@@ -13,10 +13,13 @@ export function SiteFooter() {
 
         <div className="site-footer__context">
           <p>
-            Mission Control is the methodology. Flight Deck is the future
-            engineering harness. This site is an implementation in progress.
+            Product engineering, architecture, and the systems that help teams
+            deliver.
           </p>
-          <Link href="/writing">Read the working notes</Link>
+          <nav aria-label="Footer navigation" className="footer-nav">
+            <Link href="/experience">Experience</Link>
+            <Link href="/writing">Writing</Link>
+          </nav>
         </div>
       </div>
     </footer>

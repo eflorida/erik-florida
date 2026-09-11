@@ -2,6 +2,7 @@ import Link from "next/link";
 
 const navigation = [
   { href: "/", label: "Home" },
+  { href: "/experience", label: "Experience" },
   { href: "/writing", label: "Writing" },
 ] as const;
 
@@ -28,7 +29,7 @@ export function SiteHeader() {
 
         <p className="site-header__signal">
           <span aria-hidden="true" />
-          Building in public
+          Engineering & product
         </p>
       </div>
     </header>

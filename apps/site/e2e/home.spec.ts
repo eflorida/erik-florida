@@ -13,7 +13,10 @@ test("the golden path moves from positioning to a draft article", async ({
   ).toBeVisible();
   await expect(page).toHaveTitle("Erik Florida");
 
-  await page.getByRole("link", { name: "Writing", exact: true }).click();
+  await page
+    .getByRole("navigation", { name: "Primary navigation" })
+    .getByRole("link", { name: "Writing", exact: true })
+    .click();
   await expect(
     page.getByRole("heading", {
       level: 1,

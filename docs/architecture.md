@@ -33,7 +33,7 @@ This architecture adapts the general agentic-first reference in the separate Fli
 
 ### Schema seam
 
-Authored and external data is validated once at the boundary with framework-independent schemas. TypeScript types are inferred rather than maintained in parallel. M001 implements the first article schema in `apps/site/src/content/article-schema.ts`; the boundary remains app-local until another consumer proves a shared contract.
+Authored and external data is validated once at the boundary with framework-independent schemas. TypeScript types are inferred rather than maintained in parallel. Article schemas live in `apps/site/src/content/article-schema.ts`; M002 adds structured career schemas in `apps/site/src/content/career-schema.ts`. Boundaries remain app-local until another consumer proves a shared contract.
 
 ### Rendering seam
 
@@ -41,7 +41,7 @@ Server Components coordinate content and data. Presentational renderers receive 
 
 ### Data/content seam
 
-The site's first data source is Git-backed MDX. Article modules are explicitly registered, and their exported metadata is treated as unknown until the content-access layer validates it. Pages consume that layer rather than importing or parsing source files directly. Persistence is added only when a feature requires durable application state.
+The site's data sources are Git-backed MDX for long-form articles and curated JSON for career records. Article modules are explicitly registered and their metadata is validated by the content-access layer. Career data is validated once at module load and resolves the current role, providing connected narrative copy for Home and detailed career/project accounts for Experience. Pages consume these access layers rather than parsing source files directly. The raw career master record is not a runtime dependency. Persistence is added only when a feature requires durable application state.
 
 ### Work seam
 

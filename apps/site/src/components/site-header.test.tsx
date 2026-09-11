@@ -20,5 +20,9 @@ describe("SiteHeader", () => {
       "href",
       "/writing",
     );
+    expect(screen.getByRole("link", { name: "Experience" })).toHaveAttribute(
+      "href",
+      "/experience",
+    );
   });
 });

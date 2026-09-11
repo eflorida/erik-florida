@@ -1,0 +1,239 @@
+{
+  "asOf": "2026-09-10",
+  "name": "Erik Florida",
+  "headline": "Engineering leadership for the agentic era.",
+  "introduction": "I build products and help shape the engineering organizations behind them—from the first version to teams that can own and evolve it. My focus is how agents can make a small engineering team more capable without losing technical judgment or product quality.",
+  "experienceIntroduction": "My career connects interface design, product engineering, technical architecture, and team leadership. The work has grown from building systems directly to creating the conditions for other engineers to build and own them.",
+  "currentRoleId": "raiven-engineering-manager",
+  "chapters": [
+    {
+      "id": "raiven-qmerit",
+      "organization": "Raiven / Qmerit",
+      "context": "B2B procurement · Continuous tenure since 2018",
+      "summary": "Joined Qmerit in 2018 and continued with the procurement organization that became Raiven. Built early products, established technical foundations, and progressed into engineering management.",
+      "roles": [
+        {
+          "id": "raiven-engineering-manager",
+          "title": "Software Engineering Manager",
+          "organization": "Raiven",
+          "start": "2025-01",
+          "end": null,
+          "summary": "Lead distributed engineering through technical leads while remaining involved in architecture, product delivery, and developer experience.",
+          "highlights": [
+            "Work with engineering leads, QA, and product partners to connect technical direction with delivery.",
+            "Guide front-end technology decisions and engineering practices while staying close to implementation.",
+            "Focus on AI adoption and the role of context, verification, and human judgment in software development."
+          ]
+        },
+        {
+          "id": "raiven-technical-lead",
+          "title": "Technical Lead",
+          "organization": "Raiven",
+          "start": "2021-10",
+          "end": "2025-01",
+          "summary": "Set technical direction for procurement products and helped a growing team take ownership of systems I had built.",
+          "highlights": [
+            "Combined hands-on development with architecture, review, and knowledge transfer.",
+            "Evolved boundaries and development patterns as products moved from individual ownership to shared contribution."
+          ]
+        },
+        {
+          "id": "raiven-senior-engineer",
+          "title": "Senior Software Engineer",
+          "organization": "Raiven",
+          "start": "2021-01",
+          "end": "2021-10",
+          "summary": "Led development of B2B procurement tools before moving into the Technical Lead role.",
+          "highlights": []
+        },
+        {
+          "id": "qmerit-senior-engineer",
+          "title": "Senior Software Engineer",
+          "organization": "Qmerit",
+          "start": "2018-05",
+          "end": "2021-01",
+          "summary": "Built the first version of a procurement browser extension and helped establish the product and engineering foundations of the procurement business.",
+          "highlights": [
+            "Owned the first extension implementation; expanded the product with a backend engineer and designer after the initial beta.",
+            "Advocated smaller, autonomous teams and designed front-end delivery boundaries that supported independent development.",
+            "Built human-review tooling for product-match training data as part of the team's applied machine-learning work."
+          ]
+        }
+      ],
+      "technologies": [
+        "TypeScript",
+        "React",
+        "Next.js",
+        "Node.js",
+        "Browser extensions",
+        "Applied AI"
+      ]
+    },
+    {
+      "id": "macys",
+      "organization": "Macy's",
+      "context": "Consumer commerce · 2015–2018",
+      "summary": "Worked across mobile-web experimentation, customer-facing commerce, and the application foundations used by engineering teams.",
+      "roles": [
+        {
+          "id": "macys-technical-lead",
+          "title": "Technical Lead",
+          "organization": "Macy's",
+          "start": "2017-11",
+          "end": "2018-05",
+          "summary": "Led a small team building a React and Node.js application foundation, with shared tooling and conventions for future applications.",
+          "highlights": [
+            "Established universal rendering, testing, and progressive-web-app capabilities in the application foundation.",
+            "Helped migrate a changing legacy Node/Grunt/Backbone application to Webpack, including architectural adjustments and library upgrades."
+          ]
+        },
+        {
+          "id": "macys-senior-developer",
+          "title": "Senior Front-End Developer",
+          "organization": "Macy's",
+          "start": "2015-06",
+          "end": "2017-11",
+          "summary": "Built customer-facing web experiences, including wedding-registry work and mobile-web experiments for A/B testing.",
+          "highlights": [
+            "Contributed to coded style guides and reusable front-end patterns.",
+            "Worked across UI implementation, rapid prototypes, and commerce application development."
+          ]
+        }
+      ],
+      "technologies": [
+        "React",
+        "Node.js",
+        "Webpack",
+        "Jest",
+        "Backbone",
+        "UX experimentation"
+      ]
+    }
+  ],
+  "earlierRoles": [
+    {
+      "id": "technotects",
+      "title": "UI/UX and Front-End Developer",
+      "organization": "Technotects",
+      "start": "2013-05",
+      "end": "2015-05",
+      "summary": "Combined interface design and front-end engineering, working directly with clients and backend developers on responsive web and hybrid mobile applications.",
+      "highlights": []
+    },
+    {
+      "id": "independent-work",
+      "title": "Freelance Software Developer",
+      "organization": "Independent work",
+      "start": "2008-11",
+      "end": "2015-04",
+      "summary": "Delivered web development, design, and consulting work directly for clients alongside other roles.",
+      "highlights": []
+    },
+    {
+      "id": "trim-gui-engineer",
+      "title": "Graphical User Interface Engineer",
+      "organization": "Tri-M Group",
+      "start": "2006-10",
+      "end": "2013-05",
+      "summary": "Built interfaces for building automation and physical systems, combining software, visual design, and live operational data across desktop, web, and mobile surfaces.",
+      "highlights": []
+    },
+    {
+      "id": "trim-assistant-engineer",
+      "title": "Assistant Engineer",
+      "organization": "Tri-M Group",
+      "start": "2005-09",
+      "end": "2007-10",
+      "summary": "Started in building-systems engineering, contributing to system layouts, end-user interfaces, and software and server configuration.",
+      "highlights": []
+    }
+  ],
+  "work": [
+    {
+      "id": "procurement-extension",
+      "category": "Product creation",
+      "title": "Procurement in the buyer's workflow.",
+      "summary": "Built the first version of a browser extension that brought contracted supplier pricing into the places customers already shopped.",
+      "context": "Buyers had established shopping habits, while negotiated supplier pricing was difficult to keep track of. A separate catalog alone did not solve that problem.",
+      "contribution": "Designed and built the first extension implementation. It recognized products on retail sites and surfaced comparable buying options through existing supplier relationships. After the beta, I expanded the product with a backend engineer and a designer.",
+      "outcome": "The extension became a foundational product for the procurement business that continued as Raiven. The work connected user behavior, product design, and end-to-end engineering.",
+      "disciplines": [
+        "Product discovery",
+        "Browser engineering",
+        "0→1 delivery"
+      ]
+    },
+    {
+      "id": "independent-delivery",
+      "category": "Technical leadership",
+      "title": "Architecture that makes room for teams.",
+      "summary": "Paired smaller engineering teams with independently deployable front-end surfaces and an isolated development environment.",
+      "context": "New product work needed to progress alongside a legacy application without making every engineering team share the same development and release cycle.",
+      "contribution": "Advocated smaller, autonomous teams at Qmerit and designed a micro-frontend approach to support them. I also built a lightweight local host so engineers could develop their application surface independently of the full parent system.",
+      "outcome": "A distributed team built and shipped a new feature independently while the core team continued its work. Technical boundaries supported the organizational change and made ownership easier to distribute.",
+      "disciplines": [
+        "Team autonomy",
+        "Application architecture",
+        "Developer experience"
+      ]
+    },
+    {
+      "id": "embedded-commerce",
+      "category": "Full-stack delivery",
+      "title": "A better answer to a slow purchase experience.",
+      "summary": "Built an embedded commerce product, then changed its data-refresh model after working through the customer's actual requirements.",
+      "context": "The product connected discovery on a content site with purchasing through suppliers. Fetching supplier information during each request made the experience too slow.",
+      "contribution": "Built the initial widget and backend, keeping the browser integration small. Customer discussions established that supplier data did not need to refresh on every request. I designed a fast read path with asynchronous refresh, built the replacement API and data layer, and worked with another engineer as the background-processing implementation expanded.",
+      "outcome": "The redesign improved the customer-facing load experience while retaining the existing widget. The architectural change addressed the product requirement directly, without rebuilding the working front end.",
+      "disciplines": [
+        "Customer collaboration",
+        "API design",
+        "Asynchronous systems"
+      ]
+    }
+  ],
+  "perspective": {
+    "title": "Agents change the engineering model.",
+    "paragraphs": [
+      "I use AI from requirements and architecture through implementation and review. As agents take on more of the work, the decisions and feedback around them matter more.",
+      "Mission Control is the methodology I am developing for that shift: clear context, bounded work, built-in verification, and engineers responsible for intent and judgment. The goal is customer value, not code volume."
+    ]
+  },
+  "journey": [
+    {
+      "id": "first-version",
+      "kicker": "Hands-on building",
+      "title": "Build the first version.",
+      "paragraphs": [
+        "I built the first procurement browser extension at Qmerit, then expanded it with a backend engineer and designer after the beta.",
+        "As more engineers joined, the work changed. The product needed an architecture and development environment that others could understand, extend, and own."
+      ]
+    },
+    {
+      "id": "team-ownership",
+      "kicker": "Architecture & leadership",
+      "title": "Give teams ownership.",
+      "paragraphs": [
+        "I advocated smaller autonomous teams and designed front-end boundaries for independent delivery. A lightweight local host let engineers work without running the entire parent system.",
+        "Those choices connected product delivery, developer experience, and team ownership. I have stayed close to that work through technical leadership and engineering management at Raiven."
+      ]
+    },
+    {
+      "id": "earned-complexity",
+      "kicker": "Engineering judgment",
+      "title": "Earn complexity.",
+      "paragraphs": [
+        "At Macy's, I built customer-facing commerce and shared application foundations inside a large engineering organization. That experience informs how I approach new products and teams.",
+        "Anticipate what will be needed, but add structure when it solves an observed problem. Strong engineers need room to make decisions, not layers of process introduced ahead of the need."
+      ]
+    }
+  ],
+  "patent": {
+    "number": "US 12,327,222 B2",
+    "title": "System and method providing an improved, automated procurement system using artificial intelligence",
+    "granted": "2025-06-10",
+    "attribution": "Co-inventor",
+    "href": "https://image-ppubs.uspto.gov/dirsearch-public/print/downloadPdf/12327222",
+    "summary": "Named co-inventor on a U.S. patent for AI-assisted procurement. The public record documents work on buying options, product comparison, and organization-specific procurement rules."
+  }
+}

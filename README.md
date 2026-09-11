@@ -2,7 +2,7 @@
 
 This repository is Erik Florida's personal platform: an immediate, public implementation of agentic-engineering ideas and a home for multiple related applications.
 
-The first application is a professional website designed to support an engineering-leadership job search. Agentic Systems Lab will become a second application when its product mission begins.
+The first application is a professional website designed to support an engineering-leadership job search. Agentic Systems Lab is being developed in a separate application track; it is not a prerequisite for the website launch.
 
 ## Relationship to Mission Control and Flight Deck
 
@@ -12,9 +12,9 @@ The first application is a professional website designed to support an engineeri
 
 ## Latest landed mission
 
-[`M001 — Establish the Content and Visual Golden Path`](docs/missions/M001/mission.md)
+[`M002 — Experience and Professional Positioning`](docs/missions/M002/mission.md)
 
-M001 is landed: a schema-validated MDX article path and an approved visual foundation are implemented. M002 will use Erik's experience source material to develop the professional narrative and rebalance the homepage around experience and perspective. Current project truth lives in [`docs/product/current-state.md`](docs/product/current-state.md). Conversations are working memory; accepted repository artifacts are project memory.
+M002 is landed: the reviewed homepage and Experience page use curated, validated career content, with agentic engineering leading the homepage narrative and a compact patent credential in the hero. M001's typed MDX path and approved visual foundation remain intact. M003 is next and requires a scope decision before implementation. Current project truth lives in [`docs/product/current-state.md`](docs/product/current-state.md). Conversations are working memory; accepted repository artifacts are project memory.
 
 ## Commands
 

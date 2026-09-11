@@ -2,7 +2,7 @@
 
 ## Mission
 
-Work is governed by the active mission. Start with `docs/product/current-state.md` and the mission it names. M001 is the latest landed mission; create or identify the next mission before feature implementation.
+Work is governed by the active mission. Start with `docs/product/current-state.md` and the mission it names. M002 is the latest landed mission; create or identify the next mission before feature implementation.
 
 ## Commands
 
@@ -28,3 +28,5 @@ Work is governed by the active mission. Start with `docs/product/current-state.m
 ## Current golden path
 
 M000 establishes verification and deployment. M001 designates `apps/site/content/writing/` → `apps/site/src/content/articles.ts` → `apps/site/src/app/writing/[slug]/page.tsx` as the first typed content path. Follow `docs/guides/adding-an-article.md` rather than creating another ingestion pattern.
+
+M002 extends the content seam with `apps/site/content/career.json` → `apps/site/src/content/career.ts` → Home/Experience Server Components. Follow `docs/guides/editing-career-content.md`; the raw career master record stays outside the repository and application payload.
