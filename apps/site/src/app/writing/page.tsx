@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-import { getArticles } from "@/content/articles";
+import { getWritingArticles } from "@/content/articles";
 import { createPageMetadata } from "@/lib/site";
 
 export const metadata = createPageMetadata({
@@ -10,7 +10,7 @@ export const metadata = createPageMetadata({
 });
 
 export default async function WritingIndex() {
-  const articles = await getArticles();
+  const articles = await getWritingArticles();
   const publishedCount = articles.filter(
     (article) => article.metadata.status === "published",
   ).length;

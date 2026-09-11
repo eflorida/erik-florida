@@ -30,6 +30,8 @@ M002 uses Erik's supplied career master record to implement an experience-led ho
 
 ## Product rules
 
+M003 adds `/agentic-engineering`, with a concise Mission Control overview at `#mission-control`. It connects supported applied-AI work, current personal development practice, and an organizational operating model in development. Short sections and one delivery-loop diagram provide depth without requiring the full methodology. The homepage gains a restrained link, not another content block. The new overview and existing article remain drafts for review; résumé/contact, publication, and the full deep dive are separate decisions.
+
 - Evidence over claims.
 - Progressive disclosure from a 30-second scan to substantial technical depth.
 - Public-safe content and accurate attribution by design.

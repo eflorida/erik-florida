@@ -28,12 +28,14 @@ Semantic tokens live in `apps/site/src/app/globals.css`. Components use roles su
 - The upper green glow stays fixed relative to the viewport while content scrolls. M001 review increased its opacity from 24% to 30%. A fixed CSS pseudo-element behind the content implements this without scroll listeners or animation.
 - Every interactive element has a visible focus state.
 - `prefers-reduced-motion` removes nonessential transition duration.
-- Navigation remains server-rendered and visible at mobile widths; no menu JavaScript is needed for Home, Experience, and Writing.
+- Navigation remains server-rendered and visible at mobile widths; no menu JavaScript is needed for Home, Experience, Agentic engineering, and Writing. M003 uses a compact brand row above the four links on small screens, preserving native navigation at 320px.
 - Use `→` for in-site navigation and reserve `↗` for external links that open a new tab. External links include an accessible new-tab notice and `rel="noopener noreferrer"`; label PDF destinations explicitly.
 
 ## Diagram convention
 
 System flows are semantic figures containing a caption and ordered list. Visual connectors are CSS decoration, while a text equivalent remains in the document. Color is not the only carrier of sequence or meaning.
+
+M003's overview reuses the homepage's two-column editorial sections with short paragraphs and a native contents list. The overview hero also uses `0.98` line-height. Its delivery-loop diagram has an adjacent explanation of revision and escalation; the sequence must not imply automatic approval.
 
 ## Accepted review
 

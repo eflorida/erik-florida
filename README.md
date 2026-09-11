@@ -14,7 +14,7 @@ The first application is a professional website designed to support an engineeri
 
 [`M002 — Experience and Professional Positioning`](docs/missions/M002/mission.md)
 
-M002 is landed: the reviewed homepage and Experience page use curated, validated career content, with agentic engineering leading the homepage narrative and a compact patent credential in the hero. M001's typed MDX path and approved visual foundation remain intact. M003 is next and requires a scope decision before implementation. Current project truth lives in [`docs/product/current-state.md`](docs/product/current-state.md). Conversations are working memory; accepted repository artifacts are project memory.
+M002 is landed: the reviewed homepage and Experience page use curated, validated career content, with agentic engineering leading the homepage narrative and a compact patent credential in the hero. M001's typed MDX path and approved visual foundation remain intact. [M003](docs/missions/M003/mission.md) adds a draft AI/agentic overview for editorial review; its verified implementation is a coordination checkpoint, not publication approval. Current project truth lives in [`docs/product/current-state.md`](docs/product/current-state.md). Conversations are working memory; accepted repository artifacts are project memory.
 
 ## Commands
 

@@ -41,7 +41,7 @@ Server Components coordinate content and data. Presentational renderers receive 
 
 ### Data/content seam
 
-The site's data sources are Git-backed MDX for long-form articles and curated JSON for career records. Article modules are explicitly registered and their metadata is validated by the content-access layer. Career data is validated once at module load and resolves the current role, providing connected narrative copy for Home and detailed career/project accounts for Experience. Pages consume these access layers rather than parsing source files directly. The raw career master record is not a runtime dependency. Persistence is added only when a feature requires durable application state.
+The site's data sources are Git-backed MDX for editorial content and curated JSON for career records. MDX modules are explicitly registered with one route each and their metadata is validated by the content-access layer. M003's top-level AI/agentic overview uses this same registry and schema; only entries at `/writing/<slug>` enter the Writing index and dynamic article routes. Career data is validated once at module load and resolves the current role, providing connected narrative copy for Home and detailed career/project accounts for Experience. Pages consume these access layers rather than parsing source files directly. The raw career master record is not a runtime dependency. Persistence is added only when a feature requires durable application state.
 
 ### Work seam
 

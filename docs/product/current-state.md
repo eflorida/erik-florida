@@ -1,6 +1,6 @@
 # Erik Florida — Current Project State
 
-**Last intentionally established:** 2026-09-11, M002 landing and M003 scope review
+**Last intentionally established:** 2026-09-11, M003 implementation checkpoint and editorial review
 
 This document is current working truth, not an activity log.
 
@@ -15,7 +15,7 @@ This document is current working truth, not an activity log.
 
 ## Mission state
 
-**M002 — Experience and Professional Positioning: Landed**
+**M003 — AI & Agentic Engineering: Implemented, editorial review pending**
 
 M002 is the latest landed mission, accepted for commit after local review. M001 established the schema-validated Git-backed article path, writing routes, and approved visual foundation. Erik approved the design, typography, and article tone. The upper green glow stays fixed while scrolling and is slightly stronger.
 
@@ -23,9 +23,11 @@ The landed mission is [`../missions/M002/mission.md`](../missions/M002/mission.m
 
 Agentic engineering leads the narrative immediately after the hero. First-version building, team ownership, and earned complexity each have their own section with two brief paragraphs; the former combined history block is removed. The career-content boundary validates section IDs and caps narrative sections at two paragraphs.
 
-Formatting, linting, strict TypeScript, 16 unit/component tests, the static production build, seven production browser journeys, and desktop/mobile inspection pass. Patent links use the USPTO PDF and open a new tab following review feedback about Google's traffic block. The local development server remains on port 3000. M002 is committed locally; no remote push or deployment has occurred for this mission. Acceptance for commit does not publish the draft article.
+M002's verification evidence is recorded in its mission and retrospective. Patent links use the USPTO PDF and open a new tab following review feedback about Google's traffic block. The local development server remains on port 3000. M002 is committed locally; acceptance for commit did not publish the draft article.
 
-M003 is in scope review, not feature implementation. The historical plan's numbered phases do not map directly to missions: its Phase 3 deep dive assumes an AI/agentic page and Mission Control overview, neither of which exists yet. The proposed next slice is that focused introduction; résumé/contact and launch readiness remain an alternative pending Erik's direction.
+The active mission is [M003 — AI & Agentic Engineering](../missions/M003/mission.md). Following the scope recommendation, Erik requested continuation with the next phase. `/agentic-engineering` now connects applied-AI experience, current engineering practice, the developing Mission Control methodology, and organizational adoption. The methodology overview is a native section at `#mission-control`, with one accessible diagram and an explanation of revision and escalation. Its MDX uses the existing registry and schema, with a single explicit route and no duplicate Writing entry. Home gains one link; primary/footer navigation include the overview, with a two-row mobile header. Both the new overview and original article remain drafts for review and are excluded from search indexing.
+
+M003 verification passes formatting, linting, strict TypeScript, 21 unit/component tests, the static build, and 12 production browser journeys. Desktop/mobile inspection covers Home, Experience, Writing, and the overview at 320, 390, 768, 1024, and 1440 pixels without horizontal overflow or browser runtime errors on those routes. The coordination task requested a clean checkpoint so it can merge the separately committed Lab; the M003 implementation is committed for that handoff, while final editorial acceptance remains pending. No push, hosted deployment, publication change, dependency change, or lockfile edit is part of this website checkpoint. The full methodology deep dive, résumé/contact, and launch readiness remain outside this slice.
 
 ## Parallel application ownership
 
@@ -62,6 +64,6 @@ This track owns `apps/site/**` and website missions in the saved checkout, using
 
 ## What happens next
 
-1. Confirm M003's scope and drafting sources before feature implementation; do not equate the historical Phase 3 with an approved M003 mission.
+1. Review the M003 overview's wording, attribution, and level of detail locally. Treat content approval and publication as explicit decisions; do not proceed to the full methodology deep dive implicitly.
 2. Before the full career-site launch, establish canonical résumé/contact links and make explicit publication decisions. These missing inputs do not reopen the landed M002 scope.
-3. Share the M002 landing commit with the coordinating task so the independent Lab track can synchronize. Keep Lab implementation and integration outside website mission work.
+3. Hand the clean M003 checkpoint to the coordinating task for its separately authorized Lab integration. Keep Lab implementation, merge resolution, and lockfile reconciliation outside website mission work.

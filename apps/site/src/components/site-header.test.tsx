@@ -24,5 +24,8 @@ describe("SiteHeader", () => {
       "href",
       "/experience",
     );
+    expect(
+      screen.getByRole("link", { name: "Agentic engineering" }),
+    ).toHaveAttribute("href", "/agentic-engineering");
   });
 });

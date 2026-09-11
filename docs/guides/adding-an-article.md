@@ -18,7 +18,9 @@ Use Markdown for prose. `Callout` and `SystemDiagram` are available in MDX witho
 
 ## 2. Register the slug
 
-Add one static importer to `articleImporters` in `apps/site/src/content/articles.ts`. The registry slug and metadata slug must match. Do not import MDX directly into a page or create filesystem parsing inside a route.
+Add one entry to `articleImporters` in `apps/site/src/content/articles.ts`, with `href: "/writing/<slug>"` and a static `load` importer. The registry slug and metadata slug must match. Do not import MDX directly into a page or create filesystem parsing inside a route.
+
+M003 uses this same registry and loader for the top-level overview in `content/pages/agentic-engineering.mdx`, registered at `/agentic-engineering`. `getWritingArticleSlugs()` and `getWritingArticles()` select only entries at `/writing/<slug>` for article routes and the Writing index. `getArticleSlugs()` covers the complete editorial registry. A dedicated overview must not also appear at a duplicate Writing URL. Follow [the overview guide](editing-agentic-overview.md) for that surface.
 
 ## 3. Verify the boundary
 
@@ -29,7 +31,7 @@ corepack pnpm check
 corepack pnpm test:e2e
 ```
 
-The loader validates metadata through `articleMetadataSchema`; Next.js statically renders every registered slug. A bad schema, mismatched slug, missing component, or invalid route must fail before landing.
+The loader validates metadata through `articleMetadataSchema`; Next.js statically renders every registered writing slug and the explicitly routed overview. A bad schema, mismatched slug, missing component, or invalid route must fail before landing.
 
 ## 4. Review publication behavior
 
