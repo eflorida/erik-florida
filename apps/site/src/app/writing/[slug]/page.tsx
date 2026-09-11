@@ -2,19 +2,22 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 
 import { EvidenceList } from "@/components/editorial/evidence-list";
-import { getArticle, getArticleSlugs } from "@/content/articles";
+import { getArticle, getWritingArticleSlugs } from "@/content/articles";
 import { createArticleMetadata } from "@/lib/site";
 
 export const dynamicParams = false;
 
 export function generateStaticParams() {
-  return getArticleSlugs().map((slug) => ({ slug }));
+  return getWritingArticleSlugs().map((slug) => ({ slug }));
 }
 
 export async function generateMetadata({
   params,
 }: PageProps<"/writing/[slug]">) {
   const { slug } = await params;
+  if (!getWritingArticleSlugs().some((registered) => registered === slug)) {
+    notFound();
+  }
   const article = await getArticle(slug);
 
   return article ? createArticleMetadata(article.metadata) : {};
@@ -24,6 +27,9 @@ export default async function ArticlePage({
   params,
 }: PageProps<"/writing/[slug]">) {
   const { slug } = await params;
+  if (!getWritingArticleSlugs().some((registered) => registered === slug)) {
+    notFound();
+  }
   const article = await getArticle(slug);
 
   if (!article) {

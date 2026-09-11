@@ -10,6 +10,8 @@ Writing starts in `content/writing/`, is registered and validated by `src/conten
 
 Career data starts in `content/career.json`, is validated and resolved by `src/content/career.ts`, and reaches Home and Experience through Server Components. The corresponding guide is `docs/guides/editing-career-content.md`.
 
+The AI/agentic overview starts in `content/pages/agentic-engineering.mdx` and uses the same editorial registry and metadata validation as Writing, with its own route at `/agentic-engineering`. Follow `docs/guides/editing-agentic-overview.md`. It remains a draft for review, not a duplicate Writing article.
+
 ## Commands
 
 Run from the repository root:

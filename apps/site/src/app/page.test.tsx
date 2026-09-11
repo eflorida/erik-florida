@@ -58,6 +58,11 @@ describe("Home", () => {
     for (const paragraph of getCareer().perspective.paragraphs) {
       expect(within(perspective).getByText(paragraph)).toBeInTheDocument();
     }
+    expect(
+      within(perspective).getByRole("link", {
+        name: /Explore agentic engineering/,
+      }),
+    ).toHaveAttribute("href", "/agentic-engineering");
     expect(screen.queryByRole("list")).not.toBeInTheDocument();
   });
 
@@ -77,7 +82,7 @@ describe("Home", () => {
     for (const [index, region] of storyRegions.entries()) {
       expect(within(region).getAllByRole("paragraph")).toHaveLength(3);
       expect(within(region).queryAllByRole("link")).toHaveLength(
-        index === storyRegions.length - 1 ? 1 : 0,
+        index === 0 || index === storyRegions.length - 1 ? 1 : 0,
       );
     }
   });

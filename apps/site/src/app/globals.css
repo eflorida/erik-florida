@@ -1,5 +1,6 @@
 @import "tailwindcss";
 @import "./career.css";
+@import "./agentic.css";
 
 :root {
   --color-ink: #f3f1ea;
@@ -1045,6 +1046,16 @@ p {
   margin-top: 1rem;
 }
 
+@media (max-width: 1100px) {
+  .site-header__inner {
+    grid-template-columns: 1fr auto;
+  }
+
+  .site-header__signal {
+    display: none;
+  }
+}
+
 @media (max-width: 900px) {
   .home-hero {
     min-height: auto;
@@ -1094,17 +1105,30 @@ p {
 
   .site-header__inner {
     min-height: 4.25rem;
-    grid-template-columns: 1fr auto;
-    gap: 1rem;
+    grid-template-columns: 1fr;
+    gap: 0.2rem;
+    padding-block: 0.75rem 0.25rem;
   }
 
-  .brand__name,
   .site-header__signal {
     display: none;
   }
 
   .site-nav {
-    gap: 1.2rem;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 0 0.6rem;
+  }
+
+  .site-nav a {
+    display: inline-flex;
+    min-height: 2.75rem;
+    align-items: center;
+    font-size: 0.72rem;
+  }
+
+  .site-nav a::after {
+    bottom: 0.35rem;
   }
 
   .home-hero {

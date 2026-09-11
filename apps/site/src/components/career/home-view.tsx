@@ -71,6 +71,9 @@ export function HomeView({ career, featuredArticle }: HomeViewProps) {
           {career.perspective.paragraphs.map((paragraph) => (
             <p key={paragraph}>{paragraph}</p>
           ))}
+          <Link className="text-link" href="/agentic-engineering">
+            Explore agentic engineering <span aria-hidden="true">→</span>
+          </Link>
         </div>
       </section>
 

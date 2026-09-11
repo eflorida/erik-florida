@@ -8,9 +8,19 @@ type ArticleModule = {
 };
 
 const articleImporters = {
-  "verification-over-understanding": () =>
-    import("../../content/writing/verification-over-understanding.mdx"),
-} satisfies Record<string, () => Promise<ArticleModule>>;
+  "verification-over-understanding": {
+    href: "/writing/verification-over-understanding",
+    load: () =>
+      import("../../content/writing/verification-over-understanding.mdx"),
+  },
+  "agentic-engineering": {
+    href: "/agentic-engineering",
+    load: () => import("../../content/pages/agentic-engineering.mdx"),
+  },
+} as const satisfies Record<
+  string,
+  { href: `/${string}`; load: () => Promise<ArticleModule> }
+>;
 
 export type ArticleSlug = keyof typeof articleImporters;
 
@@ -23,6 +33,16 @@ export function getArticleSlugs(): ArticleSlug[] {
   return Object.keys(articleImporters) as ArticleSlug[];
 }
 
+export function getArticleHref(slug: ArticleSlug): string {
+  return articleImporters[slug].href;
+}
+
+export function getWritingArticleSlugs(): ArticleSlug[] {
+  return getArticleSlugs().filter(
+    (slug) => getArticleHref(slug) === `/writing/${slug}`,
+  );
+}
+
 export function isArticleSlug(value: string): value is ArticleSlug {
   return Object.hasOwn(articleImporters, value);
 }
@@ -32,7 +52,7 @@ export async function getArticle(slug: string): Promise<Article | null> {
     return null;
   }
 
-  const articleModule = await articleImporters[slug]();
+  const articleModule = await articleImporters[slug].load();
 
   return {
     Content: articleModule.default,
@@ -40,8 +60,8 @@ export async function getArticle(slug: string): Promise<Article | null> {
   };
 }
 
-export async function getArticles(): Promise<Article[]> {
-  return Promise.all(getArticleSlugs().map(loadRegisteredArticle));
+export async function getWritingArticles(): Promise<Article[]> {
+  return Promise.all(getWritingArticleSlugs().map(loadRegisteredArticle));
 }
 
 async function loadRegisteredArticle(slug: ArticleSlug): Promise<Article> {
