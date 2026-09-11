@@ -1,0 +1,138 @@
+{
+  "schemaVersion": 1,
+  "id": "run-redirect-safety-001",
+  "mode": "recorded",
+  "recordedAt": "2026-09-11T04:12:00.000Z",
+  "title": "Close an unsafe redirect boundary",
+  "status": "accepted-for-human-review",
+  "scenario": {
+    "title": "Redirect safety",
+    "repository": "TypeScript service fixture",
+    "intent": "Reject external and protocol-relative redirect targets while preserving valid same-origin paths.",
+    "input": "Add a small boundary function and regression tests. Do not add dependencies or change unrelated authentication behavior.",
+    "acceptanceCriteria": [
+      "Accept absolute paths that begin with one slash.",
+      "Reject protocol-relative and fully qualified external URLs.",
+      "Cover the boundary with focused tests.",
+      "Pass formatting, linting, strict TypeScript, and tests without new dependencies."
+    ]
+  },
+  "steps": [
+    {
+      "id": "intent",
+      "sequence": 1,
+      "phase": "intent",
+      "label": "Intent accepted",
+      "status": "passed",
+      "summary": "The request is bounded, testable, and safe to route into implementation.",
+      "detail": "The change is limited to one redirect-validation boundary and its regression tests. No product or architecture decision is required.",
+      "evidenceIds": ["acceptance-contract"]
+    },
+    {
+      "id": "investigation",
+      "sequence": 2,
+      "phase": "work",
+      "label": "Existing behavior inspected",
+      "status": "passed",
+      "summary": "The redirect target crossed directly from a query value into navigation.",
+      "detail": "Inspection found no shared validator and one call site. The smallest coherent change is a pure boundary function used before navigation.",
+      "evidenceIds": ["scope-inspection"]
+    },
+    {
+      "id": "implementation",
+      "sequence": 3,
+      "phase": "work",
+      "label": "Boundary implemented",
+      "status": "passed",
+      "summary": "A pure predicate now accepts local absolute paths and rejects ambiguous or external targets.",
+      "detail": "The patch stays framework-independent and adds no dependency. Focused cases cover ordinary local paths, protocol-relative URLs, and external protocols.",
+      "artifact": {
+        "kind": "patch",
+        "label": "src/security/redirect.ts",
+        "language": "typescript",
+        "content": "export function isSafeRedirect(target: string): boolean {\n  return target.startsWith(\"/\") && !target.startsWith(\"//\");\n}"
+      },
+      "evidenceIds": ["implementation-diff"]
+    },
+    {
+      "id": "verification",
+      "sequence": 4,
+      "phase": "evaluation",
+      "label": "Checks verified",
+      "status": "passed",
+      "summary": "All deterministic checks pass, including six focused redirect cases.",
+      "detail": "The evaluator compared the implementation with every acceptance criterion and found no unrelated dependency or surface change.",
+      "evidenceIds": ["focused-tests", "strict-typecheck", "lint-check"]
+    },
+    {
+      "id": "transfer",
+      "sequence": 5,
+      "phase": "transfer",
+      "label": "Human review requested",
+      "status": "awaiting-human",
+      "summary": "Mechanical evidence is complete; product ownership remains with the reviewer.",
+      "detail": "The run recommends landing the bounded patch. A human reviewer still decides whether the behavior matches the intended authentication experience.",
+      "evidenceIds": ["evaluation-summary"]
+    }
+  ],
+  "evidence": [
+    {
+      "id": "acceptance-contract",
+      "kind": "contract",
+      "label": "Acceptance contract",
+      "summary": "Four explicit behavioral and quality criteria recorded before implementation.",
+      "status": "verified"
+    },
+    {
+      "id": "scope-inspection",
+      "kind": "inspection",
+      "label": "Call-site inspection",
+      "summary": "One redirect boundary and no existing reusable validator found.",
+      "status": "verified"
+    },
+    {
+      "id": "implementation-diff",
+      "kind": "artifact",
+      "label": "Focused patch",
+      "summary": "One pure function plus focused regression coverage; no dependency changes.",
+      "status": "verified"
+    },
+    {
+      "id": "focused-tests",
+      "kind": "test",
+      "label": "Redirect regression tests",
+      "summary": "6 passed · 0 failed",
+      "command": "pnpm test -- redirect-safety",
+      "status": "verified"
+    },
+    {
+      "id": "strict-typecheck",
+      "kind": "typecheck",
+      "label": "Strict TypeScript",
+      "summary": "0 errors",
+      "command": "pnpm typecheck",
+      "status": "verified"
+    },
+    {
+      "id": "lint-check",
+      "kind": "lint",
+      "label": "Lint policy",
+      "summary": "0 warnings · 0 errors",
+      "command": "pnpm lint",
+      "status": "verified"
+    },
+    {
+      "id": "evaluation-summary",
+      "kind": "evaluation",
+      "label": "Transfer evaluation",
+      "summary": "4 of 4 criteria satisfied; human product review remains.",
+      "status": "verified"
+    }
+  ],
+  "transfer": {
+    "state": "awaiting-human",
+    "authority": "Human reviewer",
+    "recommendation": "Accept the bounded change",
+    "summary": "Deterministic evidence supports the implementation. Human authority owns the final product judgment."
+  }
+}
