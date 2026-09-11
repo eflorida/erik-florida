@@ -2,7 +2,7 @@
 
 ## Mission
 
-Work is governed by the active mission. Start with `docs/product/current-state.md` and the mission it names. M000 is the latest landed mission; create or identify the next mission before feature implementation.
+Work is governed by the active mission. Start with `docs/product/current-state.md` and the mission it names. M001 is the latest landed mission; create or identify the next mission before feature implementation.
 
 ## Commands
 
@@ -27,4 +27,4 @@ Work is governed by the active mission. Start with `docs/product/current-state.m
 
 ## Current golden path
 
-M000 establishes verification and deployment. M001 will designate the first typed content path as the application golden path.
+M000 establishes verification and deployment. M001 designates `apps/site/content/writing/` → `apps/site/src/content/articles.ts` → `apps/site/src/app/writing/[slug]/page.tsx` as the first typed content path. Follow `docs/guides/adding-an-article.md` rather than creating another ingestion pattern.

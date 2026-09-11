@@ -1,0 +1,97 @@
+export const metadata = {
+  slug: "verification-over-understanding",
+  title: "Verification Over Understanding",
+  summary:
+    "When agents produce more of the implementation, engineering confidence must come from observable evidence—not a human replay of every line.",
+  status: "draft",
+  tags: ["Agentic engineering", "Verification", "Engineering leadership"],
+  evidence: [
+    {
+      type: "methodology",
+      label: "Mission Control operating principle",
+      description:
+        "The methodology treats evidence and evaluation as first-class parts of moving work from intent to a verified outcome.",
+    },
+    {
+      type: "repository",
+      label: "This site's delivery path",
+      description:
+        "Strict types, schema validation, tests, deterministic builds, and reviewable mission artifacts apply the same principle to this implementation.",
+    },
+  ],
+};
+
+Software teams have long used human comprehension as a proxy for confidence. An engineer writes a change, another engineer reads the diff, and the organization assumes that shared understanding is enough to make the change safe.
+
+That proxy becomes less reliable when agents can produce useful implementation at machine speed. The volume of code can grow faster than a person’s ability to reconstruct every decision. If confidence still depends on reading every line with equal intensity, review becomes the bottleneck and the promised leverage disappears.
+
+<Callout title="The goal is not less understanding. It is stronger evidence.">
+  Humans should understand the intent, architecture, risks, and meaning of the
+  result. They should not need to replay every mechanical implementation step
+  before the system can establish confidence.
+</Callout>
+
+## Verification is a system, not a test suite
+
+Verification asks whether the artifact satisfies the accepted intent and constraints. Tests are part of that answer, but not the whole answer.
+
+A useful verification surface combines several forms of evidence:
+
+- schemas and types that constrain what can enter the system;
+- architecture boundaries that make unsafe coupling difficult;
+- static analysis and policy checks that enforce deterministic rules;
+- tests that exercise behavior at the appropriate seam;
+- observable output that lets a reviewer inspect the actual result;
+- and human judgment where ambiguity, consequence, or taste demands it.
+
+<SystemDiagram
+  caption="From intent to a verified artifact"
+  steps={["Intent", "Implementation", "Verification", "Evidence", "Judgment"]}
+/>
+
+The important shift is that confidence comes from the combined evidence. A reviewer can concentrate on whether the intent was right, whether the architecture makes sense, whether the evidence is sufficient, and whether the residual risk is acceptable.
+
+## Put deterministic policy outside the prompt
+
+Prompts are useful for direction, but weak as the only enforcement mechanism. A rule like “do not import server code into the browser” is more dependable as a package boundary or lint rule. A data contract is stronger as a schema. A critical journey is clearer as an executable browser test.
+
+This does not eliminate instructions. It gives each kind of guidance the right home:
+
+1. durable documents hold intent, decisions, and context;
+2. architecture establishes stable seams and defaults;
+3. code and configuration enforce deterministic policy;
+4. tests and evaluation produce evidence;
+5. human review handles consequence and judgment.
+
+When a failure repeats, the response should usually improve the environment—not merely lengthen the next prompt.
+
+## Review the evidence at the level of risk
+
+Verification over understanding does not imply automatic approval. It makes the autonomy decision explicit.
+
+A reversible presentation change with strong visual and automated evidence can move quickly. A migration affecting customer data requires a different evidence standard, tighter permissions, and meaningful human gates. The executor—human or agent—is less important than the risk, reversibility, and quality of the proof.
+
+The practical question becomes:
+
+> What evidence would make this change safe to accept?
+
+That is a better design question than asking a reviewer to compensate for a weak delivery system through effort alone.
+
+## What humans should understand deeply
+
+As implementation becomes more automated, human attention becomes more valuable, not less. It should concentrate on the work that remains irreducibly contextual:
+
+- the customer problem and desired outcome;
+- the constraints the system must preserve;
+- the architecture and escalation triggers;
+- the quality and relevance of the evidence;
+- tradeoffs that affect people, product, or long-term direction;
+- and whether the result deserves to become durable organizational state.
+
+The result is not engineering without understanding. It is engineering that stops using exhaustive human reconstruction as its primary control mechanism.
+
+## A working default
+
+Start every meaningful change with explicit intent and acceptance criteria. Give the executor a blessed path. Make the relevant constraints mechanical. Produce evidence at the same boundary where the work will be judged. Then increase autonomy only as the system demonstrates that its evidence is trustworthy.
+
+That is the heart of verification over understanding: not blind trust in agents, but a better-designed basis for confidence.

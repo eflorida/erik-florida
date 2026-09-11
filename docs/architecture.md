@@ -1,7 +1,7 @@
 # Erik Florida — Application Architecture
 
-- **Status:** Adopted for repository bootstrap
-- **Last updated:** 2026-09-01
+- **Status:** Adopted and active
+- **Last updated:** 2026-09-10
 
 This architecture adapts the general agentic-first reference in the separate Flight Deck project to Erik Florida's concrete needs. The reference provides patterns and option triggers; this document and the ADRs under `docs/architecture/decisions/` record what Erik Florida has actually adopted.
 
@@ -33,7 +33,7 @@ This architecture adapts the general agentic-first reference in the separate Fli
 
 ### Schema seam
 
-Authored and external data is validated once at the boundary with framework-independent schemas. TypeScript types are inferred rather than maintained in parallel. M001 will implement the first content schemas.
+Authored and external data is validated once at the boundary with framework-independent schemas. TypeScript types are inferred rather than maintained in parallel. M001 implements the first article schema in `apps/site/src/content/article-schema.ts`; the boundary remains app-local until another consumer proves a shared contract.
 
 ### Rendering seam
 
@@ -41,7 +41,7 @@ Server Components coordinate content and data. Presentational renderers receive 
 
 ### Data/content seam
 
-The site's first data source is Git-backed content. Pages consume a content-access layer rather than parsing source files directly. Persistence is added only when a feature requires durable application state.
+The site's first data source is Git-backed MDX. Article modules are explicitly registered, and their exported metadata is treated as unknown until the content-access layer validates it. Pages consume that layer rather than importing or parsing source files directly. Persistence is added only when a feature requires durable application state.
 
 ### Work seam
 

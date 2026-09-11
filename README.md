@@ -10,11 +10,11 @@ The first application is a professional website designed to support an engineeri
 - **Flight Deck** is a future engineering-department harness that can bring together the tools, context, evidence, and work informing software delivery.
 - **Erik Florida** is neither a Flight Deck competitor nor a substitute. It applies the available patterns now, before the full methodology and harness exist.
 
-## Latest mission
+## Latest landed mission
 
-[`M000 — Establish the Erik Florida Repository Bones`](docs/missions/M000/mission.md)
+[`M001 — Establish the Content and Visual Golden Path`](docs/missions/M001/mission.md)
 
-M000 is landed. M001 will establish the typed content golden path and initial visual foundation. Current project truth lives in [`docs/product/current-state.md`](docs/product/current-state.md). Conversations are working memory; accepted repository artifacts are project memory.
+M001 is landed: a schema-validated MDX article path and an approved visual foundation are implemented. M002 will use Erik's experience source material to develop the professional narrative and rebalance the homepage around experience and perspective. Current project truth lives in [`docs/product/current-state.md`](docs/product/current-state.md). Conversations are working memory; accepted repository artifacts are project memory.
 
 ## Commands
 
