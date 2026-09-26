@@ -92,7 +92,7 @@ The original reference scenario explicitly discloses that its source execution a
 
 ## What happens next
 
-1. Define and review a separate Goal Contract before authorizing Step 4's smallest useful repository-native Mission Control bootstrap. Do not infer a runtime shape from the completed reconciliation.
+1. Review the proposed [Step 4 adoption Goal Contract](../reconciliation/step-4-goal-contract-draft.md). Approval must confirm the real M003 outcome, authority, mutation scope, evidence, budget, stop rules, and minimal runtime hypothesis before implementation begins.
 2. Review M003 wording and decide editorial acceptance/publication separately from implementation verification.
 3. Resolve LAB-M001's human-review boundary and run LAB-M002's credentialed smoke test before claiming live-provider validation.
 4. Before the full career-site launch, establish canonical résumé/contact links and explicit publication/deployment decisions.
