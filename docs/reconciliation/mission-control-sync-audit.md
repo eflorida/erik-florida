@@ -2,7 +2,7 @@
 
 **Investigation date:** 2026-09-23
 **Last reconciled:** 2026-09-25
-**Status:** Step 2 documentation reconciliation (2a–2c) implemented within approved scopes; Human Gate 2 review required.
+**Status:** Step 2 documentation reconciliation (2a–2c) implemented and Human Gate 2 approved; Step 3 independent evaluation authorized.
 **Repository baseline:** `7f4657e6170536fec6f3016bca18e5bfd892d6fe` (`merge: reconcile website M003 checkpoint`).
 **Authority:** [Agent handoff](../AGENT_HANDOFF.md), [reconciliation plan](../RECONCILIATION_PLAN.md), and Erik's 2026-09-25 approval for Step 2a, recorded below.
 
@@ -383,3 +383,9 @@ At Erik's request, the completed reconciliation was prepared as a clean `main` c
 - `corepack pnpm test:e2e` passed all 15 browser tests (12 site and 3 Lab). The site server logged `NoFallbackError` while the suite intentionally requested two unregistered `/writing/*` paths; both requests returned the expected 404 status and the suite passed.
 - No new application test was added. Step 2 changes documentation, context routing, and formatter scope rather than application behavior; adding tests that mirror unchanged implementation would provide no new assurance.
 - No canonical source was reformatted, and no provider request, deployment, publication, runtime bootstrap, application behavior change, or Step 3 evaluation occurred.
+
+## Human Gate 2 approval — 2026-09-25
+
+After reviewing the Step 2 recap and clean-check results, Erik explicitly instructed that all changes be merged to `main` and Step 3 begin. This records Human Gate 2 approval and authorizes the independent consistency evaluation defined by the reconciliation plan.
+
+The approval does not pre-accept the Step 3 result, authorize silent repairs, resolve the replay-provenance or other deferred product decisions, accept M003/LAB missions, publish or deploy either application, or start Step 4. Material evaluation failures return to Step 2; otherwise the process stops for Human Gate 3.

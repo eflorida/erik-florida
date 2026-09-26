@@ -1,6 +1,6 @@
 # Erik Florida — Current Project State
 
-**Last intentionally established:** 2026-09-25, Mission Control reconciliation Step 2b
+**Last intentionally established:** 2026-09-25, Mission Control reconciliation Human Gate 2
 
 This document is current working truth, not an activity log. Historical mission files preserve what was true at their checkpoints; a commit or merge does not by itself establish Landing, editorial acceptance, publication, deployment, or completion of an unchecked validation item.
 
@@ -21,7 +21,7 @@ Documentation reconciliation is active under the [reconciliation plan](../RECONC
 - Step 2a established source authority and the Mission Control / Flight Deck concept boundary.
 - Step 2b reconciled current repository facts and routed agent contexts to authoritative local documents. It changed no application behavior.
 - Step 2c reconciled Lab evidence/product claims, editorial guidance, and unselected implementation options. It changed no application behavior or public copy.
-- Human Gate 2, independent Step 3 evaluation, and all runtime/bootstrap steps remain unstarted.
+- Human Gate 2 was explicitly approved on 2026-09-25 after the complete repository check and browser suite passed. Step 3 is authorized; its independent evaluation artifact has not yet been produced. Human Gate 3 and all runtime/bootstrap steps remain unstarted.
 
 The repository has no explicit Goal Contract, Goal State, Loop Contract, Mission Log, normalized event runtime, Flight Deck adapter, or `.mission-control` structure. Historical missions contain useful intent, scope, evidence, and human decisions, but are not silently relabeled as complete implementations of the newer model.
 
@@ -88,8 +88,8 @@ The reconciliation audit separately flags the reference replay's execution-evide
 
 ## What happens next
 
-1. Perform Human Gate 2: validate the reconciled terminology, product boundaries, architecture descriptions, claim limits, and unresolved decisions. Do not infer approval from silence.
-2. After Human Gate 2 approval, run the independent Step 3 consistency evaluation with a fresh context where practical; report failures rather than silently repairing them.
+1. Run the independent Step 3 consistency evaluation with a fresh context; report failures rather than silently repairing them.
+2. Stop for Human Gate 3. Material failures return to Step 2; otherwise accept the documentation reconciliation before any runtime/bootstrap work.
 3. Review M003 wording and decide editorial acceptance/publication separately from implementation verification.
 4. Resolve LAB-M001's human-review boundary and run LAB-M002's credentialed smoke test before claiming live-provider validation.
 5. Before the full career-site launch, establish canonical résumé/contact links and explicit publication/deployment decisions.
