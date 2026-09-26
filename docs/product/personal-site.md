@@ -43,6 +43,6 @@ Public methodology copy should distinguish a green deterministic floor from dire
 - The implementation itself is evidence of engineering quality.
 - Shipping the job-search surface takes priority over completeness.
 - Agentic Systems Lab is complementary evidence, not a prerequisite for the website launch.
-- Do not link to or cite the Lab replay as verified execution evidence until its provenance assessment is resolved and a public deployment/link is intentionally approved.
+- Do not cite the Lab reference scenario as verified execution evidence. A public Lab link still requires intentionally approved positioning and deployment.
 
 The complete supplied product and build plan is preserved at [`../reference/career-website-build-plan.md`](../reference/career-website-build-plan.md).

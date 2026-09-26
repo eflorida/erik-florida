@@ -1,6 +1,6 @@
 # Erik Florida — Current Project State
 
-**Last intentionally established:** 2026-09-25, Mission Control reconciliation Step 3 evaluation
+**Last intentionally established:** 2026-09-25, Mission Control reconciliation accepted at Human Gate 3
 
 This document is current working truth, not an activity log. Historical mission files preserve what was true at their checkpoints; a commit or merge does not by itself establish Landing, editorial acceptance, publication, deployment, or completion of an unchecked validation item.
 
@@ -8,21 +8,23 @@ This document is current working truth, not an activity log. Historical mission 
 
 - Erik Florida is a multi-application personal platform whose immediate purpose is to support Erik's search for an engineering-leadership role through concrete professional and technical evidence.
 - `apps/site` is the static-first professional website.
-- `apps/agentic-systems-lab` is the independently deployable evidence application. It is present in this checkout and contains a recorded reference-run explorer plus a bounded, opt-in live review workflow.
+- `apps/agentic-systems-lab` is the independently deployable evidence application. It is present in this checkout and contains an original reference-scenario explorer plus a bounded, opt-in live review workflow.
 - Mission Control is the generally tool- and team-agnostic engineering methodology informing work here. Its current terminology is mapped in the [concept guide](../guides/mission-control-concepts.md).
 - Flight Deck is a possible future, opinionated implementation of a Mission Control engineering team, including observability, coordination, and governance. Existing tools could collectively fulfill all of its responsibilities. Its product-specific plans do not govern this repository or replace specialized coding harnesses.
 - The site, Lab, Mission Control, and Flight Deck retain distinct purposes. Neither application in this repository is Flight Deck.
 
 ## Reconciliation state
 
-Documentation reconciliation is active under the [reconciliation plan](../RECONCILIATION_PLAN.md) and [audit](../reconciliation/mission-control-sync-audit.md).
+Documentation reconciliation is complete under the [reconciliation plan](../RECONCILIATION_PLAN.md), [audit](../reconciliation/mission-control-sync-audit.md), and [independent evaluation](../reconciliation/mission-control-sync-evaluation.md).
 
 - Step 1's investigation-only audit is complete.
 - Step 2a established source authority and the Mission Control / Flight Deck concept boundary.
 - Step 2b reconciled current repository facts and routed agent contexts to authoritative local documents. It changed no application behavior.
 - Step 2c reconciled Lab evidence/product claims, editorial guidance, and unselected implementation options. It changed no application behavior or public copy.
 - Human Gate 2 was explicitly approved on 2026-09-25 after the complete repository check and browser suite passed.
-- The independent [Step 3 evaluation](../reconciliation/mission-control-sync-evaluation.md) is complete. It found two material failures: unresolved replay provenance conflicts with the Lab's visitor-facing verification claims, and the retained agent handoff conflicts with the current authorized phase. Human Gate 3 is not ready; no correction has begun.
+- The independent [Step 3 evaluation](../reconciliation/mission-control-sync-evaluation.md) found two material failures: unresolved replay provenance conflicted with the Lab's visitor-facing verification claims, and the retained agent handoff conflicted with the current authorized phase.
+- Erik authorized one bounded closure batch. The reference-scenario provenance treatment, agent routing, draft site terminology, and volatile Git-state wording were corrected. The full repository check and both browser suites pass.
+- A fresh focused re-evaluation found no remaining material failure. Erik's conditional authorization therefore accepts Human Gate 3 and closes documentation reconciliation. Step 4 and all runtime/bootstrap work remain unstarted and require their own Goal Contract and authorization.
 - All runtime/bootstrap steps remain unstarted.
 
 The repository has no explicit Goal Contract, Goal State, Loop Contract, Mission Log, normalized event runtime, Flight Deck adapter, or `.mission-control` structure. Historical missions contain useful intent, scope, evidence, and human decisions, but are not silently relabeled as complete implementations of the newer model.
@@ -43,12 +45,12 @@ M003's mission records passing formatting, linting, strict TypeScript, 21 unit/c
 
 The Lab was integrated into this checkout by commit `06f1ff5`. It remains independently deployable from the site and uses port 3100 during local development.
 
-- [LAB-M001 — Reference Run Explorer](../missions/LAB-M001/mission.md) is recorded as **Ready for human review**. `/reference` loads a schema-validated Git-backed fixture through an app-local run contract and renders its steps, artifacts, evidence claims, and human-transfer recommendation.
+- [LAB-M001 — Reference Run Explorer](../missions/LAB-M001/mission.md) is recorded as **Ready for human review**. `/reference` loads the original schema-validated, Git-backed reference scenario through an app-local run contract and renders its steps, artifacts, scenario claims, provenance disclosure, and human-transfer recommendation.
 - [LAB-M002 — Bounded Live Review](../missions/LAB-M002/mission.md) is recorded as **Ready for credentialed validation**. `/` accepts a bounded TypeScript diff and `/api/reviews` makes one request-bound OpenAI Responses API call when a server credential and `LAB_LIVE_REVIEW_ENABLED=true` are configured.
 - [ADR-008](../architecture/decisions/ADR-008-bounded-openai-responses-runtime.md) governs the live route: no tools, submitted-code execution, repository access, application persistence, or automatic merge/deployment authority. The Lab has no database, authentication, worker, queue, saved run history, or public runtime approval.
 - Automated verification and safe unconfigured behavior are recorded in LAB-M002. Its credentialed live provider smoke test remains unchecked. The merge does not complete that validation.
 
-The reconciliation audit separately flags the reference replay's execution-evidence provenance for later human resolution. Step 2b does not relabel the fixture or decide that issue.
+The original reference scenario explicitly discloses that its source execution artifacts are not retained in this checkout. Its contract and interface distinguish scenario claims from repository-verified structure and presentation. This treatment resolves the public-claim conflict without converting the scenario into execution evidence or accepting LAB-M001.
 
 ## Application and ownership boundaries
 
@@ -72,7 +74,7 @@ The reconciliation audit separately flags the reference replay's execution-evide
 - Preserve Qmerit/Raiven career continuity and distinguish individual implementation, team delivery, and patent co-invention. Exclude private business details and unsupported metrics.
 - Keep draft editorial content visibly labeled and emit `noindex, nofollow` until Erik approves publication. Indexing directives do not make draft routes private.
 - Apply Mission Control as a tool- and team-agnostic methodology. Flight Deck is optional product architecture whose old plans must be reconciled against current principles before implementation.
-- Git remote `origin` is `https://github.com/eflorida/erik-florida.git`; local `main` is ahead of the recorded `origin/main`. No remote push is implied.
+- Git remote `origin` is `https://github.com/eflorida/erik-florida.git`. Ahead/behind state is volatile operational information and must be inspected when needed rather than retained here as product truth.
 
 ## Intentionally deferred or unresolved
 
@@ -83,16 +85,14 @@ The reconciliation audit separately flags the reference replay's execution-evide
 - Public enablement, abuse controls, cost budget, and credentialed smoke validation for the Lab live route.
 - Saved/shareable Lab runs, persistence, authentication, workers, code execution, repository ingestion, multiple workflows, and generalized orchestration.
 - Public integration between the site and Lab, including the evidence and deployment boundary needed to link them.
-- Reference-replay evidence provenance and any resulting visitor-facing disclosure change.
+- Any future attributable execution evidence for, or replacement of, the original reference scenario. The current provenance disclosure is approved.
 - Shared UI/content/domain packages without demonstrated reuse.
 - Mission Control runtime layout, normalized events, adapters, deployment topology, Flight Deck product design, and final portfolio-demo scope. Step 2c records options but adopts none.
 - Repository visibility changes and hosted GitHub controls.
 
 ## What happens next
 
-1. Review the Step 3 findings and authorize a bounded return to Step 2 for the two material failures. The replay correction requires an explicit provenance/disclosure/replacement decision.
-2. After approved corrections, repeat the affected Step 3 checks. Do not silently repair or broaden the correction.
-3. Stop for Human Gate 3. Accept the documentation reconciliation only if no material failure remains, before any runtime/bootstrap work.
-4. Review M003 wording and decide editorial acceptance/publication separately from implementation verification.
-5. Resolve LAB-M001's human-review boundary and run LAB-M002's credentialed smoke test before claiming live-provider validation.
-6. Before the full career-site launch, establish canonical résumé/contact links and explicit publication/deployment decisions.
+1. Define and review a separate Goal Contract before authorizing Step 4's smallest useful repository-native Mission Control bootstrap. Do not infer a runtime shape from the completed reconciliation.
+2. Review M003 wording and decide editorial acceptance/publication separately from implementation verification.
+3. Resolve LAB-M001's human-review boundary and run LAB-M002's credentialed smoke test before claiming live-provider validation.
+4. Before the full career-site launch, establish canonical résumé/contact links and explicit publication/deployment decisions.

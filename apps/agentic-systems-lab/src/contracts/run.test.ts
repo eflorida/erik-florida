@@ -6,7 +6,14 @@ import { runSchema } from "./run";
 
 describe("run contract", () => {
   it("accepts the reference run", () => {
-    expect(runSchema.parse(source).id).toBe("run-redirect-safety-001");
+    const run = runSchema.parse(source);
+
+    expect(run.id).toBe("run-redirect-safety-001");
+    expect(run.mode).toBe("reference-scenario");
+    expect(run.provenance).toMatchObject({
+      classification: "original-reference-scenario",
+      executionEvidence: "not-retained",
+    });
   });
 
   it("rejects evidence references that do not resolve", () => {

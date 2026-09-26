@@ -460,7 +460,7 @@ button {
   white-space: nowrap;
 }
 
-.step-state--passed {
+.step-state--scenario-complete {
   border-color: rgb(121 242 208 / 32%);
   background: var(--mint-soft);
   color: var(--mint);

@@ -25,7 +25,7 @@ No Mission Control runtime, state/event store, adapter topology, Flight Deck pro
 
 - pnpm workspaces and Turborepo coordinate applications and packages.
 - `apps/site` is a static-first Next.js App Router application deployed to Vercel.
-- `apps/agentic-systems-lab` is an implemented, independently deployable Next.js application. It contains a Git-backed reference replay and an opt-in, request-bound OpenAI review route governed by ADR-008. Its recorded mission state remains ready for human review/credentialed validation; integration into this checkout is not evidence of public deployment or mission Landing.
+- `apps/agentic-systems-lab` is an implemented, independently deployable Next.js application. It contains a Git-backed original reference scenario with an explicit execution-provenance boundary and an opt-in, request-bound OpenAI review route governed by ADR-008. Its recorded mission state remains ready for human review/credentialed validation; integration into this checkout is not evidence of public deployment or mission Landing.
 - Shared configuration begins under `packages/`. Content contracts and shared UI are introduced when their first real implementation requires them.
 
 ## Site profile
@@ -42,7 +42,7 @@ No Mission Control runtime, state/event store, adapter topology, Flight Deck pro
 
 Authored and external data is validated once at the boundary with framework-independent schemas. TypeScript types are inferred rather than maintained in parallel. Article schemas live in `apps/site/src/content/article-schema.ts`; M002 adds structured career schemas in `apps/site/src/content/career-schema.ts`. Boundaries remain app-local until another consumer proves a shared contract.
 
-The Lab separately validates its recorded run fixture in `apps/agentic-systems-lab/src/contracts/run.ts` and live-review input/output in `src/contracts/review.ts`. These contracts remain app-local and do not constitute shared Mission Control contracts.
+The Lab separately validates its reference-scenario fixture in `apps/agentic-systems-lab/src/contracts/run.ts` and live-review input/output in `src/contracts/review.ts`. These contracts remain app-local and do not constitute shared Mission Control contracts.
 
 ### Rendering seam
 
@@ -61,7 +61,7 @@ No durable or background work runtime is implemented. The Lab's live review is a
 Rendering is selected per application or surface:
 
 - Personal site: static/pre-rendered editorial content with explicit revalidation only when needed.
-- Agentic Systems Lab: a dynamic live-review surface plus a validated reference replay, without changing the site's profile.
+- Agentic Systems Lab: a dynamic live-review surface plus a validated, provenance-disclosed reference scenario, without changing the site's profile.
 
 ## Verification
 

@@ -34,6 +34,6 @@ The final portfolio demo is intentionally unselected. A simplified Flight Deck, 
 
 ## Current handoff
 
-LAB-M001 is ready for human review and remains available as the reference replay. Its embedded execution provenance is unresolved; see the [evidence assessment](../reference/lab-evidence-assessment.md). LAB-M002's bounded OpenAI runtime is implemented and remains ready for credentialed validation, with the live provider smoke test unchecked. The Lab runs independently on port 3100 and the professional site on port 3000.
+LAB-M001 is ready for human review and remains available as the original reference scenario. Its interface now discloses that source execution artifacts are not retained; see the [evidence assessment](../reference/lab-evidence-assessment.md). LAB-M002's bounded OpenAI runtime is implemented and remains ready for credentialed validation, with the live provider smoke test unchecked. The Lab runs independently on port 3100 and the professional site on port 3000.
 
 No current mission authorizes persistence, a worker, public runtime enablement, generalized orchestration, Flight Deck behavior, Mastra adoption, or a site-to-Lab public integration.

@@ -28,12 +28,14 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
               </span>
               <div>
                 <p className="app-name">Agentic Systems Lab</p>
-                <p className="app-context">Verified change runs</p>
+                <p className="app-context">
+                  Reference scenarios and live review
+                </p>
               </div>
             </div>
             <nav className="app-nav" aria-label="Lab modes">
               <Link href="/">Live review</Link>
-              <Link href="/reference">Reference replay</Link>
+              <Link href="/reference">Reference scenario</Link>
             </nav>
             <div className="environment-state">
               <span aria-hidden="true" />

@@ -17,7 +17,7 @@ This reuses the M001 MDX compiler, metadata schema, and content-access boundary.
 - Label the diagram as an example rather than a universal workflow. Goals, applicable loops, evidence-backed re-entry, candidate completion, and governed Landing must not be collapsed into fixed Agile/Kanban-style stages.
 - Present progressive enhancement separately from progressive autonomy. Do not imply that more machine authority is a required destination; authority changes only for a supported scope under evidence and policy.
 - Link to existing Experience evidence and the Writing article. Do not copy the raw career record, add unapproved contact destinations, or link to a local/private Lab endpoint.
-- Do not cite the Lab replay as verified execution evidence until `docs/reference/lab-evidence-assessment.md` is resolved. A public Lab link requires separate evidence, positioning, and deployment approval.
+- Do not cite the Lab reference scenario as verified execution evidence; `docs/reference/lab-evidence-assessment.md` records its provenance boundary. A public Lab link requires separate evidence, positioning, and deployment approval.
 - The overview starts as `draft`. Publishing requires explicit approval and an ISO `publishedAt` date, following the existing metadata schema. The route derives indexing from status; drafts emit `noindex, nofollow` and carry a visible review notice. Draft status does not make a route private.
 
 ## Verification

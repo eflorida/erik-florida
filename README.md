@@ -2,7 +2,7 @@
 
 This repository is Erik Florida's personal platform: an immediate, public implementation of agentic-engineering ideas and a home for multiple related applications.
 
-The first application is a professional website designed to support an engineering-leadership job search. Agentic Systems Lab is the second application and provides a recorded run explorer plus a bounded local live-review workflow. The applications share the monorepo but remain independently deployable; the Lab is not a prerequisite for the website launch.
+The first application is a professional website designed to support an engineering-leadership job search. Agentic Systems Lab is the second application and provides an original reference-scenario explorer plus a bounded local live-review workflow. The applications share the monorepo but remain independently deployable; the Lab is not a prerequisite for the website launch.
 
 ## Relationship to Mission Control and Flight Deck
 
@@ -32,7 +32,7 @@ The site runs at `http://localhost:3000` and the Lab at `http://localhost:3100` 
 ## Repository map
 
 - `apps/site` — static-first Next.js professional website.
-- `apps/agentic-systems-lab` — independently deployable Next.js evidence application with recorded replay and bounded live review.
+- `apps/agentic-systems-lab` — independently deployable Next.js evidence application with an explicitly disclosed reference scenario and bounded live review.
 - `packages/typescript-config` — shared strict TypeScript configuration.
 - `packages/eslint-config` — shared Next.js lint policy.
 - `docs/product` — product framing and current state.

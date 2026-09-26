@@ -6,7 +6,7 @@ Repository context and current status live in the root [`AGENTS.md`](../../AGENT
 
 LAB-M001 remains ready for human review. LAB-M002 is implemented in this checkout and remains ready for credentialed validation; its unchecked live provider smoke test has not been converted into an acceptance claim by the merge.
 
-The replay fixture's schema and presentation are verified, but its embedded source-inspection/test/evaluation history is not retained in this checkout. See the [evidence assessment](../../docs/reference/lab-evidence-assessment.md) before using it as verified portfolio evidence. The Lab demonstrates selected boundaries and presentation patterns; it has no Goal State, Loop Contract runtime, durable event history, effect verification, tools, Mastra workflow, or Flight Deck behavior.
+The original reference scenario is a schema-validated design fixture created while the Lab and Mission Control model were evolving. Its structure and presentation are verified, while the source execution artifacts described inside it are not retained in this checkout. The interface and [evidence assessment](../../docs/reference/lab-evidence-assessment.md) disclose that boundary. The Lab demonstrates selected boundaries and presentation patterns; it has no Goal State, Loop Contract runtime, durable event history, effect verification, tools, Mastra workflow, or Flight Deck behavior.
 
 ## LAB-M002 live review
 
@@ -16,7 +16,7 @@ The live route accepts one TypeScript unified diff of at most 12,000 characters.
 
 The live route is a local validation surface. Do not enable it in a public deployment until a later mission defines abuse controls and a cost budget.
 
-## LAB-M001 reference replay
+## LAB-M001 reference scenario
 
 The LAB-M001 golden path is:
 

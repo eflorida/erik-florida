@@ -1,6 +1,6 @@
 import { expect, test } from "@playwright/test";
 
-test("a visitor can inspect evidence and reach the human transfer", async ({
+test("a visitor can inspect a disclosed reference scenario and reach the human transfer", async ({
   page,
 }) => {
   await page.goto("/reference");
@@ -10,6 +10,13 @@ test("a visitor can inspect evidence and reach the human transfer", async ({
     page.getByRole("heading", { name: "Close an unsafe redirect boundary" }),
   ).toBeVisible();
   await expect(page.getByText("No live model call")).toBeVisible();
+  await expect(
+    page.getByRole("heading", { name: "Original reference scenario" }),
+  ).toBeVisible();
+  await expect(
+    page.getByText(/execution artifacts.*not retained/i),
+  ).toBeVisible();
+  await expect(page.getByText("Scenario claim").first()).toBeVisible();
 
   await page.getByRole("button", { name: /Boundary implemented/ }).click();
   await expect(page.getByText("src/security/redirect.ts")).toBeVisible();
@@ -90,6 +97,6 @@ test("the run remains readable on mobile without horizontal overflow", async ({
         document.documentElement.clientWidth,
     ),
   ).toBe(true);
-  await page.getByRole("button", { name: /Checks verified/ }).click();
+  await page.getByRole("button", { name: /Checks represented/ }).click();
   await expect(page.getByText("6 passed · 0 failed")).toBeVisible();
 });

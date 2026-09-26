@@ -37,4 +37,4 @@ M002 extends the content seam with `apps/site/content/career.json` → `apps/sit
 
 M003 reuses the editorial registry for `apps/site/content/pages/agentic-engineering.mdx` → `/agentic-engineering`. Follow `docs/guides/editing-agentic-overview.md`; draft status and editorial acceptance remain human-controlled.
 
-The Lab's recorded path is `apps/agentic-systems-lab/content/runs/*.json` → `src/contracts/run.ts` → `src/data/runs.ts` → `/reference`. Its bounded live path is `src/contracts/review.ts` → `src/app/api/reviews/route.ts` → the live-review UI, under ADR-008. Do not generalize either path into a Mission Control runtime or Flight Deck architecture without a new approved mission.
+The Lab's reference-scenario path is `apps/agentic-systems-lab/content/runs/*.json` → `src/contracts/run.ts` → `src/data/runs.ts` → `/reference`. Its bounded live path is `src/contracts/review.ts` → `src/app/api/reviews/route.ts` → the live-review UI, under ADR-008. Do not generalize either path into a Mission Control runtime or Flight Deck architecture without a new approved mission.

@@ -20,7 +20,7 @@ Their primary task is to inspect a run and answer:
 
 ## First product slice
 
-The first slice is a **reference run explorer** for a bounded TypeScript change. It uses a schema-validated replay fixture and clearly states that no live model call is occurring. The fixture exists to establish the data contract, information hierarchy, and evidence-presentation story before introducing runtime cost, nondeterminism, or public-input risk.
+The first slice is a **reference-scenario explorer** for a bounded TypeScript change. It uses the original schema-validated design scenario and clearly states that no live model call is occurring. The scenario established the data contract, information hierarchy, and evidence-presentation story while the Lab and Mission Control model were still evolving, before runtime cost, nondeterminism, or public-input risk.
 
 The stable conceptual path is:
 
@@ -28,7 +28,7 @@ The stable conceptual path is:
 
 The interface exposes a mission label, acceptance criteria, ordered steps, artifacts, evidence claims, and a transfer recommendation. These are earlier Lab vocabulary and a scenario projection, not proof that the Lab implements the current Mission/Goal/Loop/Round model.
 
-The repository verifies the fixture's schema, reference integrity, rendering, navigation, and responsive presentation. It does not retain the source run, raw command output, evaluator identity, or source revision supporting the fixture's embedded execution claims. The [Lab evidence assessment](../reference/lab-evidence-assessment.md) records that boundary and the human decision still required before treating the replay as verified portfolio evidence.
+The repository verifies the fixture's schema, reference integrity, rendering, navigation, responsive presentation, and explicit provenance disclosure. It does not retain a source run, raw command output, evaluator identity, or source revision supporting the fixture's scenario assertions. The [Lab evidence assessment](../reference/lab-evidence-assessment.md) records the approved treatment: present it as the original reference scenario, not as independently verified execution history.
 
 ## Second product slice
 
@@ -36,7 +36,7 @@ The second slice adds one bounded live workflow: review a pasted TypeScript diff
 
 The live surface exposes model identity, request latency, token usage, estimated token cost, a fixed structured review request, and the final human decision boundary. It is bounded model assistance, not an autonomous engineering workflow: it has no tools, repository context, effect verification, durable Goal State, event history, transfer acceptance, or Landing authority.
 
-Automated tests verify request validation, safe unconfigured behavior, error mapping, structured rendering, and a mocked success path. LAB-M002's credentialed provider smoke test remains pending. The reference replay remains available as a deterministic explanation of the Lab's inspection model, subject to the evidence boundary above.
+Automated tests verify request validation, safe unconfigured behavior, error mapping, structured rendering, and a mocked success path. LAB-M002's credentialed provider smoke test remains pending. The reference scenario remains available as a deterministic explanation of the Lab's inspection model, subject to the evidence boundary above.
 
 ## Mission Control concepts demonstrated and absent
 
@@ -52,14 +52,14 @@ Automated tests verify request validation, safe unconfigured behavior, error map
 ## Product rules
 
 - Evidence over animation or claims.
-- Label recorded, simulated, and live behavior accurately.
+- Label reference-scenario, recorded, simulated, and live behavior accurately.
 - Make failures and human authority visible rather than polishing them away.
 - Keep the primary run inspection surface in the first viewport.
 - Treat arbitrary public input, code execution, persistence, authentication, and long-running work as separate product and architecture decisions.
 - Keep contracts and components app-local until a real second consumer exists.
 - Do not introduce Flight Deck concepts such as projects, activity ingestion, integrations, or durable knowledge graphs into the Lab without a separate mission.
-- Do not promote fixture assertions or mocked provider responses into execution/reliability claims. Link success claims to attributable evidence and keep unresolved provenance visible.
+- Do not promote scenario assertions or mocked provider responses into execution/reliability claims. Link success claims to attributable evidence and keep the approved provenance boundary visible.
 
 ## Success boundary
 
-The first slice's interface goal is that a visitor can understand the requested change, inspect the presented work/evidence model, and identify the human decision boundary in three minutes without believing the replay is executing live. Whether its fixture qualifies as verified historical evidence remains a separate provenance decision.
+The first slice's interface goal is that a visitor can understand the requested change, inspect the presented work/evidence model, and identify the human decision boundary in three minutes without mistaking the original reference scenario for live or independently verified historical execution.

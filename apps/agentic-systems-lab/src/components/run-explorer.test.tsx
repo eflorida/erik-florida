@@ -6,10 +6,18 @@ import { getReferenceRun } from "@/data/runs";
 import { RunExplorer } from "./run-explorer";
 
 describe("RunExplorer", () => {
-  it("labels the replay and exposes step evidence", () => {
+  it("labels the original reference scenario and exposes its claims", () => {
     render(<RunExplorer run={getReferenceRun()} />);
 
     expect(screen.getByText("No live model call")).toBeInTheDocument();
+    expect(
+      screen.getByRole("heading", { name: "Original reference scenario" }),
+    ).toBeInTheDocument();
+    expect(
+      screen.getByText(/execution artifacts.*not retained/i),
+    ).toBeInTheDocument();
+    expect(screen.getByText("Scenario claim")).toBeInTheDocument();
+    expect(screen.queryByText("Verified")).not.toBeInTheDocument();
     expect(
       screen.getByRole("heading", {
         name: "Close an unsafe redirect boundary",

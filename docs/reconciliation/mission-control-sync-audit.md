@@ -2,7 +2,7 @@
 
 **Investigation date:** 2026-09-23
 **Last reconciled:** 2026-09-25
-**Status:** Step 3 independent evaluation complete with material failures; bounded Step 2 correction required before Human Gate 3.
+**Status:** Documentation reconciliation accepted at Human Gate 3; Step 4 remains unstarted and unauthorized.
 **Repository baseline:** `7f4657e6170536fec6f3016bca18e5bfd892d6fe` (`merge: reconcile website M003 checkpoint`).
 **Authority:** [Agent handoff](../AGENT_HANDOFF.md), [reconciliation plan](../RECONCILIATION_PLAN.md), and Erik's 2026-09-25 approval for Step 2a, recorded below.
 
@@ -418,3 +418,63 @@ The evaluation also records three non-material findings: draft site terminology 
 Scoped Prettier, all 28 local links in the evaluation, new-file whitespace validation, and `git diff --check` passed. No application test, provider request, deployment, publication, mission acceptance, correction, or Step 4 work occurred in Step 3.
 
 The process now returns to a bounded Step 2 correction. The failures remain unmodified. The replay path requires an explicit human choice among supplying attributable provenance, approving an illustrative/synthetic disclosure, replacing the fixture, or authorizing another narrowly defined resolution. After approved corrections, repeat the affected Step 3 checks before Human Gate 3.
+
+## Bounded Step 2 correction after Step 3
+
+### Authorization and interpretation — 2026-09-25
+
+Erik authorized the reconciliation closure as one batch and clarified that the Lab fixture is the original reference scenario created while the system and the methodology were being designed together. Expected drift and later revision are evidence of learning rather than proof of an earlier failure, provided that durable sources distinguish historical checkpoints, current truth, and unsupported claims.
+
+This authorization selects a fourth, narrower replay treatment: preserve the original reference scenario and its assertions while disclosing that source execution artifacts are not retained here. It also authorizes correction of the stale handoff/plan routing, the three non-material Step 3 findings, affected application contracts/presentation/tests, governing documentation, full verification, focused independent re-evaluation, and conditional Human Gate 3 acceptance if no material failure remains. It does not authorize publication, deployment, a provider call, LAB/M003 acceptance, Step 4 runtime/bootstrap work, Flight Deck implementation, Mastra adoption, or another product architecture decision.
+
+### Implemented correction
+
+- The Lab run contract is schema version 2 with `mode: "reference-scenario"`, `authoredAt`, an `original-reference-scenario` classification, and `executionEvidence: "not-retained"`. Embedded results are scenario claims and completed scenario steps rather than retained verification facts.
+- The Lab interface identifies the original reference scenario, displays its provenance disclosure, replaces “Verified,” “Recorded,” and unqualified passed-state presentation, and retains the no-live-model and human-authority boundaries. Contract, component, and browser coverage assert the disclosure.
+- The original handoff is labeled completed/superseded and routes agents to current state, the audit, and the evaluation. The plan preserves its sequence while explicitly identifying its final Step 1 instruction as historical and routing phase discovery to current records.
+- The two draft site entries now describe Flight Deck as a possible opinionated implementation, distinguish progressive improvement from expanding authority, and acknowledge that durable source-of-truth revisions are how the methodology incorporates learning. Draft status, indexing, and publication decisions are unchanged.
+- Current documentation records the approved reference-scenario treatment, removes volatile branch-divergence state, and retains mission acceptance, provider validation, public integration, runtime topology, Flight Deck, Mastra, and demo decisions as separate work.
+
+### Exact changed paths
+
+| Area                                       | Files                                                                                                                                                                                                                                                                 |
+| ------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Repository routing and formatting boundary | `.prettierignore`; `AGENTS.md`; `README.md`; `docs/AGENT_HANDOFF.md`; `docs/RECONCILIATION_PLAN.md`                                                                                                                                                                   |
+| Lab application and tests                  | `apps/agentic-systems-lab/content/runs/redirect-safety.json`; `e2e/run-explorer.spec.ts`; `src/app/globals.css`; `src/app/layout.tsx`; `src/components/run-explorer.tsx`; `src/components/run-explorer.test.tsx`; `src/contracts/run.ts`; `src/contracts/run.test.ts` |
+| Lab agent and product context              | `apps/agentic-systems-lab/AGENTS.md`; `apps/agentic-systems-lab/README.md`; `docs/architecture.md`; `docs/missions/LAB-M001/mission.md`; `docs/plans/agentic-systems-lab.md`; `docs/product/agentic-systems-lab.md`                                                   |
+| Draft site content and editing rules       | `apps/site/content/pages/agentic-engineering.mdx`; `apps/site/content/writing/verification-over-understanding.mdx`; `docs/guides/editing-agentic-overview.md`; `docs/product/personal-site.md`; `docs/reference/agentic-source-assessment.md`                         |
+| Current evidence/reconciliation truth      | `docs/product/current-state.md`; `docs/reference/README.md`; `docs/reference/lab-evidence-assessment.md`; this audit                                                                                                                                                  |
+
+The independent evaluator may append its focused result to `docs/reconciliation/mission-control-sync-evaluation.md`; no authoring-agent conclusion is substituted for that review.
+
+### Verification before focused re-evaluation
+
+- `corepack pnpm check` passed: repository formatting, both applications' lint and strict type checks, all 37 unit/component/contract/route tests (21 site and 16 Lab), and both production builds.
+- `corepack pnpm test:e2e` passed all 15 browser tests (12 site and 3 Lab), including the new reference-scenario disclosure and mobile presentation. The expected Next.js `NoFallbackError` logs correspond to the site's two intentional 404 assertions.
+- All 96 local file links across the 19 changed Markdown/MDX files resolve, including three heading fragments; the two application-route links remain covered by the site browser suite. `git diff --check` passed.
+- No provider request, deployment, publication, mission acceptance, public enablement, runtime bootstrap, or canonical reference edit occurred.
+
+The correction does not erase the original Step 3 result. A fresh context must repeat the affected criteria, report any remaining material failure, and recommend whether the condition for Human Gate 3 acceptance has been met.
+
+## Focused Step 3 re-evaluation and Human Gate 3
+
+### Independent result — 2026-09-25
+
+A second fresh agent context reviewed the complete 28-path bounded correction and appended its result to the [evaluation](mission-control-sync-evaluation.md#focused-independent-re-evaluation-after-bounded-correction). It modified no correction file.
+
+The focused review found:
+
+- criterion 5, public content versus architecture/evidence boundaries: **Pass**;
+- criterion 7, authoritative context discovery: **Pass**;
+- prior Git-freshness finding: **Resolved**;
+- criteria 2, 3, and 6: **Pass** without regression;
+- criteria 1 and 4: **Qualified pass**, retaining only the already disclosed imported-source limitations and historical/product-source boundary;
+- overall material-failure result: **none remain**.
+
+The reviewer also ran the two affected Vitest files (five tests), scoped Prettier, all 29 local links in the evaluation including one heading fragment, evaluation and repository whitespace checks, and confirmed that its evaluation change was append-only.
+
+### Human Gate 3 acceptance — 2026-09-25
+
+Erik authorized this correction, verification, focused re-evaluation, and Human Gate 3 disposition as one closure batch, conditional on no material failure remaining. The independent result satisfies that condition. Human Gate 3 is accepted and documentation reconciliation is closed.
+
+This acceptance validates the reconciliation result only. It does not accept LAB-M001, LAB-M002, or M003; certify credentialed provider behavior; publish or deploy either application; select Flight Deck, Mastra, topology, events, adapters, or demo scope; or authorize Step 4. A separate Goal Contract and explicit authorization are required before runtime/bootstrap work.

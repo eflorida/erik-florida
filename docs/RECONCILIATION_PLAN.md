@@ -1,6 +1,8 @@
 # Mission Control Repository Reconciliation Plan
 
-Status: execution directive
+Status: governing reconciliation plan; current phase is tracked separately
+
+> **Current routing:** This plan preserves the original sequence and gates. Do not infer the active phase from its historical startup instruction. Read `docs/product/current-state.md`, `docs/reconciliation/mission-control-sync-audit.md`, and `docs/reconciliation/mission-control-sync-evaluation.md` for dated approvals, results, corrections, and the next authorized action.
 
 ## Objective
 
@@ -205,4 +207,4 @@ Evaluate against the portfolio goal: demonstrate engineering leadership, agentic
 
 `Mission Control methodology -> repository-native implementation -> coding-harness execution -> structured telemetry -> Flight Deck observability -> evidence -> methodology/product refinement`
 
-The immediate task is Step 1 only.
+The original immediate task was Step 1 only. That startup boundary is historical; use the current routing above for active work.

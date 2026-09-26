@@ -18,7 +18,7 @@ const evidenceSchema = z
     label: text,
     summary: text,
     command: text.optional(),
-    status: z.literal("verified"),
+    status: z.literal("scenario-claim"),
   })
   .strict();
 
@@ -37,7 +37,7 @@ const runStepSchema = z
     sequence: z.number().int().positive(),
     phase: z.enum(["intent", "work", "evaluation", "transfer"]),
     label: text,
-    status: z.enum(["passed", "awaiting-human"]),
+    status: z.enum(["scenario-complete", "awaiting-human"]),
     summary: text,
     detail: text,
     artifact: artifactSchema.optional(),
@@ -47,12 +47,19 @@ const runStepSchema = z
 
 export const runSchema = z
   .object({
-    schemaVersion: z.literal(1),
+    schemaVersion: z.literal(2),
     id,
-    mode: z.literal("recorded"),
-    recordedAt: z.iso.datetime(),
+    mode: z.literal("reference-scenario"),
+    authoredAt: z.iso.datetime(),
     title: text,
-    status: z.literal("accepted-for-human-review"),
+    status: z.literal("scenario-ready-for-human-review"),
+    provenance: z
+      .object({
+        classification: z.literal("original-reference-scenario"),
+        executionEvidence: z.literal("not-retained"),
+        disclosure: text,
+      })
+      .strict(),
     scenario: z
       .object({
         title: text,

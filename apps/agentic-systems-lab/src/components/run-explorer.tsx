@@ -11,7 +11,7 @@ const phaseLabels = {
   transfer: "Transfer",
 } as const;
 
-const recordedAtFormatter = new Intl.DateTimeFormat("en-US", {
+const authoredAtFormatter = new Intl.DateTimeFormat("en-US", {
   dateStyle: "medium",
   timeStyle: "short",
   timeZone: "UTC",
@@ -24,7 +24,7 @@ function EvidenceCard({ evidence }: { evidence: RunEvidence }) {
         <span className={`evidence-kind evidence-kind--${evidence.kind}`}>
           {evidence.kind}
         </span>
-        <span className="evidence-status">Verified</span>
+        <span className="evidence-status">Scenario claim</span>
       </div>
       <h3>{evidence.label}</h3>
       <p>{evidence.summary}</p>
@@ -53,7 +53,7 @@ export function RunExplorer({ run }: { run: RunRecord }) {
         <div className="run-mode">
           <span className="run-mode__pulse" aria-hidden="true" />
           <div>
-            <p>Reference replay</p>
+            <p>Reference scenario</p>
             <span>No live model call</span>
           </div>
         </div>
@@ -75,10 +75,10 @@ export function RunExplorer({ run }: { run: RunRecord }) {
               <dd>{run.scenario.repository}</dd>
             </div>
             <div>
-              <dt>Recorded</dt>
+              <dt>Authored</dt>
               <dd>
-                <time dateTime={run.recordedAt}>
-                  {recordedAtFormatter.format(new Date(run.recordedAt))} UTC
+                <time dateTime={run.authoredAt}>
+                  {authoredAtFormatter.format(new Date(run.authoredAt))} UTC
                 </time>
               </dd>
             </div>
@@ -116,6 +116,12 @@ export function RunExplorer({ run }: { run: RunRecord }) {
           </div>
         </header>
 
+        <section className="input-contract" aria-labelledby="provenance-title">
+          <p className="eyebrow">Provenance</p>
+          <h2 id="provenance-title">Original reference scenario</h2>
+          <p>{run.provenance.disclosure}</p>
+        </section>
+
         <div className="input-contract">
           <p className="eyebrow">Change request</p>
           <p>{run.scenario.input}</p>
@@ -145,7 +151,9 @@ export function RunExplorer({ run }: { run: RunRecord }) {
                     <span>{step.summary}</span>
                   </span>
                   <span className={`step-state step-state--${step.status}`}>
-                    {step.status === "passed" ? "Passed" : "Human"}
+                    {step.status === "scenario-complete"
+                      ? "Scenario complete"
+                      : "Human"}
                   </span>
                 </button>
               </li>
@@ -183,7 +191,9 @@ export function RunExplorer({ run }: { run: RunRecord }) {
             <h2 id="evidence-title">Evidence & artifact</h2>
           </div>
           <span className={`step-state step-state--${activeStep.status}`}>
-            {activeStep.status === "passed" ? "Passed" : "Human review"}
+            {activeStep.status === "scenario-complete"
+              ? "Scenario complete"
+              : "Human review"}
           </span>
         </header>
 
