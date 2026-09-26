@@ -6,3 +6,12 @@ out
 playwright-report
 test-results
 pnpm-lock.yaml
+
+# Preserve supplied reconciliation inputs byte-for-byte.
+docs/RECONCILIATION_PLAN.md
+docs/mission-control-reference/agentic-loop-architecture.md
+docs/mission-control-reference/autonomous-flight.md
+docs/mission-control-reference/document-suite-alignment.md
+docs/mission-control-reference/flight-deck-product-boundary.md
+docs/mission-control-reference/mission-control-implementation.md
+docs/mission-control-reference/mission-control-operating-model.md

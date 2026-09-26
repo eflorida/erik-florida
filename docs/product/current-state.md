@@ -1,69 +1,95 @@
 # Erik Florida — Current Project State
 
-**Last intentionally established:** 2026-09-11, M003 implementation checkpoint and editorial review
+**Last intentionally established:** 2026-09-25, Mission Control reconciliation Step 2b
 
-This document is current working truth, not an activity log.
+This document is current working truth, not an activity log. Historical mission files preserve what was true at their checkpoints; a commit or merge does not by itself establish Landing, editorial acceptance, publication, deployment, or completion of an unchecked validation item.
 
 ## Product identity
 
-- Erik Florida is a multi-application personal platform.
-- Its immediate purpose is to help Erik secure an engineering-leadership role where agentic development can materially improve customer value, organizational output, quality, and visibility.
-- The first application is a professional personal website.
-- Agentic Systems Lab is the second application, developed in a separate track, and will provide executable evidence of the ideas described by the site. Its implementation is not yet integrated into this checkout.
-- Mission Control is the engineering operating methodology informing this work.
-- Flight Deck is a future engineering-department harness; Erik Florida is an implementation informed by its patterns, not a competitor or replacement.
+- Erik Florida is a multi-application personal platform whose immediate purpose is to support Erik's search for an engineering-leadership role through concrete professional and technical evidence.
+- `apps/site` is the static-first professional website.
+- `apps/agentic-systems-lab` is the independently deployable evidence application. It is present in this checkout and contains a recorded reference-run explorer plus a bounded, opt-in live review workflow.
+- Mission Control is the generally tool- and team-agnostic engineering methodology informing work here. Its current terminology is mapped in the [concept guide](../guides/mission-control-concepts.md).
+- Flight Deck is a possible future, opinionated implementation of a Mission Control engineering team, including observability, coordination, and governance. Existing tools could collectively fulfill all of its responsibilities. Its product-specific plans do not govern this repository or replace specialized coding harnesses.
+- The site, Lab, Mission Control, and Flight Deck retain distinct purposes. Neither application in this repository is Flight Deck.
 
-## Mission state
+## Reconciliation state
 
-**M003 — AI & Agentic Engineering: Implemented, editorial review pending**
+Documentation reconciliation is active under the [reconciliation plan](../RECONCILIATION_PLAN.md) and [audit](../reconciliation/mission-control-sync-audit.md).
 
-M002 is the latest landed mission, accepted for commit after local review. M001 established the schema-validated Git-backed article path, writing routes, and approved visual foundation. Erik approved the design, typography, and article tone. The upper green glow stays fixed while scrolling and is slightly stronger.
+- Step 1's investigation-only audit is complete.
+- Step 2a established source authority and the Mission Control / Flight Deck concept boundary.
+- Step 2b reconciled current repository facts and routed agent contexts to authoritative local documents. It changed no application behavior.
+- Step 2c reconciled Lab evidence/product claims, editorial guidance, and unselected implementation options. It changed no application behavior or public copy.
+- Human Gate 2, independent Step 3 evaluation, and all runtime/bootstrap steps remain unstarted.
 
-The landed mission is [`../missions/M002/mission.md`](../missions/M002/mission.md). Following the supplementary positioning guidance, the homepage connects first-version product ownership, hands-on architectural and organizational leadership, earned complexity, and agentic engineering as a whole-system change. It demonstrates audience fit through experience and principles rather than job-search filters or a management-ladder narrative. A compact patent credential sits beside the current role in the opening. Detailed career progression and three project accounts remain on `/experience`; the homepage no longer presents a linked project list. Both pages consume one schema-validated career record. Selection and provenance are recorded in [`../reference/career-source-assessment.md`](../reference/career-source-assessment.md); both supplied source files stay outside the repository and deployment. The first article remains a draft.
+The repository has no explicit Goal Contract, Goal State, Loop Contract, Mission Log, normalized event runtime, Flight Deck adapter, or `.mission-control` structure. Historical missions contain useful intent, scope, evidence, and human decisions, but are not silently relabeled as complete implementations of the newer model.
 
-Agentic engineering leads the narrative immediately after the hero. First-version building, team ownership, and earned complexity each have their own section with two brief paragraphs; the former combined history block is removed. The career-content boundary validates section IDs and caps narrative sections at two paragraphs.
+## Website state
 
-M002's verification evidence is recorded in its mission and retrospective. Patent links use the USPTO PDF and open a new tab following review feedback about Google's traffic block. The local development server remains on port 3000. M002 is committed locally; acceptance for commit did not publish the draft article.
+**Latest landed website mission:** [M002 — Experience and Professional Positioning](../missions/M002/mission.md)
 
-The active mission is [M003 — AI & Agentic Engineering](../missions/M003/mission.md). Following the scope recommendation, Erik requested continuation with the next phase. `/agentic-engineering` now connects applied-AI experience, current engineering practice, the developing Mission Control methodology, and organizational adoption. The methodology overview is a native section at `#mission-control`, with one accessible diagram and an explanation of revision and escalation. Its MDX uses the existing registry and schema, with a single explicit route and no duplicate Writing entry. Home gains one link; primary/footer navigation include the overview, with a two-row mobile header. Both the new overview and original article remain drafts for review and are excluded from search indexing.
+**Current checkpoint:** [M003 — AI & Agentic Engineering](../missions/M003/mission.md), implemented and verified; editorial acceptance pending
 
-M003 verification passes formatting, linting, strict TypeScript, 21 unit/component tests, the static build, and 12 production browser journeys. Desktop/mobile inspection covers Home, Experience, Writing, and the overview at 320, 390, 768, 1024, and 1440 pixels without horizontal overflow or browser runtime errors on those routes. The coordination task requested a clean checkpoint so it can merge the separately committed Lab; the M003 implementation is committed for that handoff, while final editorial acceptance remains pending. No push, hosted deployment, publication change, dependency change, or lockfile edit is part of this website checkpoint. The full methodology deep dive, résumé/contact, and launch readiness remain outside this slice.
+M001 established the schema-validated Git-backed article path and approved visual foundation. M002 landed the reviewed homepage and Experience page using one curated, schema-validated career record. The homepage connects first-version product ownership, hands-on architectural and organizational leadership, earned complexity, and agentic engineering; Experience retains the detailed career and project accounts. The patent is presented early with co-inventor attribution and a USPTO PDF destination. The raw career sources remain outside the repository and deployment.
 
-## Parallel application ownership
+M003 adds `/agentic-engineering`, connecting applied-AI experience, current engineering practice, the developing Mission Control methodology, and organizational adoption. Its MDX uses the existing content registry and has one explicit route. Home, primary navigation, and footer link to it. The overview and the original “Verification Over Understanding” article remain visible drafts with `noindex, nofollow`; neither has publication approval.
 
-This track owns `apps/site/**` and website missions in the saved checkout, using port 3000. Agentic Systems Lab is owned by a separate worktree on `codex/agentic-systems-lab`, using port 3100, as reported by the coordinating task. Do not edit `apps/agentic-systems-lab/**` or `LAB-*` documents here. No lockfile change is required for M002; reconcile the separate branch's lockfile during explicitly coordinated integration after landing.
+M003's mission records passing formatting, linting, strict TypeScript, 21 unit/component tests, static build, 12 production browser journeys, and responsive inspection. That evidence supports the implementation checkpoint. It does not supply the outstanding editorial decision or authorize a hosted deployment.
+
+## Agentic Systems Lab state
+
+The Lab was integrated into this checkout by commit `06f1ff5`. It remains independently deployable from the site and uses port 3100 during local development.
+
+- [LAB-M001 — Reference Run Explorer](../missions/LAB-M001/mission.md) is recorded as **Ready for human review**. `/reference` loads a schema-validated Git-backed fixture through an app-local run contract and renders its steps, artifacts, evidence claims, and human-transfer recommendation.
+- [LAB-M002 — Bounded Live Review](../missions/LAB-M002/mission.md) is recorded as **Ready for credentialed validation**. `/` accepts a bounded TypeScript diff and `/api/reviews` makes one request-bound OpenAI Responses API call when a server credential and `LAB_LIVE_REVIEW_ENABLED=true` are configured.
+- [ADR-008](../architecture/decisions/ADR-008-bounded-openai-responses-runtime.md) governs the live route: no tools, submitted-code execution, repository access, application persistence, or automatic merge/deployment authority. The Lab has no database, authentication, worker, queue, saved run history, or public runtime approval.
+- Automated verification and safe unconfigured behavior are recorded in LAB-M002. Its credentialed live provider smoke test remains unchecked. The merge does not complete that validation.
+
+The reconciliation audit separately flags the reference replay's execution-evidence provenance for later human resolution. Step 2b does not relabel the fixture or decide that issue.
+
+## Application and ownership boundaries
+
+- Both applications now live in the same `main` checkout. Earlier separate-worktree instructions are historical coordination records, not current ownership constraints.
+- `apps/site/**` remains the site's independently deployable boundary and local development uses port 3000.
+- `apps/agentic-systems-lab/**` remains the Lab's independently deployable boundary and local development uses port 3100.
+- Shared root configuration, the lockfile, and `packages/**` are cross-application integration surfaces. Shared code still requires a proven second consumer.
+- The professional site does not import the Lab implementation. Public site-to-Lab integration remains a separate product, content, deployment, and evidence decision.
 
 ## Decisions established
 
 - Use one pnpm/Turborepo monorepo with independently deployable applications.
-- Name the first application `apps/site`.
-- Add `apps/agentic-systems-lab` only when its product mission defines real requirements.
-- Use strict TypeScript, Next.js App Router, React Server Components by default, Tailwind CSS, Vitest, Testing Library, and Playwright for the site.
-- Keep the site static-first and content-led.
-- Deploy applications independently to Vercel; choose canonical domains later.
-- Add no database, authentication, API, background worker, CMS, AI runtime, or general client-state layer for the website.
-- Preserve the approved typography and visual foundation; defer final logo, imagery, broader brand identity, and motion-library selection.
-- Keep M001 content contracts and presentation app-local until another application proves a shared consumer.
-- Treat authored MDX metadata as untrusted at the content boundary and infer its TypeScript type from Zod.
-- Use curated JSON and Zod for shared career facts on Home and Experience; keep long-form writing on the MDX path. Do not ship the raw career master record.
+- Use strict TypeScript, Next.js App Router, React Server Components by default, Tailwind CSS, Vitest, Testing Library, and Playwright.
+- Validate authored and external data once at app-local Zod boundaries and infer TypeScript types from schemas.
+- Keep Server Components responsible for coordination; presentational components receive typed, render-ready props and do not fetch.
+- Keep the site static-first and content-led. Its no-database/auth/API/worker/AI-runtime defaults remain intact.
+- Permit the Lab's narrowly bounded API and OpenAI runtime only under ADR-008 and LAB-M002. Persistence, authentication, background work, repository/tool access, and public enablement require later decisions.
+- Preserve independent application deployment and promote only proven cross-app contracts or primitives to shared packages.
+- Preserve the approved site typography and visual foundation; final logo, imagery, broader brand identity, and coordinated motion remain deferred.
+- Keep the site content paths distinct: MDX for long-form editorial content and curated JSON for career facts. Do not ship the raw career master record.
 - Preserve Qmerit/Raiven career continuity and distinguish individual implementation, team delivery, and patent co-invention. Exclude private business details and unsupported metrics.
 - Keep draft editorial content visibly labeled and emit `noindex, nofollow` until Erik approves publication. Indexing directives do not make draft routes private.
-- Lead the homepage with experience, judgment, and perspective; use a matter-of-fact voice and let hiring interest follow from the evidence.
-- Tell a connected story on Home; keep detailed accomplishments on Experience. Present the patent early and modestly as one supporting credential.
-- Position Erik as builder, architect, and organizational leader, with agentic engineering as the central differentiator. Use earned complexity and autonomous teams as principles; omit literal desired team size, company stage, and title from public copy.
-- Git remote `origin` is `https://github.com/eflorida/erik-florida.git`; `main` tracks `origin/main`.
+- Apply Mission Control as a tool- and team-agnostic methodology. Flight Deck is optional product architecture whose old plans must be reconciled against current principles before implementation.
+- Git remote `origin` is `https://github.com/eflorida/erik-florida.git`; local `main` is ahead of the recorded `origin/main`. No remote push is implied.
 
-## Intentionally deferred
+## Intentionally deferred or unresolved
 
-- Canonical domain names.
+- M003 editorial acceptance and publication decisions for both site drafts.
+- Canonical résumé/contact links and full career-site launch readiness.
+- Canonical domains, production promotion, and current hosted deployment verification.
 - Final logo, imagery, broader brand identity, and coordinated motion.
-- Agentic Systems Lab integration with the website; the Lab's scope and implementation belong to its separate track.
-- Analytics provider.
-- Whether a shared UI package is justified by a second consumer.
+- Public enablement, abuse controls, cost budget, and credentialed smoke validation for the Lab live route.
+- Saved/shareable Lab runs, persistence, authentication, workers, code execution, repository ingestion, multiple workflows, and generalized orchestration.
+- Public integration between the site and Lab, including the evidence and deployment boundary needed to link them.
+- Reference-replay evidence provenance and any resulting visitor-facing disclosure change.
+- Shared UI/content/domain packages without demonstrated reuse.
+- Mission Control runtime layout, normalized events, adapters, deployment topology, Flight Deck product design, and final portfolio-demo scope. Step 2c records options but adopts none.
 - Repository visibility changes and hosted GitHub controls.
 
 ## What happens next
 
-1. Review the M003 overview's wording, attribution, and level of detail locally. Treat content approval and publication as explicit decisions; do not proceed to the full methodology deep dive implicitly.
-2. Before the full career-site launch, establish canonical résumé/contact links and make explicit publication decisions. These missing inputs do not reopen the landed M002 scope.
-3. Hand the clean M003 checkpoint to the coordinating task for its separately authorized Lab integration. Keep Lab implementation, merge resolution, and lockfile reconciliation outside website mission work.
+1. Perform Human Gate 2: validate the reconciled terminology, product boundaries, architecture descriptions, claim limits, and unresolved decisions. Do not infer approval from silence.
+2. After Human Gate 2 approval, run the independent Step 3 consistency evaluation with a fresh context where practical; report failures rather than silently repairing them.
+3. Review M003 wording and decide editorial acceptance/publication separately from implementation verification.
+4. Resolve LAB-M001's human-review boundary and run LAB-M002's credentialed smoke test before claiming live-provider validation.
+5. Before the full career-site launch, establish canonical résumé/contact links and explicit publication/deployment decisions.

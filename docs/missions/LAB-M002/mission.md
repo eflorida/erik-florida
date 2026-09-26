@@ -65,3 +65,7 @@ LAB-M002 activates the AI-runtime trigger. The approved provider is OpenAI throu
 ## Human authority
 
 The model may recommend approval or changes. A human reviewer owns interpretation, validation against the complete repository, and every merge or deployment decision.
+
+## Reconciliation note — 2026-09-25
+
+The [Lab evidence assessment](../../reference/lab-evidence-assessment.md) records that automated tests cover request boundaries, safe configuration/error states, and mocked success rendering. They do not replace the unchecked credentialed provider smoke test or establish review reliability across representative cases. No mission status, public enablement, or human authority changed during documentation reconciliation.

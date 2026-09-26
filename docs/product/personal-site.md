@@ -32,6 +32,10 @@ M002 uses Erik's supplied career master record to implement an experience-led ho
 
 M003 adds `/agentic-engineering`, with a concise Mission Control overview at `#mission-control`. It connects supported applied-AI work, current personal development practice, and an organizational operating model in development. Short sections and one delivery-loop diagram provide depth without requiring the full methodology. The homepage gains a restrained link, not another content block. The new overview and existing article remain drafts for review; résumé/contact, publication, and the full deep dive are separate decisions.
 
+Current methodology terminology comes from the [Mission Control concept guide](../guides/mission-control-concepts.md), not the historical career-site plan. Mission Control is generally tool- and team-agnostic. Flight Deck is an optional, opinionated engineering-team implementation whose responsibilities can be fulfilled by existing tools; the site must not present it as a dependency, coding-harness replacement, or inevitable destination.
+
+Public methodology copy should distinguish a green deterministic floor from directional evidence and governed sufficiency where the distinction matters. Example diagrams are explanatory rather than mandatory stages. Progressive enhancement can improve a human-operated loop; increasing machine authority is conditional, not the definition of progress. The concise overview need not enumerate every formal term, but it must not contradict Goal Contract, Goal State, Loop/Round, transfer, candidate-completion, or Landing semantics.
+
 - Evidence over claims.
 - Progressive disclosure from a 30-second scan to substantial technical depth.
 - Public-safe content and accurate attribution by design.
@@ -39,5 +43,6 @@ M003 adds `/agentic-engineering`, with a concise Mission Control overview at `#m
 - The implementation itself is evidence of engineering quality.
 - Shipping the job-search surface takes priority over completeness.
 - Agentic Systems Lab is complementary evidence, not a prerequisite for the website launch.
+- Do not link to or cite the Lab replay as verified execution evidence until its provenance assessment is resolved and a public deployment/link is intentionally approved.
 
 The complete supplied product and build plan is preserved at [`../reference/career-website-build-plan.md`](../reference/career-website-build-plan.md).

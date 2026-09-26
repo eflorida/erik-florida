@@ -16,19 +16,24 @@ Accept one pasted TypeScript diff and review it through the OpenAI Responses API
 
 ### LAB-M003 — Durable public evidence
 
-Only if saved or shareable runs are required, add persistence behind an app-local data seam and stable public run URLs. Add a worker only if a run must outlive a request. Define a public run-summary contract and promote it to a shared package only when the professional website becomes a real consumer.
+This remains a conditional proposal, not an approved next mission. Only if saved or shareable runs are required should the project evaluate persistence behind an app-local data seam and stable public run URLs. Add a worker only if a run must outlive a request. Define a public run-summary contract and promote it to a shared package only when the professional website becomes a real consumer.
 
 ### Later missions
 
 Sandboxed code execution, private runs, authentication, user-provided repositories, multiple workflow authoring, and generalized orchestration each require separate product, architecture, safety, and operational decisions.
 
-## Parallel-work ownership
+The final portfolio demo is intentionally unselected. A simplified Flight Deck, Mission Control implementation assistant, autonomous Mastra application, or real career-platform integration remain options in the reconciliation plan. Mastra agents/workflows/evals/observability are evaluation criteria for that later decision, not adopted Lab dependencies or an automatic LAB-M003 scope.
+
+## Application boundaries
 
 - The website track owns `apps/site/**` and its site-specific missions.
 - The Lab track owns `apps/agentic-systems-lab/**` and `LAB-*` missions.
-- Shared root files, the lockfile, and cross-application packages are integration surfaces. Synchronize with the latest landed website work before merging changes to them.
-- Flight Deck is a source of product and methodology context, not a code or runtime dependency.
+- Both applications are now present in the same `main` checkout. Shared root files, the lockfile, and cross-application packages remain integration surfaces; same-checkout presence does not justify cross-app imports.
+- Mission Control principles inform the work. Flight Deck is an optional product implementation, not a code/runtime dependency or required roadmap destination for the Lab.
+- The replay and live-review contracts remain app-local. They do not establish shared Mission Control primitives.
 
 ## Current handoff
 
-LAB-M001 is ready for human review and remains available as the reference replay. LAB-M002 is approved to add the bounded OpenAI runtime while the Lab runs independently on port 3100 and the professional site remains on port 3000.
+LAB-M001 is ready for human review and remains available as the reference replay. Its embedded execution provenance is unresolved; see the [evidence assessment](../reference/lab-evidence-assessment.md). LAB-M002's bounded OpenAI runtime is implemented and remains ready for credentialed validation, with the live provider smoke test unchecked. The Lab runs independently on port 3100 and the professional site on port 3000.
+
+No current mission authorizes persistence, a worker, public runtime enablement, generalized orchestration, Flight Deck behavior, Mastra adoption, or a site-to-Lab public integration.

@@ -1,0 +1,2 @@
+# The lowercase Mission Control source files are preserved exactly as supplied.
+docs/mission-control-reference/[a-z]*.md whitespace=-blank-at-eol

@@ -2,6 +2,12 @@
 
 Independent public evidence application for inspecting bounded agentic work.
 
+Repository context and current status live in the root [`AGENTS.md`](../../AGENTS.md) and [`docs/product/current-state.md`](../../docs/product/current-state.md). Mission Control terminology follows the [concept guide](../../docs/guides/mission-control-concepts.md). The Lab demonstrates selected ideas; it is not Flight Deck or a general Mission Control runtime.
+
+LAB-M001 remains ready for human review. LAB-M002 is implemented in this checkout and remains ready for credentialed validation; its unchecked live provider smoke test has not been converted into an acceptance claim by the merge.
+
+The replay fixture's schema and presentation are verified, but its embedded source-inspection/test/evaluation history is not retained in this checkout. See the [evidence assessment](../../docs/reference/lab-evidence-assessment.md) before using it as verified portfolio evidence. The Lab demonstrates selected boundaries and presentation patterns; it has no Goal State, Loop Contract runtime, durable event history, effect verification, tools, Mastra workflow, or Flight Deck behavior.
+
 ## LAB-M002 live review
 
 Copy `.env.example` to `.env.local`, add a server-side `OPENAI_API_KEY`, set `LAB_LIVE_REVIEW_ENABLED=true`, and restart the development server. `OPENAI_MODEL` defaults to `gpt-5.6-terra`.

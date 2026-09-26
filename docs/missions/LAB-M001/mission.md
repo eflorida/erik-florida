@@ -68,3 +68,7 @@ A visitor can inspect a coherent reference run, understand why it was accepted, 
 ## Human authority
 
 Erik reviews whether the reference run is the right proof point before LAB-M002 introduces live behavior.
+
+## Reconciliation note — 2026-09-25
+
+This mission preserves the evidence available at its checkpoint. The later [Lab evidence assessment](../../reference/lab-evidence-assessment.md) distinguishes verification of the fixture contract/interface from provenance for the execution claims authored inside the fixture. It does not revoke the application checks or establish that the history was fabricated; it leaves the replay's status as verified portfolio evidence for explicit human resolution. This mission remains ready for human review.
