@@ -2,7 +2,7 @@
 
 **Investigation date:** 2026-09-23
 **Last reconciled:** 2026-09-25
-**Status:** Step 2 documentation reconciliation (2a–2c) implemented and Human Gate 2 approved; Step 3 independent evaluation authorized.
+**Status:** Step 3 independent evaluation complete with material failures; bounded Step 2 correction required before Human Gate 3.
 **Repository baseline:** `7f4657e6170536fec6f3016bca18e5bfd892d6fe` (`merge: reconcile website M003 checkpoint`).
 **Authority:** [Agent handoff](../AGENT_HANDOFF.md), [reconciliation plan](../RECONCILIATION_PLAN.md), and Erik's 2026-09-25 approval for Step 2a, recorded below.
 
@@ -389,3 +389,32 @@ At Erik's request, the completed reconciliation was prepared as a clean `main` c
 After reviewing the Step 2 recap and clean-check results, Erik explicitly instructed that all changes be merged to `main` and Step 3 begin. This records Human Gate 2 approval and authorizes the independent consistency evaluation defined by the reconciliation plan.
 
 The approval does not pre-accept the Step 3 result, authorize silent repairs, resolve the replay-provenance or other deferred product decisions, accept M003/LAB missions, publish or deploy either application, or start Step 4. Material evaluation failures return to Step 2; otherwise the process stops for Human Gate 3.
+
+## Step 3 — independent consistency evaluation
+
+### Result — 2026-09-25
+
+A fresh agent context evaluated the canonical references, plan, audit, reconciled documentation, visitor-facing source, and relevant repository facts against all seven Step 3 criteria. It created the [independent evaluation](mission-control-sync-evaluation.md) without modifying any evaluated surface.
+
+The results were:
+
+| Criterion                                                                  | Result         |
+| -------------------------------------------------------------------------- | -------------- |
+| Canonical concepts are consistent                                          | Qualified pass |
+| Repository-specific facts survived                                         | Qualified pass |
+| Methodology and implementation choices are distinct                        | Pass           |
+| Obsolete Flight Deck assumptions remain                                    | Qualified pass |
+| Public content conflicts with internal architecture or evidence boundaries | **Fail**       |
+| Unresolved choices remain unresolved                                       | Pass           |
+| A coding harness can discover authoritative context                        | **Fail**       |
+
+Two material failures block Human Gate 3:
+
+1. The Lab's visitor-facing replay presents recorded, passed, and “Verified” execution claims even though the retained repository evidence does not establish their provenance.
+2. `docs/AGENT_HANDOFF.md` remains an unqualified Step 1 directive while current state and this audit authorize later phases, so a harness entering through that named authority can follow the wrong instruction.
+
+The evaluation also records three non-material findings: draft site terminology that trails the reconciled model, a volatile and now-stale current-state statement about local `main` being ahead of `origin/main`, and the already disclosed link/completeness gaps in the imported package.
+
+Scoped Prettier, all 28 local links in the evaluation, new-file whitespace validation, and `git diff --check` passed. No application test, provider request, deployment, publication, mission acceptance, correction, or Step 4 work occurred in Step 3.
+
+The process now returns to a bounded Step 2 correction. The failures remain unmodified. The replay path requires an explicit human choice among supplying attributable provenance, approving an illustrative/synthetic disclosure, replacing the fixture, or authorizing another narrowly defined resolution. After approved corrections, repeat the affected Step 3 checks before Human Gate 3.
