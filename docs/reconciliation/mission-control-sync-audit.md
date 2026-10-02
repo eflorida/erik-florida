@@ -2,7 +2,7 @@
 
 **Investigation date:** 2026-09-23
 **Last reconciled:** 2026-09-25
-**Status:** Documentation reconciliation accepted at Human Gate 3; Step 4 later landed under [G004-001 State](../../.mission-control/goals/G004-001/state.md), and the first [Step 5 Codex assessment](step-5-codex-assessment.md) is recorded separately. Dated findings below retain their original checkpoint meaning.
+**Status:** Documentation reconciliation accepted at Human Gate 3; Step 4 later landed under [G004-001 State](../../.mission-control/goals/G004-001/state.md), the focused [Step 5 Codex assessment](step-5-codex-assessment.md) is recorded, and Step 6 has a [logical event contract proposal](step-6-event-contract.md). Dated findings below retain their original checkpoint meaning.
 **Repository baseline:** `7f4657e6170536fec6f3016bca18e5bfd892d6fe` (`merge: reconcile website M003 checkpoint`).
 **Authority:** [Agent handoff](../AGENT_HANDOFF.md), [reconciliation plan](../RECONCILIATION_PLAN.md), and Erik's 2026-09-25 approval for Step 2a, recorded below.
 

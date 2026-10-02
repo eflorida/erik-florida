@@ -6,7 +6,7 @@ Start with `docs/product/current-state.md`, then read the applicable app's `AGEN
 
 For Mission Control terminology or agentic execution, read `docs/guides/mission-control-concepts.md` and `docs/reconciliation/canonical-reference-notes.md`, then follow their links to the authoritative source. Mission Control is generally tool- and team-agnostic. Flight Deck is an optional, opinionated implementation; it does not replace coding harnesses or govern this repository by default.
 
-Step 4's repository-native pilot is landed. Start at `.mission-control/README.md`, then read the `G004-001` Goal Contract, landed Goal State, and editorial-readiness Loop Contract when reviewing that pilot. The state records its evidence, human decision, and next action; Erik alone had Landing authority. Historical mission files are not fully conforming replacements. No normalized event artifacts or Flight Deck runtime exist. Follow `docs/RECONCILIATION_PLAN.md` and its recorded approvals for later work.
+Step 4's repository-native pilot is landed. Start at `.mission-control/README.md`, then read the `G004-001` Goal Contract, landed Goal State, and editorial-readiness Loop Contract when reviewing that pilot. The state records its evidence, human decision, and next action; Erik alone had Landing authority. Historical mission files are not fully conforming replacements. Step 6 has a proposed logical event contract, but no emitted normalized events, event runtime, or Flight Deck runtime exists. Follow `docs/RECONCILIATION_PLAN.md` and its recorded approvals for later work.
 
 ## Commands
 
