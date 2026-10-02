@@ -2,11 +2,11 @@
 
 ## Context route
 
-Start with the root `../../AGENTS.md` and `../../docs/product/current-state.md`. For site work, read `../../docs/product/personal-site.md`, this app's `README.md`, and the applicable `M00*` mission. M003 is implemented but awaits editorial acceptance; do not infer publication from its committed checkpoint.
+Start with the root `../../AGENTS.md` and `../../docs/product/current-state.md`. For site work, read `../../docs/product/personal-site.md`, this app's `README.md`, and the applicable `M00*` mission. M003 is editorially accepted and landed; publication is still a separate decision.
 
 For Mission Control or agentic-development claims, use `../../docs/guides/mission-control-concepts.md`, `../../docs/reconciliation/canonical-reference-notes.md`, and the applicable source assessment. The site explains selected ideas; it is not the Mission Control runtime or Flight Deck.
 
-Use the documented content guide for the surface being changed. Step 4's active M003 editorial pilot is routed by `../../.mission-control/README.md`; read its Goal Contract, current State, and editorial-readiness Loop Contract before work on that goal. The pilot does not make ordinary site work a Mission Control runtime task or authorize publication.
+Use the documented content guide for the surface being changed. Step 4's landed M003 editorial pilot is routed by `../../.mission-control/README.md`; read its Goal Contract, State, and editorial-readiness Loop Contract when reviewing that goal. The pilot does not make ordinary site work a Mission Control runtime task or authorize publication.
 
 ## Site rules
 

@@ -2,11 +2,11 @@
 
 ## Mission
 
-Start with `docs/product/current-state.md`, then read the applicable app's `AGENTS.md`, product summary, plan, and active mission. M002 is the latest landed website mission; M003 is an implemented checkpoint pending editorial acceptance. LAB-M001 remains ready for human review and LAB-M002 remains ready for credentialed validation. A commit or merge does not imply Landing, publication, deployment, or completion of an unchecked validation item.
+Start with `docs/product/current-state.md`, then read the applicable app's `AGENTS.md`, product summary, plan, and active mission. M003 is the latest landed website mission: its wording is editorially accepted, while publication remains separate. LAB-M001 remains ready for human review and LAB-M002 remains ready for credentialed validation. A commit or merge does not imply Landing, publication, deployment, or completion of an unchecked validation item.
 
 For Mission Control terminology or agentic execution, read `docs/guides/mission-control-concepts.md` and `docs/reconciliation/canonical-reference-notes.md`, then follow their links to the authoritative source. Mission Control is generally tool- and team-agnostic. Flight Deck is an optional, opinionated implementation; it does not replace coding harnesses or govern this repository by default.
 
-Step 4 has bootstrapped one repository-native pilot. Start at `.mission-control/README.md`, then read the active `G004-001` Goal Contract, Goal State, and editorial-readiness Loop Contract before agentic execution. The state records the current status, evidence, and next action; Erik alone decides Landing. Historical mission files are not fully conforming replacements. No normalized event artifacts or Flight Deck runtime exist. Follow `docs/RECONCILIATION_PLAN.md` and its recorded approvals for later work.
+Step 4's repository-native pilot is landed. Start at `.mission-control/README.md`, then read the `G004-001` Goal Contract, landed Goal State, and editorial-readiness Loop Contract when reviewing that pilot. The state records its evidence, human decision, and next action; Erik alone had Landing authority. Historical mission files are not fully conforming replacements. No normalized event artifacts or Flight Deck runtime exist. Follow `docs/RECONCILIATION_PLAN.md` and its recorded approvals for later work.
 
 ## Commands
 

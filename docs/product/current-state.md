@@ -1,6 +1,6 @@
 # Erik Florida — Current Project State
 
-**Last intentionally established:** 2026-10-02, Step 4 repository-native pilot started under G004-001
+**Last intentionally established:** 2026-10-02, M003 and Step 4 goal G004-001 landed by Erik
 
 This document is current working truth, not an activity log. Historical mission files preserve what was true at their checkpoints; a commit or merge does not by itself establish Landing, editorial acceptance, publication, deployment, or completion of an unchecked validation item.
 
@@ -26,21 +26,21 @@ Documentation reconciliation is complete under the [reconciliation plan](../RECO
 - Erik authorized one bounded closure batch. The reference-scenario provenance treatment, agent routing, draft site terminology, and volatile Git-state wording were corrected. The full repository check and both browser suites pass.
 - A fresh focused re-evaluation found no remaining material failure. Erik's conditional authorization accepted Human Gate 3 and closed documentation reconciliation.
 - Erik approved the proposed Step 4 adoption goal by instructing execution on 2026-10-02. The [repository-native pilot](../../.mission-control/README.md) now contains one Goal Contract, Goal State, and editorial-readiness Loop Contract for M003. Its [State](../../.mission-control/goals/G004-001/state.md) is the live record of rounds, evidence, blockers, and next action.
-- Goal Contract `0.1` had a protected ordering defect: it listed Human Landing and the final adoption decision as prerequisites for `candidate-complete`. Erik approved version `0.2`, which places those decisions after candidate transfer while preserving their requirements. A fresh-context evaluation and the retained check passed. G004-001 is `candidate-complete`; Erik's editorial Landing and adoption decisions remain open.
+- Goal Contract `0.1` had a protected ordering defect: it listed Human Landing and the final adoption decision as prerequisites for `candidate-complete`. Erik approved version `0.2`, which places those decisions after candidate transfer while preserving their requirements. A fresh-context evaluation and the retained check passed. Erik then accepted M003 editorially, landed G004-001, and chose to continue the repository-native pattern narrowly. The [Goal State](../../.mission-control/goals/G004-001/state.md) retains the decision and limits.
 
 The repository has one explicit Goal Contract, Goal State, and Loop Contract under `.mission-control/`. It has no Mission Log, normalized event runtime, Flight Deck adapter, or generalized Mission Control service. Historical missions contain useful intent, scope, evidence, and human decisions, but are not silently relabeled as complete implementations of the newer model.
 
 ## Website state
 
-**Latest landed website mission:** [M002 — Experience and Professional Positioning](../missions/M002/mission.md)
+**Latest landed website mission:** [M003 — AI & Agentic Engineering](../missions/M003/mission.md), editorially accepted 2026-10-02
 
-**Current checkpoint:** [M003 — AI & Agentic Engineering](../missions/M003/mission.md), implemented and verified; editorial acceptance pending
+**Current checkpoint:** M003 wording accepted; publication and launch readiness remain separate
 
 M001 established the schema-validated Git-backed article path and approved visual foundation. M002 landed the reviewed homepage and Experience page using one curated, schema-validated career record. The homepage connects first-version product ownership, hands-on architectural and organizational leadership, earned complexity, and agentic engineering; Experience retains the detailed career and project accounts. The patent is presented early with co-inventor attribution and a USPTO PDF destination. The raw career sources remain outside the repository and deployment.
 
 M003 adds `/agentic-engineering`, connecting applied-AI experience, current engineering practice, the developing Mission Control methodology, and organizational adoption. Its MDX uses the existing content registry and has one explicit route. Home, primary navigation, and footer link to it. The overview and the original “Verification Over Understanding” article remain visible drafts with `noindex, nofollow`; neither has publication approval.
 
-M003's mission records passing formatting, linting, strict TypeScript, 21 unit/component tests, static build, 12 production browser journeys, and responsive inspection. That evidence supports the implementation checkpoint. It does not supply the outstanding editorial decision or authorize a hosted deployment.
+M003's mission records passing formatting, linting, strict TypeScript, 21 unit/component tests, static build, 12 production browser journeys, and responsive inspection. Erik's later editorial Landing supplies the formerly outstanding human decision. It does not authorize publication or a hosted deployment.
 
 ## Agentic Systems Lab state
 
@@ -79,7 +79,7 @@ The original reference scenario explicitly discloses that its source execution a
 
 ## Intentionally deferred or unresolved
 
-- M003 editorial acceptance and publication decisions for both site drafts.
+- Publication decisions for the accepted M003 overview and the separate draft article; the article's own editorial/publication state remains unchanged.
 - Canonical résumé/contact links and full career-site launch readiness.
 - Canonical domains, production promotion, and current hosted deployment verification.
 - Final logo, imagery, broader brand identity, and coordinated motion.
@@ -93,7 +93,7 @@ The original reference scenario explicitly discloses that its source execution a
 
 ## What happens next
 
-1. Read [G004-001 State](../../.mission-control/goals/G004-001/state.md) for the candidate packet. Erik decides editorial sufficiency and Landing, and whether to continue, change, narrow, or retire the repository-native pattern.
-2. Review M003 wording and decide editorial acceptance separately from publication and implementation verification.
+1. Read the landed [G004-001 State](../../.mission-control/goals/G004-001/state.md) for Step 4's evidence, human decision, and narrow adoption limit. Scope selected-harness integration for Step 5 separately; this pilot did not prove a need for a harness adapter or authorize Step 6 telemetry.
+2. Decide publication and deployment of the accepted M003 overview separately. The article retains its own draft state.
 3. Resolve LAB-M001's human-review boundary and run LAB-M002's credentialed smoke test before claiming live-provider validation.
 4. Before the full career-site launch, establish canonical résumé/contact links and explicit publication/deployment decisions.

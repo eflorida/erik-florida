@@ -1,7 +1,7 @@
 # G004-001 — Goal State
 
 - **Updated:** 2026-10-02
-- **Status:** `candidate-complete`; transferred to Erik for Landing and adoption decisions
+- **Status:** `landed`; Erik accepted the M003 editorial result and the narrow repository-native pilot on 2026-10-02
 - **Owner and Landing authority:** Erik Florida
 - **Goal Contract:** [version 0.2](contract.md), approved by Erik's explicit correction instruction; version `0.1` remains in Git commit `b83e0c6`
 - **Loop Contract:** [editorial-readiness version 0.1](../../loops/editorial-readiness.md)
@@ -11,9 +11,9 @@
 
 ## Current gap and next action
 
-The minimal runtime is present, one bounded M003 editorial review has a source-backed no-change finding, and the retained deterministic floor passes. Erik approved version `0.2`'s correction of the completion order. A genuinely fresh, read-only coding-harness evaluation passed and its two provenance findings were corrected. Conditions 1–8 below support `candidate-complete`. The routing smoke check remains a separate, narrower observation.
+The minimal runtime is present, one bounded M003 editorial review has a source-backed no-change finding, and the retained deterministic floor passes. Erik approved version `0.2`'s correction of the completion order. A genuinely fresh, read-only coding-harness evaluation passed and its two provenance findings were corrected. Conditions 1–8 supported `candidate-complete`, after which Erik made the Landing and adoption decisions recorded below. The routing smoke check remains a separate, narrower observation.
 
-**Next action:** Erik reviews the M003 overview and this evidence packet, then explicitly lands the goal, directs a specific bounded re-entry round, revises the contract, pauses, or abandons it. Erik also decides whether to continue, change, narrow, or retire this repository-native pattern. There is no remaining executor-side blocker to transferring the candidate; human editorial sufficiency and Landing are outstanding. Publication is a separate decision.
+**Next action:** Close Step 4 routing and scope Step 5 coding-harness integration as a separate goal or bounded authorization. There is no active product round or unresolved Step 4 blocker. M003 publication and the article's editorial/publication decisions remain separate.
 
 ## Contract pressure and approved version 0.2
 
@@ -41,10 +41,10 @@ The minimal runtime is present, one bounded M003 editorial review has a source-b
 
 - **Contract authority:** Erik's 2026-10-02 instruction to execute Step 4 after reviewing the [proposal](../../../docs/reconciliation/step-4-goal-contract-draft.md), followed by explicit approval of the [operating contract](contract.md) version `0.2`. Version `0.1` is retained at `b83e0c6`.
 - **Runtime layout:** [routing README](../../README.md), this State, [contract](contract.md), and [loop](../../loops/editorial-readiness.md). Limit: one goal and one loop; no event system.
-- **Editorial judgment:** Round 1 above and its linked sources, MDX, registry, and route. Limit: Erik's editorial sufficiency decision pending.
+- **Editorial judgment:** Round 1 above and its linked sources, MDX, registry, and route; Erik accepted the current overview wording on 2026-10-02. Limit: publication remains unapproved.
 - **Deterministic floor:** `corepack pnpm check` passed on the Step 4 documentation working tree based on `8377395`; the initial formatting failure was fixed before the complete rerun. Both local production routes emitted `noindex, nofollow`. The runtime pilot was committed as `b83e0c6`, and the approved version `0.2` correction as `3453be8`. After the fresh evaluator's two documentation findings were fixed, `corepack pnpm check` passed again, with all 37 tests and both builds (application tasks used the unchanged-code cache). No browser suite was needed because visitor-facing source did not change.
 - **Discovery:** 100 local links resolved; cold file-based routing trace passed ten structural checks. A separate fresh coding-harness evaluator then passed the contract's discoverability scenario, with two minor provenance nits now corrected. See the evaluation record below.
-- **Human Landing and adoption:** pending. Neither follows from a merge, a green check, or the operator's recommendation.
+- **Human Landing and adoption:** Erik's 2026-10-02 response to the candidate packet accepted M003 and directed continuation; the explicit disposition is recorded below. Neither decision was inferred from the merge or green check.
 
 ## Fresh-context evaluation
 
@@ -63,12 +63,20 @@ The evaluator found two minor provenance errors: the contract's `0.1` history st
 7. **Retained floor:** the full check and local links pass after the version `0.2` correction. Both draft routes locally build with `noindex, nofollow`; no application source, private career material, or deployment state changed.
 8. **Candidate recommendation:** the operator recommends transfer because the source-backed editorial no-change result and repository-native pilot are reviewable. The pilot exposed and corrected one contract-lifecycle defect, but one case does not prove broader reliability. Erik decides sufficiency.
 
-This is candidate completion under the [version `0.2` contract](contract.md#completion-conditions-and-persistent-effects), not Landing, M003 editorial acceptance, publication, deployment, or an adoption decision.
+This was candidate completion under the [version `0.2` contract](contract.md#completion-conditions-and-persistent-effects). Erik's subsequent Landing and adoption decisions are recorded below; candidate completion alone did not establish them.
+
+## Human Landing and adoption — 2026-10-02
+
+- **Human review and authority:** Erik was given the candidate packet, the no-change editorial recommendation, the fresh-context result, and the passing retained floor. He replied “M003 approved, let's go!” to the explicit request to accept M003 wording, land G004-001, and continue the repository-native pattern narrowly. Erik is the sole Landing authority under [contract version `0.2`](contract.md#landing-and-transfer).
+- **Landing:** M003's current AI & Agentic Engineering overview wording is editorially accepted; G004-001 is `landed`. The [M003 mission](../../../docs/missions/M003/mission.md) records this acceptance. No additional product round was requested.
+- **Adoption decision:** Continue the repository-native pattern narrowly for the next bounded harness-integration evaluation. This is not an endorsement of a generalized service, normalized events, Flight Deck, or broad automated authority. The pilot demonstrated useful routing, durable state, and protected-contract revision on one real editorial case; it did not establish cross-goal or cross-repository reliability.
+- **Later-step signal:** Step 5 can test whether a selected coding harness needs an adapter beyond root/document routing; that need is not yet proven. Step 6 event storage or analytics has no demonstrated trigger from this one case. A separate scope decision governs either step's implementation.
+- **Publication boundary:** Neither M003 approval nor G004-001 Landing changes the overview or article from `draft`, authorizes indexing, or deploys the site.
 
 ## Operator recommendation for Erik
 
-The M003 overview is ready for Erik's editorial judgment without an additional copy round. The repository-native pattern made active work, provenance, authority, and a contract defect visible in four artifacts, which supports continuing it narrowly. It has not demonstrated cross-goal reliability or a need for telemetry, a service, or Flight Deck. The approved version `0.2` and fresh-context evaluation close the executor-side candidate prerequisites. Erik may accept the wording, request a specific revision, or keep M003 in draft review. Publication remains a separate choice.
+Erik accepted the operator's M003 no-change recommendation and chose to continue the repository-native pattern narrowly. The pilot made active work, provenance, authority, and a contract defect visible in four artifacts. It has not demonstrated cross-goal reliability or a need for telemetry, a service, or Flight Deck. Publication remains a separate choice.
 
 ## Retained boundaries
 
-M003 stays in editorial review; neither site draft is published. LAB-M001 review and LAB-M002 credentialed validation remain separate. No deployment, provider request, Flight Deck build, final demo choice, normalized events, adapter, or Step 5/6 work is part of this goal. The methodology can be used without this particular repository layout.
+M003 is editorially accepted; neither site draft is published. LAB-M001 review and LAB-M002 credentialed validation remain separate. No deployment, provider request, Flight Deck build, final demo choice, normalized events, adapter, or Step 5/6 work was part of this goal. The methodology can be used without this particular repository layout.

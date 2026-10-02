@@ -30,7 +30,7 @@ M002 uses Erik's supplied career master record to implement an experience-led ho
 
 ## Product rules
 
-M003 adds `/agentic-engineering`, with a concise Mission Control overview at `#mission-control`. It connects supported applied-AI work, current personal development practice, and an organizational operating model in development. Short sections and one delivery-loop diagram provide depth without requiring the full methodology. The homepage gains a restrained link, not another content block. The new overview and existing article remain drafts for review; résumé/contact, publication, and the full deep dive are separate decisions.
+M003 adds `/agentic-engineering`, with a concise Mission Control overview at `#mission-control`. It connects supported applied-AI work, current personal development practice, and an organizational operating model in development. Short sections and one delivery-loop diagram provide depth without requiring the full methodology. The homepage gains a restrained link, not another content block. Erik accepted the overview's wording on 2026-10-02; it retains draft metadata until a separate publication decision. The existing article retains its own draft status. Résumé/contact, publication, and the full deep dive are separate decisions.
 
 Current methodology terminology comes from the [Mission Control concept guide](../guides/mission-control-concepts.md), not the historical career-site plan. Mission Control is generally tool- and team-agnostic. Flight Deck is an optional, opinionated engineering-team implementation whose responsibilities can be fulfilled by existing tools; the site must not present it as a dependency, coding-harness replacement, or inevitable destination.
 

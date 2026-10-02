@@ -2,7 +2,7 @@
 
 Static-first professional website for Erik Florida, using Next.js App Router, local MDX, Zod, and Tailwind CSS. Repository-level context, current mission status, architecture, and commands live in the root [`README.md`](../../README.md), [`AGENTS.md`](../../AGENTS.md), and [`docs/product/current-state.md`](../../docs/product/current-state.md).
 
-M001 landed the approved site shell and first typed content golden path. M002 landed the career-led homepage and Experience page using curated facts from Erik's source material. M003's AI/agentic overview is implemented and verified as a checkpoint, but its editorial acceptance and publication remain pending.
+M001 landed the approved site shell and first typed content golden path. M002 landed the career-led homepage and Experience page using curated facts from Erik's source material. M003's AI/agentic overview is implemented, verified, and editorially accepted; publication remains pending.
 
 Mission Control terminology follows the repository [concept guide](../../docs/guides/mission-control-concepts.md). This app applies selected methodology principles and publishes a draft overview; it is not a Mission Control runtime or Flight Deck implementation.
 

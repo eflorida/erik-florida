@@ -2,7 +2,7 @@
 
 ## Source boundary
 
-M003 drafts the recommended AI/agentic introduction and Mission Control overview after Erik requested continuation. Use the existing documents for editorial review, not as permission to publish a finished methodology or private employer details.
+M003 used the existing documents to draft the recommended AI/agentic introduction and Mission Control overview after Erik requested continuation. Erik accepted the overview wording on 2026-10-02 through [G004-001](../../.mission-control/goals/G004-001/state.md). That editorial decision is not permission to publish a finished methodology or private employer details.
 
 The supplied career record and positioning guidance retain the identities and digests in [the M002 assessment](career-source-assessment.md). Relevant career sections were reread for this mission: §3 patent, product matching, Mission Control, and reference architecture; §5 AI & Agentic Engineering. The positioning guidance was reread in full. Neither raw document enters the repository or deployment.
 
@@ -22,11 +22,11 @@ The original career-site plan and M003 sources preserve editorial intent and per
 
 ## Editorial and publication rules
 
-Keep sections short and matter-of-fact. Clearly distinguish existing work, current personal practice, and developing methodology. The original build plan supplies direction, not proof of completed outcomes; it does not mandate the full deep dive in this mission. Keep new content visibly in review, exclude it from search indexing, and preserve the existing article's draft status until explicit approval. No book title or completion claim is introduced.
+Keep sections short and matter-of-fact. Clearly distinguish existing work, current personal practice, and developing methodology. The original build plan supplies direction, not proof of completed outcomes; it does not mandate the full deep dive in this mission. Keep the accepted overview as an unindexed draft until a separate publication decision, and preserve the existing article's draft status. No book title or completion claim is introduced.
 
-## Reconciliation recommendations for later editorial review
+## Historical Step 2c recommendations
 
-These are proposed copy directions, not changes to the current MDX and not publication approval:
+These were proposed copy directions at Step 2c. The later M003 editorial review accepted the current MDX wording; these notes are not publication approval:
 
 - Replace “future engineering harness” with a concise description of Flight Deck as an optional, opinionated Mission Control implementation for an engineering team. Do not make it the inevitable software form of the methodology.
 - Keep the delivery diagram clearly labeled as an example. A goal can invoke applicable loops and re-enter work based on evidence; Mission Control is not one universal sequence of Intent → Work → Verification → Review → Artifact.

@@ -1,17 +1,17 @@
 # Mission Control implementation options
 
-**Status:** Proposed/deferred architecture context; no runtime or topology adopted
+**Status:** Step 2c option analysis; a bounded repository-native pilot later landed, while generalized runtime/topology remains deferred
 **Established:** 2026-09-25, reconciliation Step 2c
 
 ## Purpose
 
-This document records implementation responsibilities and viable options without turning Mission Control into a tool prescription. It is an input to later Goal Contract, adapter, event, and topology design. It does not authorize `.mission-control`, a database, Flight Deck, MCP, Mastra, workflow orchestration, application changes, or a portfolio demo.
+This document records implementation responsibilities and viable options without turning Mission Control into a tool prescription. It was written before the bounded [G004-001 repository-native pilot](../../.mission-control/goals/G004-001/state.md), which later landed. This option analysis itself does not authorize a database, Flight Deck, MCP, Mastra, workflow orchestration, application changes, or a portfolio demo.
 
 Mission Control is generally tool- and team-agnostic. The methodology requires clear intent, bounded outcomes, durable contracts/state, evidence, governed transfers, authority, and inspectable history. A repository, existing work systems, automation, and human operating practices can satisfy those responsibilities. Flight Deck is an optional, opinionated product implementation and must be designed against the current methodology rather than treated as its prerequisite.
 
-## Current footing
+## Step 2c footing and later pilot
 
-This repository currently uses Markdown missions/plans/current state, Git provenance, application schemas, deterministic checks, GitHub Actions, browser tests, and human review. These provide useful foundations but are not yet explicit Goal Contracts, Goal State, Loop Contracts, a Mission Log, normalized Mission Control events, or a deployed control plane.
+At the Step 2c baseline, this repository used Markdown missions/plans/current state, Git provenance, application schemas, deterministic checks, GitHub Actions, browser tests, and human review, without explicit Goal Contracts, Goal State, Loop Contracts, a Mission Log, normalized Mission Control events, or a deployed control plane. Step 4 later added and landed one explicit [Goal Contract, State, and Loop Contract](../../.mission-control/README.md). It did not add a Mission Log, normalized events, or a deployed control plane. Use [current state](../product/current-state.md) for live status.
 
 The site and Lab remain independently deployable. The Lab's recorded fixture and bounded live-review request are application-specific contracts; neither is a general Mission Control runtime. The [evidence assessment](../reference/lab-evidence-assessment.md) records their current proof limits.
 
@@ -39,7 +39,7 @@ The patterns can coexist and evolve. None is selected here.
 | **Dedicated control plane**     | Can normalize state, policy, evidence, events, permissions and projections across tools.              | Adds a new system of record, integration/operations burden and migration risk. Flight Deck would be one opinionated product in this category, not the only valid implementation. |
 | **Hybrid/federated**            | Keeps artifacts in appropriate origins while one governed representation connects them.               | Requires explicit source authority, synchronization, conflict resolution, snapshots and duplicate-action prevention.                                                             |
 
-Step 4 of the reconciliation plan treats `.mission-control/{config,missions,goals,loops,policies,schemas,context}` as a hypothesis for a small repository-native runtime. A later Goal Contract must evaluate that shape against a real career-platform outcome. This document neither adopts the directory nor assumes it remains authoritative if another topology proves better.
+Step 4 of the reconciliation plan treated `.mission-control/{config,missions,goals,loops,policies,schemas,context}` as a hypothesis for a small repository-native runtime. G004-001 evaluated it against M003 editorial readiness and adopted only the four artifacts needed for that case. This document does not make that directory a methodology requirement or assume it remains authoritative if another topology proves better.
 
 ## Authority and topology record
 
@@ -94,7 +94,7 @@ Existing Flight Deck plans are historical product inputs. Reassess their web-app
 
 ## Decisions deferred to later steps
 
-- the first real career-platform Goal Contract and Landing authority;
+- expansion beyond the one landed career-platform Goal Contract and its named Landing authority;
 - whether repository-native, existing-system, dedicated, or hybrid state is authoritative for each primitive;
 - the Mission Log/event contract, storage, retention, permissions and analytics;
 - coding-harness and external-system adapters;

@@ -1,6 +1,6 @@
 # M003 — AI & Agentic Engineering
 
-**State:** Implemented — verified checkpoint, editorial review pending, 2026-09-11
+**State:** Landed — editorially accepted by Erik, 2026-10-02; publication pending
 
 **Predecessor:** [M002](../M002/mission.md), landed on `main` at `d16453d8bb6dfb8447b3b5d2ff6117a83df69405`.
 
@@ -51,9 +51,9 @@ Résumés, contact destinations, About, a full methodology deep dive, and launch
 
 - [x] Proceed with the recommended priority and existing sources following Erik's continuation request; state the interpretation explicitly.
 - [x] The mission records implementation scope, exclusions, and public-safety constraints before feature implementation.
-- [x] The visitor-facing content and navigation are implemented and visually inspected; Erik's editorial review remains pending.
+- [x] The visitor-facing content and navigation are implemented and visually inspected; Erik's later editorial decision is recorded below.
 - [x] Automated and browser verification pass, including publication metadata and responsive reading order.
-- [ ] Final editorial review and landing are explicit; the application-track boundary remains intact.
+- [x] Final editorial review and landing are explicit; the application-track boundary remains intact.
 
 ## Verification and handoff
 
@@ -62,3 +62,9 @@ Résumés, contact destinations, About, a full methodology deep dive, and launch
 - Home, Experience, Writing, and the overview were checked at 320, 390, 768, 1024, and 1440 pixels without horizontal overflow. Desktop/mobile screenshots were inspected for typography, the contents list, and diagram readability.
 - No dependency, manifest, lockfile, Lab code, or `LAB-*` document changes were made. No push, deployment, or publication-status change occurred.
 - The coordinating task requested a clean commit before its separately authorized Lab merge. Commit this verified implementation as an M003 checkpoint, keeping the overview visibly draft and this mission open for Erik's editorial acceptance. Restore the website dev server on port 3000; do not stop the Lab's port 3100 server.
+
+## Editorial Landing — 2026-10-02
+
+Erik responded “M003 approved, let's go!” to the [G004-001 candidate packet](../../../.mission-control/goals/G004-001/state.md) and the explicit recommendation to accept the M003 wording and land that goal. This accepts the AI & Agentic Engineering overview's current wording without another copy round and closes M003's editorial acceptance item. The Step 4 round found no supported visitor-facing change; the source and claim assessment, earlier site checks, fresh-context evaluation, and retained repository check are recorded in G004-001 State.
+
+The overview remains `draft` with `noindex, nofollow`. The separate “Verification Over Understanding” article retains its own draft and publication state. This Landing does not approve publication, indexing, deployment, canonical domains, résumé/contact destinations, the Lab, or a full Mission Control deep dive. The earlier implementation handoff above remains historical checkpoint evidence rather than a current instruction to leave M003 open.
