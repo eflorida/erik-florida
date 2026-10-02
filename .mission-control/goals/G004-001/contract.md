@@ -200,7 +200,7 @@ The goal does not transfer publication or deployment authority. If editorial Lan
 ## Provenance and revision history
 
 - `0.1-proposed` — drafted from the accepted reconciliation, canonical Mission Control worksheets, current M003 mission, and Erik's direction to prepare Step 4. No implementation authority was inferred from the draft alone.
-- `0.1` — Erik's 2026-10-02 instruction to execute Step 4 approved the proposed goal, scope, authority, budget, and initial artifact hypothesis. This operating copy preserves the proposed completion criteria. During preflight, the executor found that items 9–10 are post-candidate human decisions inside the candidate prerequisite list; see the pending amendment in Goal State.
+- `0.1` — Erik's 2026-10-02 instruction to execute Step 4 approved the proposed goal, scope, authority, budget, and initial artifact hypothesis. The version `0.1` operating copy preserved the proposed completion criteria. During preflight, the executor found that items 9–10 were post-candidate human decisions inside the candidate prerequisite list; the approved correction is recorded below and in Goal State.
 - `0.2` — Erik explicitly approved the narrow correction after reviewing the version `0.1` defect. Conditions 1–8 now precede `candidate-complete`; conditions 9–10 remain required for Landing and closeout. No evidence standard, authority, scope, budget, or publication boundary changed. Version `0.1` remains in Git commit `b83e0c6`.
 - Contract revisions require a new numbered version, a recorded reason, affected-consumer review, and Erik's approval.
 - Historical versions and their evidence remain available after revision.
