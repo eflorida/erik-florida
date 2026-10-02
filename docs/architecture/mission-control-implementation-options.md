@@ -1,6 +1,6 @@
 # Mission Control implementation options
 
-**Status:** Step 2c option analysis; a bounded repository-native pilot later landed and a [Step 6 logical event contract](../reconciliation/step-6-event-contract.md) was proposed, while event runtime/topology remains deferred
+**Status:** Step 2c option analysis; a bounded repository-native pilot later landed, a [Step 6 logical event contract](../reconciliation/step-6-event-contract.md) was proposed, and [Step 7](../reconciliation/step-7-deployment-topology.md) assessed topology without selecting a Flight Deck deployment
 **Established:** 2026-09-25, reconciliation Step 2c
 
 ## Purpose
