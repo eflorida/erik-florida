@@ -26,6 +26,6 @@ Evaluate three separate questions: whether the run was valid, whether the retain
 
 ## Budget, re-entry, and transfer
 
-At most three valid product rounds under Goal Contract `0.1`, with one recovery attempt for the same invalid environment/harness condition. On a valid failure, record the gap and next bounded round without erasing prior evidence. On a deterministic regression, restore the floor or revert the round. Stop and escalate on unsupported claims, protected-criterion pressure, scope or authority changes, exhausted budget, or consequential ambiguity.
+At most three valid product rounds across Goal Contract versions `0.1` and `0.2`, with one recovery attempt for the same invalid environment/harness condition. On a valid failure, record the gap and next bounded round without erasing prior evidence. On a deterministic regression, restore the floor or revert the round. Stop and escalate on unsupported claims, protected-criterion pressure, scope or authority changes, exhausted budget, or consequential ambiguity.
 
 Transfer to Erik consists of the Goal Contract and State, round record, source-linked findings, diff or no-change rationale, deterministic and browser evidence as applicable, unresolved judgment, and editorial recommendation. Erik may accept, request re-entry, revise the contract, pause, or abandon. A recommendation is not an accepted transfer or Landing.

@@ -1,13 +1,13 @@
 # G004-001 — Step 4 adoption Goal Contract
 
 - **Goal ID:** `G004-001`
-- **Contract version:** `0.1`
+- **Contract version:** `0.2`
 - **Owner:** Erik Florida
 - **Landing authority:** Erik Florida
 - **Parent mission:** proposed `M004 — Dogfood Mission Control through M003 editorial readiness`
-- **Status:** Approved for Step 4 execution by Erik's 2026-10-02 instruction; a protected completion-order defect is pending a versioned correction
+- **Status:** Approved for Step 4 execution; version `0.2` was approved by Erik's explicit correction instruction
 
-This is the operating copy of the [approved proposal](../../../docs/reconciliation/step-4-goal-contract-draft.md). Its completion criteria remain verbatim pending a decision on the proposed `0.2` correction recorded in [Goal State](state.md). The conflict does not authorize the executor to waive or silently reinterpret those criteria.
+This is the operating copy of the [approved proposal](../../../docs/reconciliation/step-4-goal-contract-draft.md). Version `0.1` is retained in Git commit `b83e0c6`. Version `0.2` changes only the order of the existing completion requirements: candidate prerequisites precede Erik's Landing and final adoption decision. See the [Goal State](state.md) for approval and execution evidence.
 
 ## Why this goal
 
@@ -61,7 +61,7 @@ Editorial Landing and publication remain separate. Landing this goal may accept 
 
 ## Completion conditions and persistent effects
 
-The goal may become `candidate-complete` only when all of the following are true:
+The goal may become `candidate-complete` only when all of conditions 1–8 are true:
 
 1. **Approved contract:** Erik has approved a numbered version of this Goal Contract, including scope, evidence, budget, authority, and Landing rules.
 2. **Minimal runtime:** the repository contains a justified minimal artifact set with no placeholder directories or speculative infrastructure.
@@ -71,6 +71,8 @@ The goal may become `candidate-complete` only when all of the following are true
 6. **Discoverability:** a fresh-context evaluator can reach the active Goal Contract and Goal State from root `AGENTS.md` and correctly identify the next permitted action, protected surfaces, evidence standard, and Landing authority without reconstructing chat history.
 7. **Retained floor:** all applicable deterministic checks pass, draft/indexing boundaries remain intact, and no unsupported claim or private source enters the application.
 8. **Candidate recommendation:** the executor records why the evidence supports candidate completion or which specific gap requires re-entry.
+   After candidate transfer, Landing and closeout additionally require:
+
 9. **Human Landing:** Erik reviews the evidence and explicitly marks the goal `landed`, directs another round, revises the contract through a new version, pauses it, or abandons it.
 10. **Adoption decision:** the final record states whether to continue, change, narrow, or retire the repository-native pattern and identifies any demonstrated need for later Step 5 or Step 6 work.
 
@@ -132,7 +134,7 @@ One valid M003 case is sufficient to judge whether this minimal bootstrap is use
 
 - Use the existing repository, Git history, local coding harness, Markdown, schemas, CI commands, and browser tests.
 - Add no production dependency, hosted service, credentialed provider request, or paid runtime.
-- Permit at most three product rounds under version `0.1` before a direction review.
+- Permit at most three product rounds across versions `0.1` and `0.2` before a direction review.
 - Permit one invalid-run recovery attempt for an environment or harness problem before escalating.
 - Prefer links to existing context over copied methodology or duplicated source material.
 - Add an artifact, directory, schema, or automation only when this goal demonstrates its immediate need.
@@ -199,6 +201,7 @@ The goal does not transfer publication or deployment authority. If editorial Lan
 
 - `0.1-proposed` — drafted from the accepted reconciliation, canonical Mission Control worksheets, current M003 mission, and Erik's direction to prepare Step 4. No implementation authority was inferred from the draft alone.
 - `0.1` — Erik's 2026-10-02 instruction to execute Step 4 approved the proposed goal, scope, authority, budget, and initial artifact hypothesis. This operating copy preserves the proposed completion criteria. During preflight, the executor found that items 9–10 are post-candidate human decisions inside the candidate prerequisite list; see the pending amendment in Goal State.
+- `0.2` — Erik explicitly approved the narrow correction after reviewing the version `0.1` defect. Conditions 1–8 now precede `candidate-complete`; conditions 9–10 remain required for Landing and closeout. No evidence standard, authority, scope, budget, or publication boundary changed. Version `0.1` remains in Git commit `b83e0c6`.
 - Contract revisions require a new numbered version, a recorded reason, affected-consumer review, and Erik's approval.
 - Historical versions and their evidence remain available after revision.
 
@@ -234,3 +237,5 @@ Version `0.1` was approved to execute Step 4 with:
 6. the completion/evidence conditions above.
 
 That approval authorizes Step 4 only. Steps 5–8 and all deferred product/publication decisions remain separate.
+
+Erik's subsequent instruction approved version `0.2`'s completion-order correction and a separate fresh-context evaluation agent. It did not itself constitute editorial acceptance, Landing, or an adoption decision.

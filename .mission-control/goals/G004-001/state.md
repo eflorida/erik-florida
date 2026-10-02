@@ -1,9 +1,9 @@
 # G004-001 — Goal State
 
 - **Updated:** 2026-10-02
-- **Status:** `blocked` for candidate completion; bounded implementation and evidence gathering are authorized
+- **Status:** `active`; fresh-context evaluation is the next candidate prerequisite
 - **Owner and Landing authority:** Erik Florida
-- **Goal Contract:** [version 0.1](contract.md), approved for Step 4 execution by Erik's 2026-10-02 instruction
+- **Goal Contract:** [version 0.2](contract.md), approved by Erik's explicit correction instruction; version `0.1` remains in Git commit `b83e0c6`
 - **Loop Contract:** [editorial-readiness version 0.1](../../loops/editorial-readiness.md)
 - **Parent mission:** proposed `M004 — Dogfood Mission Control through M003 editorial readiness`; no historical M004 mission file is being relabeled or fabricated
 - **Product rounds used:** 1 of 3
@@ -11,15 +11,15 @@
 
 ## Current gap and next action
 
-The minimal runtime is present, one bounded M003 editorial review has a source-backed no-change finding, and the deterministic floor passes. The contract's candidate-completion clause incorrectly includes Erik's later Landing and adoption decisions as prerequisites. That protected criterion makes `candidate-complete` unreachable before the human decision it is intended to precede. The operator has asked Erik to approve or reject a version `0.2` correction; until then, keep this goal `blocked` for candidate completion and preserve version `0.1` unchanged. A true fresh-context evaluation remains open; the routing smoke check below does not substitute for it.
+The minimal runtime is present, one bounded M003 editorial review has a source-backed no-change finding, and the deterministic floor passes. Erik approved version `0.2`'s correction of the completion order. The next action is a genuinely fresh, read-only coding-harness evaluation starting from root `AGENTS.md`. It must identify the active goal, state, loop, next permitted action, protected surfaces, evidence standard, stop conditions, and Landing authority without this conversation. The routing smoke check below does not substitute for that judgment.
 
-Erik should review the correction proposal and editorial packet. If the correction is approved and remaining evidence meets the corrected contract, the executor may mark `candidate-complete` and transfer for Erik's separate Landing decision. Editorial acceptance and publication remain distinct.
+If the fresh-context result passes and the retained floor still holds, the executor may mark `candidate-complete` and transfer the packet for Erik's separate Landing decision. Editorial acceptance and publication remain distinct.
 
-## Contract pressure and proposed version 0.2
+## Contract pressure and approved version 0.2
 
 - **Observed defect:** [contract 0.1, completion conditions](contract.md#completion-conditions-and-persistent-effects) says all items 1–10 must precede `candidate-complete`; item 9 requires the later human Landing decision, and item 10 requires the final adoption decision. This conflicts with the same contract's desired state, Landing section, and [methodology definition of candidate completion](../../../docs/guides/mission-control-concepts.md#outcomes-and-execution).
-- **Proposed minimal correction:** in version `0.2`, retain the text and evidence standards of items 1–10, but make items 1–8 prerequisites for `candidate-complete` and items 9–10 requirements for Landing/closeout after candidate transfer. Preserve Erik as sole Landing authority and publication as a separate decision. Make no other scope, budget, authority, or evaluation change.
-- **Approval:** pending Erik's explicit answer. The operator cannot approve this revision. A rejection requires a new human direction because the current lifecycle is unsatisfiable.
+- **Approved minimal correction:** in version `0.2`, retain the text and evidence standards of items 1–10, but make items 1–8 prerequisites for `candidate-complete` and items 9–10 requirements for Landing/closeout after candidate transfer. Erik remains sole Landing authority, and publication remains separate. No other scope, budget, authority, or evaluation change was approved.
+- **Approval and provenance:** Erik replied “Yes, please do that” to the explicit request to approve version `0.2` and run a fresh evaluation agent. The retained version `0.1` is Git commit `b83e0c6`; the active [contract](contract.md) is version `0.2`.
 - **Affected consumers:** this State, the editorial Loop Contract's transfer rule, root/app routing, and current-state. No application runtime or schema depends on the wording.
 
 ## Round 1 — M003 editorial readiness
@@ -39,16 +39,16 @@ Erik should review the correction proposal and editorial packet. If the correcti
 
 ## Evidence and transfer ledger
 
-- **Contract authority:** Erik's 2026-10-02 instruction to execute Step 4 after reviewing the [proposal](../../../docs/reconciliation/step-4-goal-contract-draft.md); [operating contract](contract.md). Limit: lifecycle defect requires a new version.
+- **Contract authority:** Erik's 2026-10-02 instruction to execute Step 4 after reviewing the [proposal](../../../docs/reconciliation/step-4-goal-contract-draft.md), followed by explicit approval of the [operating contract](contract.md) version `0.2`. Version `0.1` is retained at `b83e0c6`.
 - **Runtime layout:** [routing README](../../README.md), this State, [contract](contract.md), and [loop](../../loops/editorial-readiness.md). Limit: one goal and one loop; no event system.
 - **Editorial judgment:** Round 1 above and its linked sources, MDX, registry, and route. Limit: Erik's editorial sufficiency decision pending.
-- **Deterministic floor:** `corepack pnpm check` passed on the Step 4 documentation working tree based on `8377395`; the initial formatting failure was fixed before the complete rerun. Both local production routes emitted `noindex, nofollow`. Limit: final commit revision to be recorded; no browser suite was needed because visitor-facing source did not change.
+- **Deterministic floor:** `corepack pnpm check` passed on the Step 4 documentation working tree based on `8377395`; the initial formatting failure was fixed before the complete rerun. Both local production routes emitted `noindex, nofollow`. The runtime pilot was committed as `b83e0c6`; no browser suite was needed because visitor-facing source did not change. Recheck version `0.2` documentation before candidate transfer.
 - **Discovery:** 100 local links resolved; cold file-based routing trace passed ten structural checks. Limit: a separate fresh coding-harness evaluator has not reviewed the packet, so contract condition 6 remains open.
 - **Human Landing and adoption:** pending. Neither follows from a merge, a green check, or the operator's recommendation.
 
 ## Operator recommendation for Erik
 
-The M003 overview is ready for Erik's editorial judgment without an additional copy round. The repository-native pattern made active work, provenance, authority, and a contract defect visible in four artifacts, which supports continuing it narrowly. It has not demonstrated cross-goal reliability or a need for telemetry, a service, or Flight Deck. Recommend correcting the contract lifecycle, obtaining a genuine fresh-context evaluation, then transferring the editorial packet for Erik's Landing and adoption decision. Erik may accept the wording, request a specific revision, or keep M003 in draft review. Publication remains a separate choice.
+The M003 overview is ready for Erik's editorial judgment without an additional copy round. The repository-native pattern made active work, provenance, authority, and a contract defect visible in four artifacts, which supports continuing it narrowly. It has not demonstrated cross-goal reliability or a need for telemetry, a service, or Flight Deck. Version `0.2` resolves the lifecycle defect; obtain a genuine fresh-context evaluation, then transfer the editorial packet for Erik's Landing and adoption decision. Erik may accept the wording, request a specific revision, or keep M003 in draft review. Publication remains a separate choice.
 
 ## Retained boundaries
 

@@ -26,7 +26,7 @@ Documentation reconciliation is complete under the [reconciliation plan](../RECO
 - Erik authorized one bounded closure batch. The reference-scenario provenance treatment, agent routing, draft site terminology, and volatile Git-state wording were corrected. The full repository check and both browser suites pass.
 - A fresh focused re-evaluation found no remaining material failure. Erik's conditional authorization accepted Human Gate 3 and closed documentation reconciliation.
 - Erik approved the proposed Step 4 adoption goal by instructing execution on 2026-10-02. The [repository-native pilot](../../.mission-control/README.md) now contains one Goal Contract, Goal State, and editorial-readiness Loop Contract for M003. Its [State](../../.mission-control/goals/G004-001/state.md) is the live record of rounds, evidence, blockers, and next action.
-- Goal Contract `0.1` has a protected ordering defect: it lists Human Landing and the final adoption decision as prerequisites for `candidate-complete`. A minimal version `0.2` correction is proposed and awaits Erik's decision. No agent may silently reinterpret the approved condition or claim Landing.
+- Goal Contract `0.1` had a protected ordering defect: it listed Human Landing and the final adoption decision as prerequisites for `candidate-complete`. Erik approved version `0.2`, which places those decisions after candidate transfer while preserving their requirements. A fresh-context evaluation and Erik's later Landing/adoption decisions remain open.
 
 The repository has one explicit Goal Contract, Goal State, and Loop Contract under `.mission-control/`. It has no Mission Log, normalized event runtime, Flight Deck adapter, or generalized Mission Control service. Historical missions contain useful intent, scope, evidence, and human decisions, but are not silently relabeled as complete implementations of the newer model.
 
@@ -93,7 +93,7 @@ The original reference scenario explicitly discloses that its source execution a
 
 ## What happens next
 
-1. Read [G004-001 State](../../.mission-control/goals/G004-001/state.md) for the current Step 4 evidence, the protected version `0.2` correction request, and the next action. Erik must decide the correction before candidate completion; editorial Landing remains a separate human decision.
+1. Read [G004-001 State](../../.mission-control/goals/G004-001/state.md) for the current Step 4 evidence and next action. A separate fresh-context evaluator must review the routing and packet before candidate completion; editorial Landing remains Erik's decision.
 2. Review M003 wording and decide editorial acceptance separately from publication and implementation verification.
 3. Resolve LAB-M001's human-review boundary and run LAB-M002's credentialed smoke test before claiming live-provider validation.
 4. Before the full career-site launch, establish canonical résumé/contact links and explicit publication/deployment decisions.
