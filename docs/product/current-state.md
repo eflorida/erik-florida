@@ -1,6 +1,6 @@
 # Erik Florida — Current Project State
 
-**Last intentionally established:** 2026-10-02, M003 and Step 4 goal G004-001 landed by Erik
+**Last intentionally established:** 2026-10-02, M003 and G004-001 landed; focused Codex Step 5 routing assessed
 
 This document is current working truth, not an activity log. Historical mission files preserve what was true at their checkpoints; a commit or merge does not by itself establish Landing, editorial acceptance, publication, deployment, or completion of an unchecked validation item.
 
@@ -27,6 +27,7 @@ Documentation reconciliation is complete under the [reconciliation plan](../RECO
 - A fresh focused re-evaluation found no remaining material failure. Erik's conditional authorization accepted Human Gate 3 and closed documentation reconciliation.
 - Erik approved the proposed Step 4 adoption goal by instructing execution on 2026-10-02. The [repository-native pilot](../../.mission-control/README.md) now contains one Goal Contract, Goal State, and editorial-readiness Loop Contract for M003. Its [State](../../.mission-control/goals/G004-001/state.md) is the live record of rounds, evidence, blockers, and next action.
 - Goal Contract `0.1` had a protected ordering defect: it listed Human Landing and the final adoption decision as prerequisites for `candidate-complete`. Erik approved version `0.2`, which places those decisions after candidate transfer while preserving their requirements. A fresh-context evaluation and the retained check passed. Erik then accepted M003 editorially, landed G004-001, and chose to continue the repository-native pattern narrowly. The [Goal State](../../.mission-control/goals/G004-001/state.md) retains the decision and limits.
+- The focused [Step 5 Codex assessment](../reconciliation/step-5-codex-assessment.md) finds the existing root/app routing sufficient for the one tested goal. No Codex-specific skill, rule, MCP adapter, or event mechanism has a demonstrated need. Other harnesses and a new active goal remain separate choices.
 
 The repository has one explicit Goal Contract, Goal State, and Loop Contract under `.mission-control/`. It has no Mission Log, normalized event runtime, Flight Deck adapter, or generalized Mission Control service. Historical missions contain useful intent, scope, evidence, and human decisions, but are not silently relabeled as complete implementations of the newer model.
 
@@ -93,7 +94,7 @@ The original reference scenario explicitly discloses that its source execution a
 
 ## What happens next
 
-1. Read the landed [G004-001 State](../../.mission-control/goals/G004-001/state.md) for Step 4's evidence, human decision, and narrow adoption limit. Scope selected-harness integration for Step 5 separately; this pilot did not prove a need for a harness adapter or authorize Step 6 telemetry.
+1. Read the landed [G004-001 State](../../.mission-control/goals/G004-001/state.md) for Step 4's evidence and human decision, and the [Codex assessment](../reconciliation/step-5-codex-assessment.md) for the first selected harness. A future active goal needs its own bounded scope and fresh routing check. Broader harness integration and Step 6 telemetry remain unselected.
 2. Decide publication and deployment of the accepted M003 overview separately. The article retains its own draft state.
 3. Resolve LAB-M001's human-review boundary and run LAB-M002's credentialed smoke test before claiming live-provider validation.
 4. Before the full career-site launch, establish canonical résumé/contact links and explicit publication/deployment decisions.
