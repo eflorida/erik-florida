@@ -1,6 +1,6 @@
 # Erik Florida — Current Project State
 
-**Last intentionally established:** 2026-09-25, Mission Control reconciliation accepted at Human Gate 3
+**Last intentionally established:** 2026-10-02, Step 4 repository-native pilot started under G004-001
 
 This document is current working truth, not an activity log. Historical mission files preserve what was true at their checkpoints; a commit or merge does not by itself establish Landing, editorial acceptance, publication, deployment, or completion of an unchecked validation item.
 
@@ -24,10 +24,11 @@ Documentation reconciliation is complete under the [reconciliation plan](../RECO
 - Human Gate 2 was explicitly approved on 2026-09-25 after the complete repository check and browser suite passed.
 - The independent [Step 3 evaluation](../reconciliation/mission-control-sync-evaluation.md) found two material failures: unresolved replay provenance conflicted with the Lab's visitor-facing verification claims, and the retained agent handoff conflicted with the current authorized phase.
 - Erik authorized one bounded closure batch. The reference-scenario provenance treatment, agent routing, draft site terminology, and volatile Git-state wording were corrected. The full repository check and both browser suites pass.
-- A fresh focused re-evaluation found no remaining material failure. Erik's conditional authorization therefore accepts Human Gate 3 and closes documentation reconciliation. Step 4 and all runtime/bootstrap work remain unstarted and require their own Goal Contract and authorization.
-- All runtime/bootstrap steps remain unstarted.
+- A fresh focused re-evaluation found no remaining material failure. Erik's conditional authorization accepted Human Gate 3 and closed documentation reconciliation.
+- Erik approved the proposed Step 4 adoption goal by instructing execution on 2026-10-02. The [repository-native pilot](../../.mission-control/README.md) now contains one Goal Contract, Goal State, and editorial-readiness Loop Contract for M003. Its [State](../../.mission-control/goals/G004-001/state.md) is the live record of rounds, evidence, blockers, and next action.
+- Goal Contract `0.1` has a protected ordering defect: it lists Human Landing and the final adoption decision as prerequisites for `candidate-complete`. A minimal version `0.2` correction is proposed and awaits Erik's decision. No agent may silently reinterpret the approved condition or claim Landing.
 
-The repository has no explicit Goal Contract, Goal State, Loop Contract, Mission Log, normalized event runtime, Flight Deck adapter, or `.mission-control` structure. Historical missions contain useful intent, scope, evidence, and human decisions, but are not silently relabeled as complete implementations of the newer model.
+The repository has one explicit Goal Contract, Goal State, and Loop Contract under `.mission-control/`. It has no Mission Log, normalized event runtime, Flight Deck adapter, or generalized Mission Control service. Historical missions contain useful intent, scope, evidence, and human decisions, but are not silently relabeled as complete implementations of the newer model.
 
 ## Website state
 
@@ -87,12 +88,12 @@ The original reference scenario explicitly discloses that its source execution a
 - Public integration between the site and Lab, including the evidence and deployment boundary needed to link them.
 - Any future attributable execution evidence for, or replacement of, the original reference scenario. The current provenance disclosure is approved.
 - Shared UI/content/domain packages without demonstrated reuse.
-- Mission Control runtime layout, normalized events, adapters, deployment topology, Flight Deck product design, and final portfolio-demo scope. Step 2c records options but adopts none.
+- Expansion of the one-goal repository-native pilot, normalized events, adapters, deployment topology, Flight Deck product design, and final portfolio-demo scope. Step 2c records options but adopts none beyond the bounded Step 4 pilot.
 - Repository visibility changes and hosted GitHub controls.
 
 ## What happens next
 
-1. Review the proposed [Step 4 adoption Goal Contract](../reconciliation/step-4-goal-contract-draft.md). Approval must confirm the real M003 outcome, authority, mutation scope, evidence, budget, stop rules, and minimal runtime hypothesis before implementation begins.
-2. Review M003 wording and decide editorial acceptance/publication separately from implementation verification.
+1. Read [G004-001 State](../../.mission-control/goals/G004-001/state.md) for the current Step 4 evidence, the protected version `0.2` correction request, and the next action. Erik must decide the correction before candidate completion; editorial Landing remains a separate human decision.
+2. Review M003 wording and decide editorial acceptance separately from publication and implementation verification.
 3. Resolve LAB-M001's human-review boundary and run LAB-M002's credentialed smoke test before claiming live-provider validation.
 4. Before the full career-site launch, establish canonical résumé/contact links and explicit publication/deployment decisions.

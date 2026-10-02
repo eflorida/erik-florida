@@ -6,7 +6,7 @@ Start with the root `../../AGENTS.md` and `../../docs/product/current-state.md`.
 
 For Mission Control or agentic-development claims, use `../../docs/guides/mission-control-concepts.md`, `../../docs/reconciliation/canonical-reference-notes.md`, and the applicable source assessment. The site explains selected ideas; it is not the Mission Control runtime or Flight Deck.
 
-Use the documented content guide for the surface being changed. No explicit Goal Contract, Goal State, or Loop Contract runtime has been bootstrapped in this repository; do not invent one during ordinary site work.
+Use the documented content guide for the surface being changed. Step 4's active M003 editorial pilot is routed by `../../.mission-control/README.md`; read its Goal Contract, current State, and editorial-readiness Loop Contract before work on that goal. The pilot does not make ordinary site work a Mission Control runtime task or authorize publication.
 
 ## Site rules
 
