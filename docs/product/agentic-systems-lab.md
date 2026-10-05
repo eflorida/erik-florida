@@ -38,16 +38,20 @@ The live surface exposes model identity, request latency, token usage, estimated
 
 Automated tests verify request validation, safe unconfigured behavior, error mapping, structured rendering, and a mocked success path. LAB-M002's credentialed provider smoke test remains pending. The reference scenario remains available as a deterministic explanation of the Lab's inspection model, subject to the evidence boundary above.
 
+## Third product slice — change review workspace
+
+LAB-M003 adds `/workspace`: a bounded diff starts a separate-worker Mastra workflow with parallel risk and test reports followed by an advisory brief. The visitor can reopen a 24-hour run URL, inspect each validated report as it arrives, and open a drawer of actual app-level transitions. This is a new local opt-in implementation checkpoint, not a public launch or evidence of review reliability. A credentialed run and three-case quality assessment remain pending. See [LAB-M003](../missions/LAB-M003/mission.md) and [ADR-009](../architecture/decisions/ADR-009-lab-mastra-worker-and-run-store.md).
+
 ## Mission Control concepts demonstrated and absent
 
-| Demonstrated in a bounded form                                                                    | Not established by the Lab                                                                    |
-| ------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
-| Explicit input limits and schema validation                                                       | A versioned Goal Contract or durable Goal State                                               |
-| Presentation of intent, steps, artifacts, evidence claims, evaluation labels, and human authority | A reusable Loop Contract, governed rounds, re-entry, transfer acceptance, or Landing          |
-| Separation of model judgment from request measurements                                            | Independent quality evaluation, calibrated reliability, or persistent-effect verification     |
-| Safe failure/configuration states and an app-local provider boundary                              | Durable Mission Log, normalized events, aggregate loop analytics, or multi-session memory     |
-| One human-owned review recommendation                                                             | Agent tools, code execution, coding-harness orchestration, or automated engineering authority |
-| Independent deployment from the professional site                                                 | Flight Deck, Mastra, a generalized agent framework, or a chosen portfolio-demo architecture   |
+| Demonstrated in a bounded form                                                     | Not established by the Lab                                                                      |
+| ---------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
+| Explicit input limits, schema validation, and a Lab-specific run record            | A Lab application Goal Contract or Mission Control Goal State                                   |
+| Presentation of intent, steps, artifacts, activity, and human authority            | Mission Control governed rounds, transfer acceptance, or Landing in the app runtime             |
+| Separation of model judgment from request measurements                             | Independent quality evaluation, calibrated reliability, or persistent-effect verification       |
+| Safe failure/configuration states, offloaded work, and app-local provider boundary | Crash-transparent mid-call continuation, Mission Log, normalized events, or aggregate analytics |
+| One human-owned review recommendation                                              | Agent tools, code execution, coding-harness orchestration, or automated engineering authority   |
+| An app-local Mastra change-review workflow                                         | Flight Deck, generalized orchestration, or public workflow release                              |
 
 ## Product rules
 
@@ -55,7 +59,7 @@ Automated tests verify request validation, safe unconfigured behavior, error map
 - Label reference-scenario, recorded, simulated, and live behavior accurately.
 - Make failures and human authority visible rather than polishing them away.
 - Keep the primary run inspection surface in the first viewport.
-- Treat arbitrary public input, code execution, persistence, authentication, and long-running work as separate product and architecture decisions.
+- Treat public enablement, code execution, authentication, and broader long-running work as separate product and architecture decisions.
 - Keep contracts and components app-local until a real second consumer exists.
 - Do not introduce Flight Deck concepts such as projects, activity ingestion, integrations, or durable knowledge graphs into the Lab without a separate mission.
 - Do not promote scenario assertions or mocked provider responses into execution/reliability claims. Link success claims to attributable evidence and keep the approved provenance boundary visible.

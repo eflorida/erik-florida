@@ -2,7 +2,7 @@
 
 **Track:** Lab
 
-**Current mission:** [`LAB-M002`](../missions/LAB-M002/mission.md)
+**Current mission:** [`LAB-M003`](../missions/LAB-M003/mission.md)
 
 ## Mission sequence
 
@@ -14,15 +14,15 @@ Build the independent application shell and one schema-validated recorded run. P
 
 Accept one pasted TypeScript diff and review it through the OpenAI Responses API. Validate structured output, expose request telemetry and cost estimates, and preserve human authority. Do not accept arbitrary repositories or execute public code.
 
-### LAB-M003 — Durable public evidence
+### LAB-M003 — Change review workspace
 
-This remains a conditional proposal, not an approved next mission. Only if saved or shareable runs are required should the project evaluate persistence behind an app-local data seam and stable public run URLs. Add a worker only if a run must outlive a request. Define a public run-summary contract and promote it to a shared package only when the professional website becomes a real consumer.
+Erik selected a bounded change-review experience: two Mastra-managed delegated reports, advisory synthesis, a persisted run URL, result-specific UI, and actual activity events. [ADR-009](../architecture/decisions/ADR-009-lab-mastra-worker-and-run-store.md) adopts an app-local run store and separate worker for local execution. It does not approve public runtime enablement; hosted worker/storage, controls, live provider validation, and evaluation remain open.
 
 ### Later missions
 
 Sandboxed code execution, private runs, authentication, user-provided repositories, multiple workflow authoring, and generalized orchestration each require separate product, architecture, safety, and operational decisions.
 
-The [Step 8 working direction](../reconciliation/step-8-demo-direction.md) now favors an interactive, production-like Lab app with Mastra-managed work, result-specific UI, and inspectable workflow activity over a full Flight Deck build for the job-search demo. The product task, durable-execution promise, public access envelope, and implementing mission remain unselected. Mastra is not yet an adopted Lab dependency or automatic LAB-M003 scope.
+The [Step 8 working direction](../reconciliation/step-8-demo-direction.md) selected this bounded product task. The Lab remains separate from Flight Deck and from the Mission Control repository-native pilot.
 
 ## Application boundaries
 
@@ -36,4 +36,4 @@ The [Step 8 working direction](../reconciliation/step-8-demo-direction.md) now f
 
 LAB-M001 is ready for human review and remains available as the original reference scenario. Its interface now discloses that source execution artifacts are not retained; see the [evidence assessment](../reference/lab-evidence-assessment.md). LAB-M002's bounded OpenAI runtime is implemented and remains ready for credentialed validation, with the live provider smoke test unchecked. The Lab runs independently on port 3100 and the professional site on port 3000.
 
-No current mission authorizes persistence, a worker, public runtime enablement, generalized orchestration, Flight Deck behavior, Mastra adoption, or a site-to-Lab public integration. The Step 8 working direction needs a new bounded mission and architecture decisions before changing those boundaries.
+LAB-M003 authorizes only its app-local Mastra workflow, run persistence, and one background worker. It does not authorize public runtime enablement, generalized orchestration, Flight Deck behavior, or a site-to-Lab public integration. Credentialed and hosted validation remain pending.

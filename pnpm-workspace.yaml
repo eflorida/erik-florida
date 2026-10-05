@@ -4,6 +4,7 @@ packages:
 allowBuilds:
   # The resolver ships platform binaries as optional dependencies; its fallback
   # source-build script is unnecessary for supported CI and development targets.
+  esbuild: false
   unrs-resolver: false
 minimumReleaseAgeExclude:
   - "@next/env@16.3.4"

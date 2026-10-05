@@ -1,5 +1,6 @@
 /node_modules
 /.next/
+/.lab-data/
 /out/
 /coverage
 /playwright-report/

@@ -1,6 +1,6 @@
 # Step 8 — Product demo direction
 
-**Status:** Working proposal, 2026-10-05. Erik has prioritized a production-like, interactive Agentic Systems Lab experience over building Flight Deck in full for the job-search demo. The product task and implementation Goal Contract are not yet locked.
+**Status:** Selected direction, 2026-10-05. Erik chose the change-review vertical slice and authorized implementation. [LAB-M003](../missions/LAB-M003/mission.md), [G008-001](../../.mission-control/goals/G008-001/contract.md), and [ADR-009](../architecture/decisions/ADR-009-lab-mastra-worker-and-run-store.md) record the operating scope. The remainder of this document preserves the proposal that led to those decisions.
 
 ## Outcome to demonstrate
 

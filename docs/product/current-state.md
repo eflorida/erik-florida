@@ -1,6 +1,6 @@
 # Erik Florida — Current Project State
 
-**Last intentionally established:** 2026-10-05, M003 and G004-001 landed; Step 5–7 outputs and a Step 8 working direction recorded
+**Last intentionally established:** 2026-10-05, M003 and G004-001 landed; LAB-M003 change-review implementation checkpoint in progress
 
 This document is current working truth, not an activity log. Historical mission files preserve what was true at their checkpoints; a commit or merge does not by itself establish Landing, editorial acceptance, publication, deployment, or completion of an unchecked validation item.
 
@@ -30,7 +30,7 @@ Documentation reconciliation is complete under the [reconciliation plan](../RECO
 - The focused [Step 5 Codex assessment](../reconciliation/step-5-codex-assessment.md) finds the existing root/app routing sufficient for the one tested goal. No Codex-specific skill, rule, MCP adapter, or event mechanism has a demonstrated need. Other harnesses and a new active goal remain separate choices.
 - The [Step 6 event contract proposal](../reconciliation/step-6-event-contract.md) defines a logical envelope, authority boundaries, corrections, and possible metrics against G004-001. It is a design artifact only; no normalized events, emitter, store, analytics job, or Mission Log service exists.
 - The [Step 7 topology assessment](../reconciliation/step-7-deployment-topology.md) maps the pilot's actual authority, storage, changes, observation, access, permissions, and telemetry to each Mission Control primitive. It assesses conditional Flight Deck adapter paths without selecting a deployment, moving authority, or integrating the separate product.
-- Erik's 2026-10-05 [Step 8 working direction](../reconciliation/step-8-demo-direction.md) favors a production-like interactive Lab app with Mastra-managed agentic work, result-specific UI, and inspectable workflow activity over a full Flight Deck build for the job-search demo. The product task, offload durability, public access envelope, and implementing mission remain to be set; no new runtime is adopted by this direction alone.
+- Erik's 2026-10-05 [Step 8 decision](../reconciliation/step-8-demo-direction.md) selected a change-review workspace with Mastra-managed tasks, result-specific UI, actual activity, and a run that can be reopened after refresh. [LAB-M003](../missions/LAB-M003/mission.md), [G008-001](../../.mission-control/goals/G008-001/contract.md), and [ADR-009](../architecture/decisions/ADR-009-lab-mastra-worker-and-run-store.md) govern the bounded local implementation. Public operation and credentialed validation remain separate.
 
 The repository has one explicit Goal Contract, Goal State, and Loop Contract under `.mission-control/`. It has no Mission Log, normalized event runtime, Flight Deck adapter, or generalized Mission Control service. Historical missions contain useful intent, scope, evidence, and human decisions, but are not silently relabeled as complete implementations of the newer model.
 
@@ -52,7 +52,8 @@ The Lab was integrated into this checkout by commit `06f1ff5`. It remains indepe
 
 - [LAB-M001 — Reference Run Explorer](../missions/LAB-M001/mission.md) is recorded as **Ready for human review**. `/reference` loads the original schema-validated, Git-backed reference scenario through an app-local run contract and renders its steps, artifacts, scenario claims, provenance disclosure, and human-transfer recommendation.
 - [LAB-M002 — Bounded Live Review](../missions/LAB-M002/mission.md) is recorded as **Ready for credentialed validation**. `/` accepts a bounded TypeScript diff and `/api/reviews` makes one request-bound OpenAI Responses API call when a server credential and `LAB_LIVE_REVIEW_ENABLED=true` are configured.
-- [ADR-008](../architecture/decisions/ADR-008-bounded-openai-responses-runtime.md) governs the live route: no tools, submitted-code execution, repository access, application persistence, or automatic merge/deployment authority. The Lab has no database, authentication, worker, queue, saved run history, or public runtime approval.
+- [ADR-008](../architecture/decisions/ADR-008-bounded-openai-responses-runtime.md) still governs the original live route: no tools, submitted-code execution, repository access, application persistence, or automatic merge/deployment authority.
+- [LAB-M003](../missions/LAB-M003/mission.md) adds a separate, disabled-by-default `/workspace` with a typed Mastra workflow, one worker, app-local LibSQL run store, 24-hour run URL, partial result cards, and recorded activity drawer. [ADR-009](../architecture/decisions/ADR-009-lab-mastra-worker-and-run-store.md) limits execution to local/controlled Node hosting; Vercel does not accept workflow runs. The Lab still has no authentication, public runtime approval, code execution, or repository ingestion.
 - Automated verification and safe unconfigured behavior are recorded in LAB-M002. Its credentialed live provider smoke test remains unchecked. The merge does not complete that validation.
 
 The original reference scenario explicitly discloses that its source execution artifacts are not retained in this checkout. Its contract and interface distinguish scenario claims from repository-verified structure and presentation. This treatment resolves the public-claim conflict without converting the scenario into execution evidence or accepting LAB-M001.
@@ -72,7 +73,7 @@ The original reference scenario explicitly discloses that its source execution a
 - Validate authored and external data once at app-local Zod boundaries and infer TypeScript types from schemas.
 - Keep Server Components responsible for coordination; presentational components receive typed, render-ready props and do not fetch.
 - Keep the site static-first and content-led. Its no-database/auth/API/worker/AI-runtime defaults remain intact.
-- Permit the Lab's narrowly bounded API and OpenAI runtime only under ADR-008 and LAB-M002. Persistence, authentication, background work, repository/tool access, and public enablement require later decisions.
+- Permit the Lab's original bounded API under ADR-008/LAB-M002 and its separate Mastra workflow, persistence, and background worker under ADR-009/LAB-M003. Authentication, repository/tool access, and public enablement require later decisions.
 - Preserve independent application deployment and promote only proven cross-app contracts or primitives to shared packages.
 - Preserve the approved site typography and visual foundation; final logo, imagery, broader brand identity, and coordinated motion remain deferred.
 - Keep the site content paths distinct: MDX for long-form editorial content and curated JSON for career facts. Do not ship the raw career master record.
@@ -87,8 +88,8 @@ The original reference scenario explicitly discloses that its source execution a
 - Canonical résumé/contact links and full career-site launch readiness.
 - Canonical domains, production promotion, and current hosted deployment verification.
 - Final logo, imagery, broader brand identity, and coordinated motion.
-- Public enablement, abuse controls, cost budget, and credentialed smoke validation for the Lab live route.
-- Saved/shareable Lab runs, persistence, authentication, workers, code execution, repository ingestion, multiple workflows, and generalized orchestration.
+- Public enablement, abuse controls, hosted cost ceiling, and credentialed smoke validation for both Lab live paths; LAB-M003 also needs its three-case quality assessment.
+- A hosted persistent Lab worker and shared run database; authentication, code execution, repository ingestion, additional workflows, and generalized orchestration.
 - Public integration between the site and Lab, including the evidence and deployment boundary needed to link them.
 - Any future attributable execution evidence for, or replacement of, the original reference scenario. The current provenance disclosure is approved.
 - Shared UI/content/domain packages without demonstrated reuse.
@@ -97,7 +98,7 @@ The original reference scenario explicitly discloses that its source execution a
 
 ## What happens next
 
-1. Read the [Step 8 demo direction](../reconciliation/step-8-demo-direction.md) and settle its product task and execution/public-access promises before implementing a new Lab mission. The landed [G004-001 State](../../.mission-control/goals/G004-001/state.md), [Step 5 Codex assessment](../reconciliation/step-5-codex-assessment.md), [Step 6 event proposal](../reconciliation/step-6-event-contract.md), and [Step 7 topology assessment](../reconciliation/step-7-deployment-topology.md) remain the evidence and boundary context. A future active goal needs its own bounded scope and fresh routing check.
+1. Finish [G008-001](../../.mission-control/goals/G008-001/state.md): run retained checks, exercise a credentialed LAB-M003 workflow and run reopening, and assess representative cases. Choose hosted worker/storage and public controls only before public release. The landed [G004-001 State](../../.mission-control/goals/G004-001/state.md), [Step 5 Codex assessment](../reconciliation/step-5-codex-assessment.md), [Step 6 event proposal](../reconciliation/step-6-event-contract.md), and [Step 7 topology assessment](../reconciliation/step-7-deployment-topology.md) remain separate methodology context.
 2. Decide publication and deployment of the accepted M003 overview separately. The article retains its own draft state.
 3. Resolve LAB-M001's human-review boundary and run LAB-M002's credentialed smoke test before claiming live-provider validation.
 4. Before the full career-site launch, establish canonical résumé/contact links and explicit publication/deployment decisions.

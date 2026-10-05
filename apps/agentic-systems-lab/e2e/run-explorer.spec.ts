@@ -1,4 +1,8 @@
 import { expect, test } from "@playwright/test";
+import {
+  isWorkerReady,
+  recordWorkerHeartbeat,
+} from "../src/lib/workflow-store";
 
 test("a visitor can inspect a disclosed reference scenario and reach the human transfer", async ({
   page,
@@ -99,4 +103,41 @@ test("the run remains readable on mobile without horizontal overflow", async ({
   ).toBe(true);
   await page.getByRole("button", { name: /Checks represented/ }).click();
   await expect(page.getByText("6 passed · 0 failed")).toBeVisible();
+});
+
+test("a queued Mastra run survives navigation and exposes actual activity", async ({
+  page,
+}) => {
+  // Simulate the worker's readiness signal; model execution is covered separately.
+  await recordWorkerHeartbeat();
+  expect(await isWorkerReady()).toBe(true);
+  await page.goto("/workspace");
+  await expect(
+    page.getByRole("heading", { name: "Send a change. Follow the work." }),
+  ).toBeVisible();
+  await page.getByRole("button", { name: "Delegate review" }).click();
+  await expect(page).toHaveURL(/\/workspace\/runs\/[a-f0-9-]{36}$/);
+  await expect(page.getByText("queued", { exact: true })).toBeVisible();
+  await page.reload();
+  await expect(page.getByText("Run", { exact: false }).first()).toBeVisible();
+  await page.getByRole("button", { name: /Activity/ }).click();
+  await expect(
+    page.getByText("Review accepted for background work."),
+  ).toBeVisible();
+  await page.getByRole("button", { name: "Close activity" }).click();
+});
+
+test("the change review workspace fits a narrow screen", async ({ page }) => {
+  await page.setViewportSize({ width: 390, height: 844 });
+  await page.goto("/workspace");
+  await expect(
+    page.getByRole("heading", { name: "Send a change. Follow the work." }),
+  ).toBeVisible();
+  expect(
+    await page.evaluate(
+      () =>
+        document.documentElement.scrollWidth <=
+        document.documentElement.clientWidth,
+    ),
+  ).toBe(true);
 });

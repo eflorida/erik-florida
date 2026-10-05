@@ -2,9 +2,9 @@
 
 ## Mission
 
-Start with the root `../../AGENTS.md` and `../../docs/product/current-state.md`, then read `../../docs/product/agentic-systems-lab.md`, `../../docs/plans/agentic-systems-lab.md`, and the active `LAB-*` mission. LAB-M001 remains ready for human review; LAB-M002 remains ready for credentialed validation. This application is a public demonstration surface, not Flight Deck or a general Mission Control runtime.
+Start with the root `../../AGENTS.md` and `../../docs/product/current-state.md`, then read `../../docs/product/agentic-systems-lab.md`, `../../docs/plans/agentic-systems-lab.md`, and the active `LAB-*` mission. LAB-M003 is the active implementation checkpoint; its repository-native Goal Contract and State are in `../../.mission-control/goals/G008-001/`. LAB-M001 remains ready for human review; LAB-M002 remains ready for credentialed validation. This application is a demonstration surface, not Flight Deck or a general Mission Control runtime.
 
-For methodology claims, read `../../docs/guides/mission-control-concepts.md` and `../../docs/reconciliation/canonical-reference-notes.md`. No explicit Goal Contract, Goal State, Loop Contract, Mission Log, or normalized event runtime exists here. Do not infer those capabilities from the replay schema or live-review request.
+For methodology claims, read `../../docs/guides/mission-control-concepts.md` and `../../docs/reconciliation/canonical-reference-notes.md`. The repository has a LAB-M003 Goal Contract and Loop Contract for engineering execution, but the Lab application does not implement those Mission Control primitives. Its run events are app-specific.
 
 ## Commands
 
@@ -17,7 +17,7 @@ For methodology claims, read `../../docs/guides/mission-control-concepts.md` and
 1. Label reference-scenario, recorded, simulated, and live behavior accurately.
 2. Validate authored and external run data once at an app-local boundary; infer TypeScript types from schemas.
 3. Server Components coordinate data. Presentational components receive typed props and do not fetch.
-4. Keep the existing API and OpenAI runtime inside ADR-008 and LAB-M002's bounds. Do not add tools, repository access, public enablement, persistence, worker, database, auth, sandbox, or shared package until a later mission fires and records the relevant trigger.
+4. Keep the existing API and OpenAI runtime inside ADR-008 and LAB-M002's bounds. LAB-M003 and ADR-009 authorize only the bounded Mastra workflow, run store, and separate local worker. Tools, repository access, public enablement, auth, sandbox, and shared packages need later decisions.
 5. Preserve independent deployment from `apps/site` and do not import site implementation details.
 6. Every success claim links to inspectable evidence; deterministic checks and human judgments remain distinguishable.
 7. Public safety, accessibility, performance, and accurate provenance are requirements.

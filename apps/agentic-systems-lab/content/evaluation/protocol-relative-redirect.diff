@@ -1,0 +1,9 @@
+diff --git a/src/redirect.ts b/src/redirect.ts
+--- a/src/redirect.ts
++++ b/src/redirect.ts
+@@ -1,3 +1,6 @@
+ export function redirectTo(target: string) {
+-  window.location.assign(target);
++  if (!target.startsWith("/")) return;
++  window.location.assign(target);
+ }

@@ -1,0 +1,15 @@
+diff --git a/src/load-items.ts b/src/load-items.ts
+--- a/src/load-items.ts
++++ b/src/load-items.ts
+@@ -1,5 +1,9 @@
+ export async function loadItems() {
+-  const response = await fetch("/api/items");
+-  if (!response.ok) throw new Error("Could not load items");
+-  return response.json();
++  try {
++    const response = await fetch("/api/items");
++    return await response.json();
++  } catch {
++    return [];
++  }
+ }

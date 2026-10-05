@@ -4,9 +4,15 @@ Independent public evidence application for inspecting bounded agentic work.
 
 Repository context and current status live in the root [`AGENTS.md`](../../AGENTS.md) and [`docs/product/current-state.md`](../../docs/product/current-state.md). Mission Control terminology follows the [concept guide](../../docs/guides/mission-control-concepts.md). The Lab demonstrates selected ideas; it is not Flight Deck or a general Mission Control runtime.
 
-LAB-M001 remains ready for human review. LAB-M002 is implemented in this checkout and remains ready for credentialed validation; its unchecked live provider smoke test has not been converted into an acceptance claim by the merge.
+LAB-M001 remains ready for human review. LAB-M002 remains ready for credentialed validation. LAB-M003 adds a local-only change-review workspace and remains pending credentialed and hosted validation.
 
-The original reference scenario is a schema-validated design fixture created while the Lab and Mission Control model were evolving. Its structure and presentation are verified, while the source execution artifacts described inside it are not retained in this checkout. The interface and [evidence assessment](../../docs/reference/lab-evidence-assessment.md) disclose that boundary. The Lab demonstrates selected boundaries and presentation patterns; it has no Goal State, Loop Contract runtime, durable event history, effect verification, tools, Mastra workflow, or Flight Deck behavior.
+The original reference scenario is a schema-validated design fixture created while the Lab and Mission Control model were evolving. Its structure and presentation are verified, while the source execution artifacts described inside it are not retained in this checkout. The interface and [evidence assessment](../../docs/reference/lab-evidence-assessment.md) disclose that boundary. The Lab now has an app-specific durable review record and Mastra workflow, but no Mission Control Goal State or Loop Contract runtime, effect verification, agent tools, or Flight Deck behavior.
+
+## LAB-M003 change review workspace
+
+`/workspace` delegates one bounded diff to parallel Mastra risk and test agents, then prepares an advisory brief. The separate worker processes a persisted queue while `/workspace/runs/[id]` reads partial results and actual activity events. Run links remain readable for 24 hours; anyone holding a link can see its reports, so do not submit private source.
+
+For local use, copy `.env.example` to `.env.local`, add `OPENAI_API_KEY`, set `LAB_WORKFLOW_ENABLED=true`, and run `corepack pnpm --filter @erik-florida/agentic-systems-lab dev`. This starts Next on port 3100 and the worker. The default database is `.lab-data/reviews.db`; `LAB_DATABASE_URL` and `LAB_DATABASE_AUTH_TOKEN` can point both processes at shared LibSQL. The workflow is disabled by default and rejects new runs on Vercel, where this worker is absent. Do not expose it publicly until the LAB-M003 release conditions are met. See [ADR-009](../../docs/architecture/decisions/ADR-009-lab-mastra-worker-and-run-store.md).
 
 ## LAB-M002 live review
 
