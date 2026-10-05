@@ -1,6 +1,6 @@
 # Erik Florida — Current Project State
 
-**Last intentionally established:** 2026-10-02, M003 and G004-001 landed; Step 5–7 outputs recorded
+**Last intentionally established:** 2026-10-05, M003 and G004-001 landed; Step 5–7 outputs and a Step 8 working direction recorded
 
 This document is current working truth, not an activity log. Historical mission files preserve what was true at their checkpoints; a commit or merge does not by itself establish Landing, editorial acceptance, publication, deployment, or completion of an unchecked validation item.
 
@@ -30,6 +30,7 @@ Documentation reconciliation is complete under the [reconciliation plan](../RECO
 - The focused [Step 5 Codex assessment](../reconciliation/step-5-codex-assessment.md) finds the existing root/app routing sufficient for the one tested goal. No Codex-specific skill, rule, MCP adapter, or event mechanism has a demonstrated need. Other harnesses and a new active goal remain separate choices.
 - The [Step 6 event contract proposal](../reconciliation/step-6-event-contract.md) defines a logical envelope, authority boundaries, corrections, and possible metrics against G004-001. It is a design artifact only; no normalized events, emitter, store, analytics job, or Mission Log service exists.
 - The [Step 7 topology assessment](../reconciliation/step-7-deployment-topology.md) maps the pilot's actual authority, storage, changes, observation, access, permissions, and telemetry to each Mission Control primitive. It assesses conditional Flight Deck adapter paths without selecting a deployment, moving authority, or integrating the separate product.
+- Erik's 2026-10-05 [Step 8 working direction](../reconciliation/step-8-demo-direction.md) favors a production-like interactive Lab app with Mastra-managed agentic work, result-specific UI, and inspectable workflow activity over a full Flight Deck build for the job-search demo. The product task, offload durability, public access envelope, and implementing mission remain to be set; no new runtime is adopted by this direction alone.
 
 The repository has one explicit Goal Contract, Goal State, and Loop Contract under `.mission-control/`. It has no Mission Log, normalized event runtime, Flight Deck adapter, or generalized Mission Control service. Historical missions contain useful intent, scope, evidence, and human decisions, but are not silently relabeled as complete implementations of the newer model.
 
@@ -96,7 +97,7 @@ The original reference scenario explicitly discloses that its source execution a
 
 ## What happens next
 
-1. Read the landed [G004-001 State](../../.mission-control/goals/G004-001/state.md), the focused [Codex assessment](../reconciliation/step-5-codex-assessment.md), the [Step 6 event proposal](../reconciliation/step-6-event-contract.md), and the [Step 7 topology assessment](../reconciliation/step-7-deployment-topology.md). A future active goal needs its own bounded scope and fresh routing check. Step 8 must choose a portfolio-demo outcome before this repository adopts Flight Deck integration or authority migration.
+1. Read the [Step 8 demo direction](../reconciliation/step-8-demo-direction.md) and settle its product task and execution/public-access promises before implementing a new Lab mission. The landed [G004-001 State](../../.mission-control/goals/G004-001/state.md), [Step 5 Codex assessment](../reconciliation/step-5-codex-assessment.md), [Step 6 event proposal](../reconciliation/step-6-event-contract.md), and [Step 7 topology assessment](../reconciliation/step-7-deployment-topology.md) remain the evidence and boundary context. A future active goal needs its own bounded scope and fresh routing check.
 2. Decide publication and deployment of the accepted M003 overview separately. The article retains its own draft state.
 3. Resolve LAB-M001's human-review boundary and run LAB-M002's credentialed smoke test before claiming live-provider validation.
 4. Before the full career-site launch, establish canonical résumé/contact links and explicit publication/deployment decisions.

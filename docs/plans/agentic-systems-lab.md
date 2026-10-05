@@ -22,7 +22,7 @@ This remains a conditional proposal, not an approved next mission. Only if saved
 
 Sandboxed code execution, private runs, authentication, user-provided repositories, multiple workflow authoring, and generalized orchestration each require separate product, architecture, safety, and operational decisions.
 
-The final portfolio demo is intentionally unselected. A simplified Flight Deck, Mission Control implementation assistant, autonomous Mastra application, or real career-platform integration remain options in the reconciliation plan. Mastra agents/workflows/evals/observability are evaluation criteria for that later decision, not adopted Lab dependencies or an automatic LAB-M003 scope.
+The [Step 8 working direction](../reconciliation/step-8-demo-direction.md) now favors an interactive, production-like Lab app with Mastra-managed work, result-specific UI, and inspectable workflow activity over a full Flight Deck build for the job-search demo. The product task, durable-execution promise, public access envelope, and implementing mission remain unselected. Mastra is not yet an adopted Lab dependency or automatic LAB-M003 scope.
 
 ## Application boundaries
 
@@ -36,4 +36,4 @@ The final portfolio demo is intentionally unselected. A simplified Flight Deck, 
 
 LAB-M001 is ready for human review and remains available as the original reference scenario. Its interface now discloses that source execution artifacts are not retained; see the [evidence assessment](../reference/lab-evidence-assessment.md). LAB-M002's bounded OpenAI runtime is implemented and remains ready for credentialed validation, with the live provider smoke test unchecked. The Lab runs independently on port 3100 and the professional site on port 3000.
 
-No current mission authorizes persistence, a worker, public runtime enablement, generalized orchestration, Flight Deck behavior, Mastra adoption, or a site-to-Lab public integration.
+No current mission authorizes persistence, a worker, public runtime enablement, generalized orchestration, Flight Deck behavior, Mastra adoption, or a site-to-Lab public integration. The Step 8 working direction needs a new bounded mission and architecture decisions before changing those boundaries.
