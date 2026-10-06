@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import Link from "next/link";
 import { useRouter } from "next/navigation";
 
 import { MAX_DIFF_CHARACTERS } from "@/contracts/review";
@@ -184,6 +185,7 @@ export function ReviewWorkspace({
                 This environment is not ready to accept live workflow runs. You
                 can still inspect the reference scenario.
               </span>
+              <Link href="/reference">Open the reference scenario →</Link>
             </div>
           ) : null}
           <dl className="workflow-meta">
@@ -240,12 +242,29 @@ export function ReviewWorkspace({
           ) : null}
           {!run ? (
             <div className="workflow-empty">
-              <span>◌</span>
+              <span aria-hidden="true">01—03</span>
               <h3>The packet starts with a real run</h3>
               <p>
                 Risk findings, test ideas, and a decision brief will appear here
                 as the workflow finishes each task.
               </p>
+              <ol className="workflow-preview" aria-label="Review stages">
+                <li>
+                  <span>01 / Parallel</span>
+                  <strong>Risk review</strong>
+                  <small>Model judgment</small>
+                </li>
+                <li>
+                  <span>02 / Parallel</span>
+                  <strong>Test strategy</strong>
+                  <small>Proposal, not executed</small>
+                </li>
+                <li>
+                  <span>03 / After both</span>
+                  <strong>Advisory brief</strong>
+                  <small>A person decides what to do</small>
+                </li>
+              </ol>
             </div>
           ) : null}
           {run ? (

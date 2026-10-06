@@ -1,5 +1,12 @@
 import type { Metadata } from "next";
-import Link from "next/link";
+import { Suspense } from "react";
+
+import { LabNav, LabNavFallback } from "@/components/lab-nav";
+
+import "@fontsource/barlow-condensed/700.css";
+import "@fontsource/barlow-condensed/900.css";
+import "@fontsource-variable/caveat/wght.css";
+import "@fontsource-variable/ibm-plex-sans/wght.css";
 
 import "./globals.css";
 
@@ -33,11 +40,10 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
                 </p>
               </div>
             </div>
-            <nav className="app-nav" aria-label="Lab modes">
-              <Link href="/workspace">Workspace</Link>
-              <Link href="/">Live review</Link>
-              <Link href="/reference">Reference scenario</Link>
-            </nav>
+            <p className="lab-scribble">Follow the evidence.</p>
+            <Suspense fallback={<LabNavFallback />}>
+              <LabNav />
+            </Suspense>
             <div className="environment-state">
               <span aria-hidden="true" />
               Bounded environment

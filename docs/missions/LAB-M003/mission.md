@@ -8,6 +8,8 @@ A visitor can submit a bounded TypeScript diff, leave or refresh the page, and r
 
 Erik selected this concrete Step 8 direction on 2026-10-05 after reviewing its intended user journey and infrastructure consequences. The related [Goal Contract](../../../.mission-control/goals/G008-001/contract.md) and [ADR-009](../../architecture/decisions/ADR-009-lab-mastra-worker-and-run-store.md) set the bounds.
 
+Erik also selected the [Experiment Ledger](../../design/lab-experiment-ledger.md) visual direction for the whole Lab. Its implementation is awaiting his visual review; the concept image does not add runtime capabilities or change this mission's evidence requirements.
+
 ## Scope and authority
 
 - Add `/workspace`, resumable `/workspace/runs/[id]`, bounded create/read APIs, a Mastra workflow, one background worker, and an app-local run store.

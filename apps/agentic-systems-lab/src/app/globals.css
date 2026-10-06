@@ -1,22 +1,30 @@
 @import "tailwindcss";
 
 :root {
-  --canvas: #070910;
-  --panel: #0c1019;
-  --panel-raised: #111725;
-  --panel-active: #151d2c;
-  --ink: #f2f6f5;
-  --muted: #91a0ae;
-  --muted-strong: #bdc8cf;
-  --line: rgb(190 214 224 / 13%);
-  --line-strong: rgb(190 214 224 / 24%);
-  --mint: #79f2d0;
-  --mint-soft: rgb(121 242 208 / 12%);
-  --violet: #a78bfa;
-  --amber: #f4c76b;
+  --canvas: #f5f1e7;
+  --panel: #fffdf7;
+  --panel-raised: #faf7ee;
+  --panel-active: #eaf0fa;
+  --ink: #102147;
+  --muted: #5b687e;
+  --muted-strong: #35445d;
+  --line: rgb(19 48 98 / 14%);
+  --line-strong: rgb(19 48 98 / 27%);
+  --blue: #215abb;
+  --blue-soft: rgb(33 90 187 / 10%);
+  --orange: #c34727;
+  --orange-soft: rgb(195 71 39 / 10%);
+  --warning: #935009;
+  --warning-soft: rgb(147 80 9 / 10%);
+  --success: #206a4d;
+  --success-soft: rgb(32 106 77 / 10%);
+  --danger: #aa3040;
+  --danger-soft: rgb(170 48 64 / 10%);
   --sans:
-    Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
-    "Segoe UI", sans-serif;
+    "IBM Plex Sans Variable", ui-sans-serif, system-ui, -apple-system,
+    BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --display: "Barlow Condensed", Impact, sans-serif;
+  --script: "Caveat Variable", "Brush Script MT", cursive;
   --mono: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
 }
 
@@ -33,14 +41,12 @@ body {
   min-height: 100vh;
   margin: 0;
   background:
-    radial-gradient(circle at 76% 12%, rgb(76 57 139 / 16%), transparent 28rem),
-    linear-gradient(rgb(121 242 208 / 2%) 1px, transparent 1px),
-    linear-gradient(90deg, rgb(121 242 208 / 2%) 1px, transparent 1px),
+    linear-gradient(rgb(33 90 187 / 5%) 1px, transparent 1px),
+    linear-gradient(90deg, rgb(33 90 187 / 5%) 1px, transparent 1px),
     var(--canvas);
   background-size:
-    auto,
-    4rem 4rem,
-    4rem 4rem,
+    3.25rem 3.25rem,
+    3.25rem 3.25rem,
     auto;
   color: var(--ink);
   font-family: var(--sans);
@@ -53,7 +59,7 @@ button {
 }
 
 :focus-visible {
-  outline: 2px solid var(--mint);
+  outline: 2px solid var(--blue);
   outline-offset: 3px;
 }
 
@@ -64,8 +70,8 @@ button {
   left: 0.75rem;
   padding: 0.75rem 1rem;
   border-radius: 0.4rem;
-  background: var(--mint);
-  color: var(--canvas);
+  background: var(--blue);
+  color: #fff;
   font-size: 0.875rem;
   font-weight: 750;
   text-decoration: none;
@@ -84,61 +90,93 @@ button {
   position: sticky;
   z-index: 20;
   top: 0;
-  display: flex;
-  min-height: 4.5rem;
+  display: grid;
+  grid-template-areas:
+    "identity note status"
+    "nav nav nav";
+  grid-template-columns: minmax(0, 1fr) auto auto;
   align-items: center;
-  justify-content: space-between;
-  gap: 1.5rem;
-  padding: 0.75rem 1.25rem;
+  gap: 0.8rem 2rem;
+  padding: 0.9rem clamp(1rem, 2.5vw, 2.5rem) 0;
   border-bottom: 1px solid var(--line-strong);
-  background: rgb(7 9 16 / 86%);
-  backdrop-filter: blur(18px);
+  background: rgb(250 247 238 / 96%);
 }
 
 .app-identity {
   display: flex;
+  grid-area: identity;
   align-items: center;
   gap: 0.85rem;
 }
 
 .app-mark {
   display: grid;
-  width: 2.35rem;
-  height: 2.35rem;
+  width: 2.75rem;
+  height: 2.75rem;
   place-items: center;
-  border: 1px solid var(--mint);
-  border-radius: 0.5rem;
-  color: var(--mint);
-  font-family: var(--mono);
-  font-size: 0.75rem;
-  font-weight: 800;
-  box-shadow: inset 0 0 1.5rem var(--mint-soft);
+  border: 2px solid var(--blue);
+  border-radius: 0.18rem;
+  color: var(--blue);
+  font-family: var(--display);
+  font-size: 1.35rem;
+  font-weight: 900;
+  letter-spacing: -0.05em;
 }
 
 .app-name,
 .app-context,
-.environment-state {
+.environment-state,
+.lab-scribble {
   margin: 0;
 }
 
 .app-name {
-  font-size: 0.9rem;
-  font-weight: 730;
-  letter-spacing: -0.02em;
+  font-family: var(--display);
+  font-size: 1.55rem;
+  font-weight: 900;
+  letter-spacing: 0.01em;
+  line-height: 1;
+  text-transform: uppercase;
 }
 
 .app-context {
-  margin-top: 0.12rem;
+  margin-top: 0.25rem;
   color: var(--muted);
   font-family: var(--mono);
-  font-size: 0.75rem;
+  font-size: 0.66rem;
+}
+
+.lab-scribble {
+  position: relative;
+  grid-area: note;
+  align-self: center;
+  margin-right: 1rem;
+  color: var(--ink);
+  font-family: var(--script);
+  font-size: 1.75rem;
+  font-weight: 600;
+  line-height: 1;
+  transform: rotate(-4deg);
+}
+
+.lab-scribble::after {
+  position: absolute;
+  right: -0.1rem;
+  bottom: -0.25rem;
+  left: 0.15rem;
+  height: 0.45rem;
+  border-bottom: 3px solid var(--orange);
+  border-radius: 50%;
+  content: "";
+  transform: rotate(-2deg);
 }
 
 .environment-state {
+  grid-area: status;
   display: flex;
   align-items: center;
   gap: 0.6rem;
-  color: var(--muted-strong);
+  color: var(--muted);
   font-family: var(--mono);
   font-size: 0.75rem;
 }
@@ -147,38 +185,42 @@ button {
   width: 0.5rem;
   height: 0.5rem;
   border-radius: 999px;
-  background: var(--violet);
-  box-shadow: 0 0 1rem rgb(167 139 250 / 70%);
+  background: var(--orange);
 }
 
 .app-nav {
   display: flex;
+  grid-area: nav;
   align-items: center;
-  gap: 0.25rem;
-  margin-left: auto;
+  gap: 0.2rem;
+  border-top: 1px solid var(--line);
 }
 
 .app-nav a {
-  padding: 0.55rem 0.7rem;
-  border-radius: 0.4rem;
+  padding: 0.7rem 0.9rem 0.65rem;
+  border-bottom: 3px solid transparent;
   color: var(--muted);
   font-family: var(--mono);
-  font-size: 0.75rem;
+  font-size: 0.7rem;
   text-decoration: none;
 }
 
-.app-nav a:hover {
-  background: var(--panel-raised);
+.app-nav a:hover,
+.app-nav a[aria-current="page"] {
+  border-bottom-color: var(--orange);
+  background: var(--orange-soft);
   color: var(--ink);
 }
 
 .lab-workspace {
   display: grid;
-  min-height: calc(100vh - 4.5rem);
+  min-height: calc(100vh - 7rem);
   grid-template-columns: minmax(15rem, 0.72fr) minmax(27rem, 1.55fr) minmax(
       18rem,
       0.9fr
     );
+  gap: 1rem;
+  padding: 1rem;
 }
 
 .mission-rail,
@@ -186,25 +228,26 @@ button {
 .evidence-rail {
   min-width: 0;
   padding: clamp(1.5rem, 2.5vw, 2.5rem);
+  border: 1px solid var(--line-strong);
+  border-radius: 0.25rem;
+  box-shadow: 0 2px 0 var(--line);
 }
 
 .mission-rail {
-  border-right: 1px solid var(--line);
-  background: rgb(9 13 21 / 66%);
+  background: var(--panel-raised);
 }
 
 .run-surface {
-  background: rgb(7 10 17 / 34%);
+  background: var(--panel);
 }
 
 .evidence-rail {
-  border-left: 1px solid var(--line);
-  background: rgb(11 15 24 / 72%);
+  background: var(--panel);
 }
 
 .eyebrow {
   margin: 0;
-  color: var(--muted);
+  color: var(--blue);
   font-family: var(--mono);
   font-size: 0.75rem;
   font-weight: 650;
@@ -218,16 +261,16 @@ button {
   align-items: center;
   gap: 0.8rem;
   padding: 0.85rem;
-  border: 1px solid rgb(167 139 250 / 30%);
+  border: 1px solid rgb(195 71 39 / 35%);
   border-radius: 0.6rem;
-  background: rgb(167 139 250 / 8%);
+  background: var(--orange-soft);
 }
 
 .run-mode__pulse {
   width: 0.65rem;
   height: 0.65rem;
   flex: none;
-  border: 2px solid var(--violet);
+  border: 2px solid var(--orange);
   border-radius: 50%;
 }
 
@@ -237,7 +280,7 @@ button {
 }
 
 .run-mode p {
-  color: #ddd4ff;
+  color: var(--ink);
   font-size: 0.875rem;
   font-weight: 700;
 }
@@ -257,10 +300,12 @@ button {
 
 .mission-summary h1 {
   margin: 1rem 0 1.25rem;
-  font-size: clamp(2rem, 3vw, 3.5rem);
-  font-weight: 570;
-  letter-spacing: -0.055em;
-  line-height: 0.98;
+  font-family: var(--display);
+  font-size: clamp(2.5rem, 3.5vw, 4rem);
+  font-weight: 900;
+  letter-spacing: -0.015em;
+  line-height: 0.9;
+  text-transform: uppercase;
 }
 
 .mission-summary > p:last-child,
@@ -327,7 +372,7 @@ button {
 }
 
 .acceptance li span {
-  color: var(--mint);
+  color: var(--blue);
   font-family: var(--mono);
   font-size: 0.75rem;
 }
@@ -346,12 +391,14 @@ button {
 .evidence-rail__header h2,
 .active-step h2 {
   margin: 0.5rem 0 0;
-  font-weight: 610;
-  letter-spacing: -0.035em;
+  font-family: var(--display);
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: 1;
 }
 
 .run-surface__header h2 {
-  font-size: clamp(1.6rem, 2.5vw, 2.4rem);
+  font-size: clamp(2rem, 2.7vw, 3rem);
 }
 
 .run-progress {
@@ -364,7 +411,7 @@ button {
 }
 
 .run-progress span:first-child {
-  color: var(--mint);
+  color: var(--blue);
   font-size: 1.25rem;
 }
 
@@ -372,7 +419,7 @@ button {
   margin: 2rem 0;
   padding: 1.2rem 1.3rem;
   border: 1px solid var(--line-strong);
-  border-left: 3px solid var(--violet);
+  border-left: 3px solid var(--orange);
   border-radius: 0.4rem;
   background: var(--panel);
 }
@@ -408,13 +455,13 @@ button {
 }
 
 .step-button:hover {
-  background: rgb(121 242 208 / 5%);
+  background: var(--blue-soft);
 }
 
 .step-button--active {
   padding-inline: 1.1rem;
   background: var(--panel-active);
-  box-shadow: inset 3px 0 var(--mint);
+  box-shadow: inset 3px 0 var(--blue);
 }
 
 .step-sequence,
@@ -426,7 +473,7 @@ button {
 
 .step-sequence {
   padding-top: 0.25rem;
-  color: var(--mint);
+  color: var(--blue);
 }
 
 .step-copy {
@@ -435,7 +482,7 @@ button {
 }
 
 .step-phase {
-  color: var(--violet);
+  color: var(--orange);
   letter-spacing: 0.06em;
   text-transform: uppercase;
 }
@@ -453,23 +500,25 @@ button {
 
 .step-state {
   width: fit-content;
+  height: fit-content;
+  align-self: start;
   padding: 0.32rem 0.48rem;
   border: 1px solid var(--line-strong);
-  border-radius: 999px;
+  border-radius: 0.2rem;
   color: var(--muted-strong);
   white-space: nowrap;
 }
 
 .step-state--scenario-complete {
-  border-color: rgb(121 242 208 / 32%);
-  background: var(--mint-soft);
-  color: var(--mint);
+  border-color: rgb(32 106 77 / 35%);
+  background: var(--success-soft);
+  color: var(--success);
 }
 
 .step-state--awaiting-human {
-  border-color: rgb(244 199 107 / 36%);
-  background: rgb(244 199 107 / 9%);
-  color: var(--amber);
+  border-color: rgb(147 80 9 / 36%);
+  background: var(--warning-soft);
+  color: var(--warning);
 }
 
 .replay-controls {
@@ -480,7 +529,7 @@ button {
   min-height: 2.8rem;
   padding: 0.65rem 0.9rem;
   border: 1px solid var(--line-strong);
-  border-radius: 0.4rem;
+  border-radius: 0.2rem;
   background: var(--panel);
   color: var(--muted-strong);
   font-size: 0.875rem;
@@ -489,7 +538,7 @@ button {
 }
 
 .control-button:hover:not(:disabled) {
-  border-color: var(--mint);
+  border-color: var(--blue);
   color: var(--ink);
 }
 
@@ -499,9 +548,14 @@ button {
 }
 
 .control-button--primary {
-  border-color: var(--mint);
-  background: var(--mint);
-  color: #07100e;
+  border-color: var(--blue);
+  background: var(--blue);
+  color: #fff;
+}
+
+.control-button--primary:hover:not(:disabled) {
+  background: var(--ink);
+  color: #fff;
 }
 
 .evidence-rail__header {
@@ -528,7 +582,7 @@ button {
   overflow: hidden;
   border: 1px solid var(--line-strong);
   border-radius: 0.5rem;
-  background: #05070c;
+  background: #f5f8fc;
 }
 
 .artifact figcaption {
@@ -544,7 +598,7 @@ button {
 }
 
 .artifact figcaption span {
-  color: var(--violet);
+  color: var(--orange);
   text-transform: uppercase;
 }
 
@@ -552,7 +606,7 @@ button {
   margin: 0;
   padding: 1rem;
   overflow-x: auto;
-  color: #c7f9eb;
+  color: var(--ink);
   font-family: var(--mono);
   font-size: 0.8rem;
   line-height: 1.7;
@@ -578,11 +632,11 @@ button {
 }
 
 .evidence-kind {
-  color: var(--violet);
+  color: var(--orange);
 }
 
 .evidence-status {
-  color: var(--mint);
+  color: var(--blue);
 }
 
 .evidence-card h3 {
@@ -610,9 +664,9 @@ button {
 .transfer-card {
   margin-top: 1.25rem;
   padding: 1.2rem;
-  border: 1px solid rgb(244 199 107 / 32%);
+  border: 1px solid rgb(147 80 9 / 34%);
   border-radius: 0.5rem;
-  background: rgb(244 199 107 / 7%);
+  background: var(--warning-soft);
 }
 
 .transfer-card h3 {
@@ -623,7 +677,7 @@ button {
 .transfer-card span {
   display: block;
   margin-top: 1rem;
-  color: var(--amber);
+  color: var(--warning);
   font-family: var(--mono);
   font-size: 0.75rem;
 }
@@ -645,11 +699,13 @@ button {
 
 .live-workspace {
   display: grid;
-  min-height: calc(100vh - 4.5rem);
+  min-height: calc(100vh - 7rem);
   grid-template-columns: minmax(17rem, 0.72fr) minmax(29rem, 1.18fr) minmax(
       22rem,
       0.92fr
     );
+  gap: 1rem;
+  padding: 1rem;
 }
 
 .live-intro,
@@ -657,20 +713,24 @@ button {
 .review-output {
   min-width: 0;
   padding: clamp(1.5rem, 2.5vw, 2.5rem);
+  border: 1px solid var(--line-strong);
+  border-radius: 0.25rem;
+  box-shadow: 0 2px 0 var(--line);
 }
 
 .live-intro {
-  border-right: 1px solid var(--line);
-  background: rgb(9 13 21 / 66%);
+  background: var(--panel-raised);
 }
 
 .live-intro h1 {
   max-width: 10ch;
   margin: 1rem 0 1.25rem;
-  font-size: clamp(2.5rem, 4vw, 4.6rem);
-  font-weight: 570;
-  letter-spacing: -0.06em;
-  line-height: 0.94;
+  font-family: var(--display);
+  font-size: clamp(3.2rem, 4.5vw, 5.2rem);
+  font-weight: 900;
+  letter-spacing: -0.015em;
+  line-height: 0.9;
+  text-transform: uppercase;
 }
 
 .live-intro > p:not(.eyebrow) {
@@ -686,10 +746,10 @@ button {
   gap: 0.55rem;
   margin-bottom: 3rem;
   padding: 0.55rem 0.7rem;
-  border: 1px solid rgb(121 242 208 / 28%);
-  border-radius: 999px;
-  background: var(--mint-soft);
-  color: var(--mint);
+  border: 1px solid rgb(195 71 39 / 35%);
+  border-radius: 0.18rem;
+  background: var(--orange-soft);
+  color: var(--ink);
   font-family: var(--mono);
   font-size: 0.75rem;
 }
@@ -698,8 +758,7 @@ button {
   width: 0.45rem;
   height: 0.45rem;
   border-radius: 50%;
-  background: var(--mint);
-  box-shadow: 0 0 0.8rem rgb(121 242 208 / 70%);
+  background: var(--orange);
 }
 
 .boundary-list {
@@ -740,7 +799,7 @@ button {
 .review-form {
   display: flex;
   flex-direction: column;
-  background: rgb(7 10 17 / 34%);
+  background: var(--panel);
 }
 
 .review-form__heading,
@@ -763,8 +822,11 @@ button {
 .review-form h2,
 .review-output h2 {
   margin: 0.45rem 0 0;
-  font-size: 1.45rem;
-  letter-spacing: -0.035em;
+  font-family: var(--display);
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: 1;
 }
 
 .review-form__heading > span {
@@ -774,7 +836,7 @@ button {
 }
 
 .review-form__heading > span.over-limit {
-  color: var(--amber);
+  color: var(--warning);
 }
 
 .review-form textarea {
@@ -786,8 +848,8 @@ button {
   border: 1px solid var(--line-strong);
   border-radius: 0.5rem;
   outline: 0;
-  background: #05070c;
-  color: #c7f9eb;
+  background: #f5f8fc;
+  color: var(--ink);
   font-family: var(--mono);
   font-size: 0.8rem;
   line-height: 1.65;
@@ -795,8 +857,8 @@ button {
 }
 
 .review-form textarea:focus {
-  border-color: var(--mint);
-  box-shadow: 0 0 0 3px var(--mint-soft);
+  border-color: var(--blue);
+  box-shadow: 0 0 0 3px var(--blue-soft);
 }
 
 .review-form__footer {
@@ -821,13 +883,13 @@ button {
   gap: 0.35rem;
   margin-top: 1rem;
   padding: 1rem;
-  border: 1px solid rgb(244 199 107 / 32%);
+  border: 1px solid rgb(147 80 9 / 34%);
   border-radius: 0.5rem;
-  background: rgb(244 199 107 / 7%);
+  background: var(--warning-soft);
 }
 
 .setup-state strong {
-  color: var(--amber);
+  color: var(--warning);
   font-size: 0.85rem;
 }
 
@@ -842,9 +904,17 @@ button {
   font-family: var(--mono);
 }
 
+.setup-state a {
+  width: fit-content;
+  margin-top: 0.35rem;
+  color: var(--blue);
+  font-size: 0.8rem;
+  font-weight: 650;
+  text-underline-offset: 0.2rem;
+}
+
 .review-output {
-  border-left: 1px solid var(--line);
-  background: rgb(11 15 24 / 72%);
+  background: var(--panel);
 }
 
 .review-output__header {
@@ -858,7 +928,7 @@ button {
   width: fit-content;
   padding: 0.32rem 0.48rem;
   border: 1px solid var(--line-strong);
-  border-radius: 999px;
+  border-radius: 0.2rem;
   color: var(--muted-strong);
   font-family: var(--mono);
   font-size: 0.7rem;
@@ -866,25 +936,30 @@ button {
   white-space: nowrap;
 }
 
-.run-state--running,
+.run-state--running {
+  border-color: rgb(33 90 187 / 36%);
+  background: var(--blue-soft);
+  color: var(--blue);
+}
+
 .run-state--complete,
 .risk--low {
-  border-color: rgb(121 242 208 / 32%);
-  background: var(--mint-soft);
-  color: var(--mint);
+  border-color: rgb(32 106 77 / 35%);
+  background: var(--success-soft);
+  color: var(--success);
 }
 
 .run-state--error,
 .risk--high {
-  border-color: rgb(255 113 128 / 35%);
-  background: rgb(255 113 128 / 9%);
-  color: #ff8d9a;
+  border-color: rgb(170 48 64 / 36%);
+  background: var(--danger-soft);
+  color: var(--danger);
 }
 
 .risk--medium {
-  border-color: rgb(244 199 107 / 36%);
-  background: rgb(244 199 107 / 9%);
-  color: var(--amber);
+  border-color: rgb(147 80 9 / 36%);
+  background: var(--warning-soft);
+  color: var(--warning);
 }
 
 .empty-review,
@@ -897,7 +972,7 @@ button {
 }
 
 .empty-review > span {
-  color: var(--violet);
+  color: var(--orange);
   font-family: var(--mono);
   font-size: 0.75rem;
 }
@@ -926,17 +1001,17 @@ button {
   gap: 1rem;
   margin-top: 2rem;
   padding: 1.4rem;
-  border: 1px solid rgb(121 242 208 / 25%);
+  border: 1px solid rgb(33 90 187 / 30%);
   border-radius: 0.5rem;
-  background: var(--mint-soft);
+  background: var(--blue-soft);
 }
 
 .running-review > span {
   width: 1rem;
   height: 1rem;
   flex: none;
-  border: 2px solid rgb(121 242 208 / 25%);
-  border-top-color: var(--mint);
+  border: 2px solid rgb(33 90 187 / 30%);
+  border-top-color: var(--blue);
   border-radius: 50%;
   animation: spin 800ms linear infinite;
 }
@@ -978,7 +1053,7 @@ button {
 }
 
 .finding-list article {
-  background: #090d15;
+  background: #f8f9fa;
 }
 
 .finding-list article > div {
@@ -1009,7 +1084,7 @@ button {
 }
 
 .strength-list li::marker {
-  color: var(--mint);
+  color: var(--blue);
 }
 
 .telemetry dl {
@@ -1023,14 +1098,14 @@ button {
 }
 
 .human-transfer {
-  border-color: rgb(244 199 107 / 32%);
-  background: rgb(244 199 107 / 7%);
+  border-color: rgb(147 80 9 / 34%);
+  background: var(--warning-soft);
 }
 
 .human-transfer strong {
   display: block;
   margin-top: 1rem;
-  color: var(--amber);
+  color: var(--warning);
   font-size: 0.8rem;
 }
 
@@ -1041,14 +1116,23 @@ button {
 }
 
 @media (max-width: 1180px) {
+  .app-header {
+    grid-template-areas:
+      "identity status"
+      "nav nav";
+    grid-template-columns: minmax(0, 1fr) auto;
+  }
+
+  .lab-scribble {
+    display: none;
+  }
+
   .lab-workspace {
     grid-template-columns: minmax(15rem, 0.7fr) minmax(28rem, 1.3fr);
   }
 
   .evidence-rail {
     grid-column: 1 / -1;
-    border-top: 1px solid var(--line-strong);
-    border-left: 0;
   }
 
   .evidence-stack {
@@ -1061,18 +1145,23 @@ button {
 
   .review-output {
     grid-column: 1 / -1;
-    border-top: 1px solid var(--line-strong);
-    border-left: 0;
   }
 }
 
 @media (max-width: 760px) {
   .app-header {
     position: static;
+    grid-template-areas:
+      "identity"
+      "nav";
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0.8rem;
+    padding: 0.9rem 1rem 0;
   }
 
   .app-context,
-  .environment-state {
+  .environment-state,
+  .lab-scribble {
     display: none;
   }
 
@@ -1086,17 +1175,9 @@ button {
   }
 
   .lab-workspace {
-    display: block;
-  }
-
-  .mission-rail,
-  .evidence-rail {
-    border: 0;
-  }
-
-  .mission-rail,
-  .run-surface {
-    border-bottom: 1px solid var(--line-strong);
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+    padding: 0.75rem;
   }
 
   .mission-summary {
@@ -1120,17 +1201,9 @@ button {
   }
 
   .live-workspace {
-    display: block;
-  }
-
-  .live-intro,
-  .review-output {
-    border: 0;
-  }
-
-  .live-intro,
-  .review-form {
-    border-bottom: 1px solid var(--line-strong);
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+    padding: 0.75rem;
   }
 
   .live-intro h1 {
@@ -1158,13 +1231,9 @@ button {
     width: 100%;
   }
 
-  .app-header {
-    flex-wrap: wrap;
-  }
-
   .app-nav {
     width: 100%;
-    order: 3;
+    flex-wrap: wrap;
   }
 
   .live-intro,
@@ -1197,50 +1266,70 @@ button {
 }
 
 .workflow-workspace {
-  min-height: calc(100vh - 4.5rem);
+  min-height: calc(100vh - 7rem);
 }
 .workflow-hero {
-  padding: clamp(2rem, 5vw, 5rem) clamp(1rem, 4vw, 4.5rem);
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(20rem, 0.85fr);
+  gap: 0 3rem;
+  padding: clamp(1.5rem, 3vw, 3rem) clamp(1rem, 3vw, 3rem);
   border-bottom: 1px solid var(--line-strong);
-  background: radial-gradient(
-    circle at 75% 10%,
-    rgb(121 242 208 / 11%),
-    transparent 45%
-  );
+  background:
+    linear-gradient(rgb(33 90 187 / 5%) 1px, transparent 1px),
+    linear-gradient(90deg, rgb(33 90 187 / 5%) 1px, transparent 1px),
+    var(--panel-raised);
+  background-size:
+    3.25rem 3.25rem,
+    3.25rem 3.25rem,
+    auto;
 }
 .workflow-hero .live-badge {
-  margin-bottom: 2rem;
+  grid-column: 1 / -1;
+  margin-bottom: 1.2rem;
+}
+.workflow-hero .eyebrow {
+  grid-column: 1;
 }
 .workflow-hero h1 {
-  max-width: 13ch;
-  margin: 0.8rem 0 1.3rem;
-  font-size: clamp(2.8rem, 5.5vw, 6rem);
-  line-height: 0.98;
-  letter-spacing: -0.065em;
-  font-weight: 560;
+  grid-column: 1;
+  max-width: 18ch;
+  margin: 0.2rem 0 0;
+  font-family: var(--display);
+  font-size: clamp(3.1rem, 4.5vw, 5rem);
+  font-weight: 900;
+  letter-spacing: -0.015em;
+  line-height: 0.9;
+  text-transform: uppercase;
 }
 .workflow-lede {
+  grid-column: 2;
+  grid-row: 2 / span 2;
+  align-self: center;
   max-width: 48rem;
+  margin: 0;
   color: var(--muted-strong);
-  font-size: clamp(1rem, 1.5vw, 1.2rem);
-  line-height: 1.65;
+  font-size: clamp(0.95rem, 1.3vw, 1.1rem);
+  line-height: 1.55;
 }
 .workflow-facts {
   display: flex;
+  grid-column: 2;
   flex-wrap: wrap;
   gap: 0.6rem;
-  margin-top: 1.8rem;
+  margin-top: 1rem;
 }
 .workflow-facts span {
   padding: 0.45rem 0.7rem;
   border: 1px solid var(--line-strong);
-  border-radius: 999px;
-  color: var(--mint);
+  border-radius: 0.18rem;
+  background: var(--panel);
+  color: var(--blue);
   font: 0.72rem var(--mono);
 }
 .workflow-boundary {
+  grid-column: 2;
   max-width: 60rem;
-  margin: 1.6rem 0 0;
+  margin: 0.65rem 0 0;
   color: var(--muted);
   font-size: 0.83rem;
   line-height: 1.6;
@@ -1248,15 +1337,19 @@ button {
 .workflow-grid {
   display: grid;
   grid-template-columns: minmax(19rem, 0.85fr) minmax(25rem, 1.15fr);
+  gap: 1rem;
+  padding: 1rem;
 }
 .workflow-input,
 .workflow-results {
   min-width: 0;
   padding: clamp(1.3rem, 3vw, 3rem);
+  border: 1px solid var(--line-strong);
+  border-radius: 0.25rem;
+  box-shadow: 0 2px 0 var(--line);
 }
 .workflow-input {
-  border-right: 1px solid var(--line-strong);
-  background: rgb(9 13 21 / 55%);
+  background: var(--panel);
 }
 .workflow-section-head {
   display: flex;
@@ -1267,8 +1360,16 @@ button {
 }
 .workflow-section-head h2 {
   margin: 0.4rem 0 0;
-  font-size: 1.6rem;
-  letter-spacing: -0.04em;
+  font-family: var(--display);
+  font-size: 2.1rem;
+  font-weight: 700;
+  line-height: 1;
+}
+.workflow-section-head .eyebrow {
+  display: inline-block;
+  padding: 0.16rem 0.4rem;
+  background: var(--orange);
+  color: #fff;
 }
 .workflow-section-head > span {
   color: var(--muted);
@@ -1284,20 +1385,20 @@ button {
 }
 .workflow-input textarea {
   width: 100%;
-  min-height: 25rem;
+  min-height: 20rem;
   padding: 1rem;
   resize: vertical;
   border: 1px solid var(--line-strong);
   border-radius: 0.5rem;
   outline: 0;
-  background: #05070c;
-  color: #c7f9eb;
+  background: #f5f8fc;
+  color: var(--ink);
   font: 0.78rem/1.65 var(--mono);
   tab-size: 2;
 }
 .workflow-input textarea:focus {
-  border-color: var(--mint);
-  box-shadow: 0 0 0 3px var(--mint-soft);
+  border-color: var(--blue);
+  box-shadow: 0 0 0 3px var(--blue-soft);
 }
 .workflow-input form > p {
   min-height: 2.5rem;
@@ -1333,7 +1434,8 @@ button {
   overflow-wrap: anywhere;
 }
 .workflow-results {
-  background: rgb(11 15 24 / 70%);
+  align-self: start;
+  background: var(--panel);
 }
 .run-toolbar {
   display: flex;
@@ -1351,40 +1453,78 @@ button {
   font: 0.74rem var(--mono);
 }
 .run-toolbar span {
-  color: var(--mint);
+  color: var(--blue);
 }
 .run-toolbar small {
   margin-top: 0.25rem;
   color: var(--muted);
 }
 .workflow-empty {
-  padding: 4rem 2rem;
+  padding: 1.5rem;
   border: 1px dashed var(--line-strong);
-  border-radius: 0.6rem;
-  text-align: center;
+  border-radius: 0.2rem;
 }
 .workflow-empty > span {
-  color: var(--violet);
-  font-size: 3rem;
+  color: var(--orange);
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  font-weight: 700;
 }
 .workflow-empty h3 {
-  margin: 1rem 0 0.5rem;
+  margin: 0.6rem 0 0.4rem;
+  font-family: var(--display);
+  font-size: 1.55rem;
+  font-weight: 700;
 }
 .workflow-empty p {
-  max-width: 26rem;
-  margin: auto;
+  max-width: 32rem;
+  margin: 0;
   color: var(--muted);
   line-height: 1.6;
 }
+.workflow-preview {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.65rem;
+  margin: 1.5rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+.workflow-preview li {
+  display: grid;
+  gap: 0.3rem;
+  padding: 0.85rem;
+  border: 1px solid var(--line);
+  border-top: 2px solid var(--orange);
+  background: var(--panel-raised);
+}
+.workflow-preview li:last-child {
+  grid-column: 1 / -1;
+  border-top-color: var(--blue);
+}
+.workflow-preview span,
+.workflow-preview small {
+  color: var(--muted);
+  font-family: var(--mono);
+  font-size: 0.65rem;
+}
+.workflow-preview strong {
+  color: var(--ink);
+  font-family: var(--display);
+  font-size: 1.25rem;
+}
 .workflow-card-stack {
   display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 1rem;
 }
 .workflow-card {
+  position: relative;
   padding: 1.3rem;
   border: 1px solid var(--line-strong);
-  border-radius: 0.6rem;
-  background: var(--panel);
+  border-radius: 0.2rem;
+  border-top: 3px solid var(--orange);
+  background: var(--panel-raised);
 }
 .workflow-card header {
   display: flex;
@@ -1394,7 +1534,9 @@ button {
 }
 .workflow-card h3 {
   margin: 1rem 0 0.65rem;
-  font-size: 1.05rem;
+  font-family: var(--display);
+  font-size: 1.5rem;
+  font-weight: 700;
   line-height: 1.4;
 }
 .workflow-card p {
@@ -1426,17 +1568,19 @@ button {
   margin: 0.35rem 0;
 }
 .workflow-card li code {
-  color: var(--violet);
+  color: var(--orange);
   font-size: 0.75rem;
 }
 .workflow-card li em {
   margin-left: 0.35rem;
-  color: var(--mint);
+  color: var(--blue);
   font: 0.68rem var(--mono);
   text-transform: uppercase;
 }
 .workflow-card--brief {
-  border-color: rgb(244 199 107 / 30%);
+  grid-column: 1 / -1;
+  border-color: var(--line-strong);
+  border-top-color: var(--blue);
 }
 .workflow-pending {
   color: var(--muted) !important;
@@ -1444,7 +1588,7 @@ button {
 .workflow-limits {
   padding-top: 0.75rem;
   border-top: 1px solid var(--line);
-  color: var(--amber) !important;
+  color: var(--warning) !important;
 }
 .workflow-dot {
   width: 0.65rem;
@@ -1454,12 +1598,12 @@ button {
   border-radius: 50%;
 }
 .workflow-dot--done {
-  border-color: var(--mint);
-  background: var(--mint);
-  box-shadow: 0 0 0.7rem var(--mint);
+  border-color: var(--success);
+  background: var(--success);
 }
 .workflow-usage {
   display: grid;
+  grid-column: 1 / -1;
   gap: 0.3rem;
   padding: 1rem;
   border: 1px solid var(--line);
@@ -1471,15 +1615,16 @@ button {
   color: var(--muted);
 }
 .workflow-usage strong {
-  color: var(--mint);
+  color: var(--blue);
   font-weight: 600;
 }
 .workflow-error {
+  grid-column: 1 / -1;
   padding: 1rem;
-  border: 1px solid rgb(255 113 128 / 35%);
+  border: 1px solid rgb(170 48 64 / 36%);
   border-radius: 0.5rem;
-  background: rgb(255 113 128 / 9%);
-  color: #ffadb4;
+  background: var(--danger-soft);
+  color: var(--danger);
   font-size: 0.85rem;
   line-height: 1.55;
 }
@@ -1507,7 +1652,12 @@ button {
   overflow-y: auto;
   padding: 1.5rem;
   border-left: 1px solid var(--line-strong);
-  background: var(--panel-raised);
+  background:
+    linear-gradient(rgb(33 90 187 / 5%) 1px, transparent 1px),
+    var(--panel-raised);
+  background-size:
+    3.25rem 3.25rem,
+    auto;
   box-shadow: -1rem 0 3rem rgb(0 0 0 / 30%);
 }
 .activity-drawer__panel header {
@@ -1542,7 +1692,7 @@ button {
   width: 0.5rem;
   height: 0.5rem;
   border-radius: 50%;
-  background: var(--mint);
+  background: var(--blue);
 }
 .activity-drawer time,
 .activity-drawer li span {
@@ -1554,7 +1704,7 @@ button {
 }
 .activity-drawer li span {
   margin-top: 0.3rem;
-  color: var(--violet);
+  color: var(--orange);
   text-transform: uppercase;
 }
 .activity-drawer li p {
@@ -1563,20 +1713,47 @@ button {
   font-size: 0.83rem;
   line-height: 1.55;
 }
+@media (max-width: 1100px) {
+  .workflow-card-stack {
+    grid-template-columns: 1fr;
+  }
+}
+
 @media (max-width: 900px) {
+  .workflow-hero {
+    grid-template-columns: 1fr;
+  }
+  .workflow-lede {
+    grid-column: 1;
+    grid-row: auto;
+    margin-top: 1.25rem;
+  }
+  .workflow-facts,
+  .workflow-boundary {
+    grid-column: 1;
+  }
   .workflow-grid {
     grid-template-columns: 1fr;
   }
-  .workflow-input {
-    border-right: 0;
-    border-bottom: 1px solid var(--line-strong);
-  }
 }
 @media (max-width: 420px) {
+  .workflow-grid {
+    gap: 0.75rem;
+    padding: 0.75rem;
+  }
+  .workflow-hero h1 {
+    font-size: 3.1rem;
+  }
   .workflow-actions .control-button {
     width: 100%;
   }
   .workflow-card-title {
     display: block;
+  }
+  .workflow-preview {
+    grid-template-columns: 1fr;
+  }
+  .workflow-preview li:last-child {
+    grid-column: 1;
   }
 }

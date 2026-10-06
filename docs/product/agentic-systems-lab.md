@@ -42,6 +42,8 @@ Automated tests verify request validation, safe unconfigured behavior, error map
 
 LAB-M003 adds `/workspace`: a bounded diff starts a separate-worker Mastra workflow with parallel risk and test reports followed by an advisory brief. The visitor can reopen a 24-hour run URL, inspect each validated report as it arrives, and open a drawer of actual app-level transitions. This is a new local opt-in implementation checkpoint, not a public launch or evidence of review reliability. A credentialed run and three-case quality assessment remain pending. See [LAB-M003](../missions/LAB-M003/mission.md) and [ADR-009](../architecture/decisions/ADR-009-lab-mastra-worker-and-run-store.md).
 
+Erik selected the [Experiment Ledger visual direction](../design/lab-experiment-ledger.md) for the Lab on 2026-10-05. Its light notebook canvas, navy and blue structure, orange markers, boxed artifacts, and restrained handwritten accent deliberately distinguish the Lab from the professional website. The generated concept image is visual inspiration only; its extra controls and sample findings do not describe implemented behavior or evidence.
+
 ## Mission Control concepts demonstrated and absent
 
 | Demonstrated in a bounded form                                                     | Not established by the Lab                                                                      |
