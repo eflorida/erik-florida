@@ -1,0 +1,101 @@
+[
+  {
+    "id": "supported-substitute",
+    "title": "A supported substitute",
+    "question": "Could the Alder chair replace the standard workstation chair?",
+    "requested": {
+      "name": "Standard workstation chair",
+      "seatHeightMinCm": 43,
+      "seatHeightMaxCm": 54,
+      "minLoadKg": 120,
+      "adjustableLumbar": true,
+      "adjustableArms": true
+    },
+    "candidate": {
+      "name": "Alder task chair",
+      "notes": [
+        {
+          "id": "A1",
+          "label": "Supplier specification",
+          "text": "Seat-height adjustment: 42–56 cm. Rated user load: 136 kg."
+        },
+        {
+          "id": "A2",
+          "label": "Feature sheet",
+          "text": "Height-adjustable lumbar support and 3D adjustable armrests are included in this configuration."
+        },
+        {
+          "id": "A3",
+          "label": "Catalog description",
+          "text": "Breathable upholstered task chair intended for daily desk work."
+        }
+      ]
+    }
+  },
+  {
+    "id": "hard-mismatch",
+    "title": "A required fit fails",
+    "question": "Could the Mica chair replace the standard workstation chair?",
+    "requested": {
+      "name": "Standard workstation chair",
+      "seatHeightMinCm": 43,
+      "seatHeightMaxCm": 54,
+      "minLoadKg": 120,
+      "adjustableLumbar": true,
+      "adjustableArms": true
+    },
+    "candidate": {
+      "name": "Mica studio chair",
+      "notes": [
+        {
+          "id": "M1",
+          "label": "Supplier specification",
+          "text": "Seat-height adjustment: 46–58 cm. Rated user load: 110 kg."
+        },
+        {
+          "id": "M2",
+          "label": "Feature sheet",
+          "text": "The chair has fixed lumbar padding and height-adjustable armrests."
+        },
+        {
+          "id": "M3",
+          "label": "Catalog description",
+          "text": "Compact chair for short-duration workstations."
+        }
+      ]
+    }
+  },
+  {
+    "id": "missing-evidence",
+    "title": "A supplier answer is needed",
+    "question": "Could the Delta chair replace the standard workstation chair?",
+    "requested": {
+      "name": "Standard workstation chair",
+      "seatHeightMinCm": 43,
+      "seatHeightMaxCm": 54,
+      "minLoadKg": 120,
+      "adjustableLumbar": true,
+      "adjustableArms": true
+    },
+    "candidate": {
+      "name": "Delta office chair",
+      "notes": [
+        {
+          "id": "D1",
+          "label": "Supplier specification",
+          "text": "Seat-height adjustment: 42–56 cm. Rated user load: 136 kg."
+        },
+        {
+          "id": "D2",
+          "label": "Feature sheet",
+          "text": "Height-adjustable lumbar support is included."
+        },
+        {
+          "id": "D3",
+          "label": "Catalog description",
+          "text": "Arm supports are supplied; adjustment options vary by configuration. This listing does not identify the armrest option."
+        }
+      ]
+    }
+  }
+]

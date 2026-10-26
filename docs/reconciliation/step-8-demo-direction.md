@@ -2,6 +2,8 @@
 
 **Status:** Selected direction, 2026-10-05. Erik chose the change-review vertical slice and authorized implementation. [LAB-M003](../missions/LAB-M003/mission.md), [G008-001](../../.mission-control/goals/G008-001/contract.md), and [ADR-009](../architecture/decisions/ADR-009-lab-mastra-worker-and-run-store.md) record the operating scope. The remainder of this document preserves the proposal that led to those decisions.
 
+**2026-10-26 refinement:** Erik approved an experiment-led Lab after reassessing the portfolio purpose. The change-review workspace remains a technical specimen rather than the Lab's product thesis. [LAB-M004](../missions/LAB-M004/mission.md) adds a customer-facing product-comparison specimen and clearer entrance. Its separate request-bound authority is recorded in [ADR-010](../architecture/decisions/ADR-010-bounded-lab-comparison.md). LAB-M003's credentialed evidence and G008-001 Landing remain open; this refinement does not retroactively change those records or select Flight Deck.
+
 ## Outcome to demonstrate
 
 A visitor should use a coherent product, delegate a bounded task, watch real Mastra-managed work progress, inspect the resulting artifact and its evidence, and understand what remains a human decision. The code and architecture should show production judgment: typed boundaries, durable execution where promised, failure recovery, evaluation, cost controls, safe public operation, and honest observability. The application does not need to implement Mission Control or Flight Deck as products.

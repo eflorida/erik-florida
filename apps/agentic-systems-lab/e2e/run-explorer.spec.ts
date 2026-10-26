@@ -72,7 +72,7 @@ test("a visitor can run a bounded live review and inspect its evidence", async (
     });
   });
 
-  await page.goto("/");
+  await page.goto("/quick-review");
   await expect(
     page.getByRole("heading", { name: "Review one TypeScript diff" }),
   ).toBeVisible();
@@ -132,6 +132,102 @@ test("the change review workspace fits a narrow screen", async ({ page }) => {
   await page.goto("/workspace");
   await expect(
     page.getByRole("heading", { name: "Send a change. Follow the work." }),
+  ).toBeVisible();
+  expect(
+    await page.evaluate(
+      () =>
+        document.documentElement.scrollWidth <=
+        document.documentElement.clientWidth,
+    ),
+  ).toBe(true);
+});
+
+test("a new visitor can choose an experiment and inspect a bounded comparison", async ({
+  page,
+}) => {
+  await page.route("**/api/comparisons", async (route) => {
+    await route.fulfill({
+      contentType: "application/json",
+      body: JSON.stringify({
+        caseId: "missing-evidence",
+        decision: "needs-review",
+        summary:
+          "The supplied record leaves a required specification unconfirmed. Ask the supplier before deciding.",
+        checks: [
+          {
+            label: "Lowest seat height",
+            required: "≤ 43 cm",
+            observed: "42 cm",
+            result: "pass",
+            evidenceId: "D1",
+          },
+          {
+            label: "Highest seat height",
+            required: "≥ 54 cm",
+            observed: "56 cm",
+            result: "pass",
+            evidenceId: "D1",
+          },
+          {
+            label: "Rated load",
+            required: "≥ 120 kg",
+            observed: "136 kg",
+            result: "pass",
+            evidenceId: "D1",
+          },
+          {
+            label: "Adjustable lumbar",
+            required: "Required",
+            observed: "Yes",
+            result: "pass",
+            evidenceId: "D2",
+          },
+          {
+            label: "Adjustable arms",
+            required: "Required",
+            observed: "Not established",
+            result: "unknown",
+            evidenceId: null,
+          },
+        ],
+        uncertainty: "The armrest configuration is not identified.",
+        model: "test-model",
+        inputTokens: 100,
+        outputTokens: 50,
+        latencyMs: 300,
+      }),
+    });
+  });
+  await page.goto("/");
+  await expect(
+    page.getByRole("heading", { name: "Small experiments. Inspectable work." }),
+  ).toBeVisible();
+  await page
+    .getByRole("link", { name: /Start with a product comparison/ })
+    .click();
+  await page.getByLabel("Catalog case").selectOption("missing-evidence");
+  await expect(
+    page.getByText(/adjustment options vary by configuration/i),
+  ).toBeVisible();
+  await page.getByRole("button", { name: "Run comparison" }).click();
+  await expect(
+    page.getByText("Needs supplier evidence", { exact: true }),
+  ).toBeVisible();
+  await expect(
+    page.getByRole("link", { name: /Source note D1/ }).first(),
+  ).toBeVisible();
+  await expect(
+    page.getByText(/does not approve or order anything/i),
+  ).toBeVisible();
+});
+
+test("the comparison specimen remains readable on a narrow screen", async ({
+  page,
+}) => {
+  await page.setViewportSize({ width: 390, height: 844 });
+  await page.goto("/comparison");
+  await expect(
+    page.getByRole("heading", { name: "A substitute needs evidence." }),
   ).toBeVisible();
   expect(
     await page.evaluate(

@@ -17,7 +17,8 @@ Erik selected the [Experiment Ledger visual direction](../../../docs/design/lab-
 - Three synthetic inputs and expected behaviors are retained in the [quality case set](../../../docs/reference/lab-m003-quality-cases.md); provider scoring has not run.
 - Credentialed Mastra/OpenAI execution is pending because this workspace has no configured `OPENAI_API_KEY`.
 - A hosted worker, shared remote database, public controls, cost ceiling, and three-case quality assessment are pending. The workflow remains disabled by default.
+- On 2026-10-26 Erik refined the Lab's portfolio framing and authorized [LAB-M004](../../../docs/missions/LAB-M004/mission.md). The change-review workspace is now one engineering specimen in an experiment-led Lab. This does not revise this goal's Contract, complete its credentialed evidence, or imply Landing. The one-shot review moved to `/quick-review` without changing its API.
 
 ## Next action
 
-Erik reviews the new Lab visual direction. Run a credentialed local workflow smoke and assess the three retained cases when a server-side provider key is available. Review hosted operating choices before enabling public use. Erik decides whether the product experience and evidence are sufficient for Landing.
+Run a credentialed local workflow smoke and assess the three retained cases when a server-side provider key is available. Review hosted operating choices before enabling public use. Erik decides whether the product experience and evidence are sufficient for Landing.

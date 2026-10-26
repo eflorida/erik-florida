@@ -25,7 +25,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     <html lang="en">
       <body>
         <a className="skip-link" href="#main-content">
-          Skip to run
+          Skip to content
         </a>
         <div className="app-shell">
           <header className="app-header">
@@ -36,7 +36,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
               <div>
                 <p className="app-name">Agentic Systems Lab</p>
                 <p className="app-context">
-                  Change review, live review, and reference scenarios
+                  Product and engineering experiments
                 </p>
               </div>
             </div>

@@ -2,7 +2,7 @@
 
 This repository is Erik Florida's personal platform: an immediate, public implementation of agentic-engineering ideas and a home for multiple related applications.
 
-The first application is a professional website designed to support an engineering-leadership job search. Agentic Systems Lab is the second application and provides an original reference-scenario explorer plus a bounded local live-review workflow. The applications share the monorepo but remain independently deployable; the Lab is not a prerequisite for the website launch.
+The first application is a professional website designed to support an engineering-leadership job search. Agentic Systems Lab is the second application: an experiment-led evidence surface with a reference scenario, a bounded local change-review workflow, and a fixed-case product-comparison specimen. The applications share the monorepo but remain independently deployable; the Lab is not a prerequisite for the website launch.
 
 ## Relationship to Mission Control and Flight Deck
 

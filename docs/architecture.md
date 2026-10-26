@@ -42,7 +42,7 @@ No Mission Control runtime, state/event store, adapter topology, Flight Deck pro
 
 Authored and external data is validated once at the boundary with framework-independent schemas. TypeScript types are inferred rather than maintained in parallel. Article schemas live in `apps/site/src/content/article-schema.ts`; M002 adds structured career schemas in `apps/site/src/content/career-schema.ts`. Boundaries remain app-local until another consumer proves a shared contract.
 
-The Lab separately validates its reference-scenario fixture in `apps/agentic-systems-lab/src/contracts/run.ts` and live-review input/output in `src/contracts/review.ts`. These contracts remain app-local and do not constitute shared Mission Control contracts.
+The Lab separately validates its reference-scenario fixture in `apps/agentic-systems-lab/src/contracts/run.ts`, one-shot review input/output in `src/contracts/review.ts`, persisted change-review records in `src/contracts/workflow-review.ts`, and fixed catalog cases/model extraction in `src/contracts/comparison.ts`. These contracts remain app-local and do not constitute shared Mission Control contracts.
 
 ### Rendering seam
 
@@ -54,14 +54,14 @@ The site's data sources are Git-backed MDX for editorial content and curated JSO
 
 ### Work seam
 
-No durable or background work runtime is implemented. The Lab's live review is a bounded request/response operation: it calls the OpenAI Responses API without tools or repository access, returns validated structured assistance, and persists no submitted run in the application. The first operation that must outlive a request still triggers an owned job contract and worker evaluation. Saved/shareable runs, authentication, broader tool use, and public runtime enablement retain their documented triggers.
+The site has no durable or background work runtime. The Lab has three separate paths: ADR-008's bounded, request-bound `/quick-review`; ADR-009's persisted `/workspace` queue and separate worker for one local change-review workflow; and ADR-010's fixed-case, request-bound `/comparison` extraction and deterministic policy. The Lab's background run is a local implementation checkpoint, not a hosted guarantee. Authentication, broader tool use, public runtime enablement, and shared contracts retain their documented triggers.
 
 ## Rendering profiles
 
 Rendering is selected per application or surface:
 
 - Personal site: static/pre-rendered editorial content with explicit revalidation only when needed.
-- Agentic Systems Lab: a dynamic live-review surface plus a validated, provenance-disclosed reference scenario, without changing the site's profile.
+- Agentic Systems Lab: an experiment-led dynamic entrance, a fixed-case comparison, a bounded one-shot review, a local persisted workflow, and a validated, provenance-disclosed reference scenario, without changing the site's profile.
 
 ## Verification
 

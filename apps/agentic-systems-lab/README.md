@@ -1,12 +1,20 @@
 # Agentic Systems Lab
 
-Independent public evidence application for inspecting bounded agentic work.
+Independent experiment-led evidence application for inspecting bounded agentic product and engineering work.
 
 Repository context and current status live in the root [`AGENTS.md`](../../AGENTS.md) and [`docs/product/current-state.md`](../../docs/product/current-state.md). Mission Control terminology follows the [concept guide](../../docs/guides/mission-control-concepts.md). The Lab demonstrates selected ideas; it is not Flight Deck or a general Mission Control runtime.
 
-LAB-M001 remains ready for human review. LAB-M002 remains ready for credentialed validation. LAB-M003 adds a local-only change-review workspace and remains pending credentialed and hosted validation.
+LAB-M001 remains ready for human review. LAB-M002 remains ready for credentialed validation. LAB-M003 adds a local-only change-review workspace and remains pending credentialed and hosted validation. LAB-M004 adds the experiment entrance and a fixed-case product-comparison specimen; its credentialed quality review is pending.
 
 The original reference scenario is a schema-validated design fixture created while the Lab and Mission Control model were evolving. Its structure and presentation are verified, while the source execution artifacts described inside it are not retained in this checkout. The interface and [evidence assessment](../../docs/reference/lab-evidence-assessment.md) disclose that boundary. The Lab now has an app-specific durable review record and Mastra workflow, but no Mission Control Goal State or Loop Contract runtime, effect verification, agent tools, or Flight Deck behavior.
+
+`/` is the visitor entrance. It introduces two experiments: `/workspace` for offloaded engineering review and `/comparison` for request-bound catalog extraction with deterministic buyer rules. The original one-shot review lives at `/quick-review`; `/reference` remains an authored scenario.
+
+## LAB-M004 product comparison
+
+`/comparison` offers three fictional chair-catalog cases. The model extracts typed specifications from selected supplier notes and cites note IDs. Code applies the buyer's explicit height, load, lumbar, and armrest requirements; a missing fact or unrecognized note ID cannot pass. The browser displays actual model usage only after a real response. It does not store a run, browse a catalog, contact a supplier, or authorize a purchase.
+
+For controlled local use, add `OPENAI_API_KEY` to `.env.local`, set `LAB_COMPARISON_ENABLED=true`, and run the Lab's development command. The comparison route rejects paid requests on Vercel and is disabled by default. Its [quality cases](../../docs/reference/lab-m004-quality-cases.md) have not been run with a credentialed model. See [ADR-010](../../docs/architecture/decisions/ADR-010-bounded-lab-comparison.md).
 
 ## LAB-M003 change review workspace
 
@@ -18,7 +26,7 @@ For local use, copy `.env.example` to `.env.local`, add `OPENAI_API_KEY`, set `L
 
 Copy `.env.example` to `.env.local`, add a server-side `OPENAI_API_KEY`, set `LAB_LIVE_REVIEW_ENABLED=true`, and restart the development server. `OPENAI_MODEL` defaults to `gpt-5.6-terra`.
 
-The live route accepts one TypeScript unified diff of at most 12,000 characters. It sends no tools, executes no submitted code, requests no repository access, sets OpenAI response storage to false, and leaves every merge or deployment decision with a human.
+The `/quick-review` route accepts one TypeScript unified diff of at most 12,000 characters. It sends no tools, executes no submitted code, requests no repository access, sets OpenAI response storage to false, and leaves every merge or deployment decision with a human.
 
 The live route is a local validation surface. Do not enable it in a public deployment until a later mission defines abuse controls and a cost budget.
 

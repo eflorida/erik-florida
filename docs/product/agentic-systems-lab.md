@@ -2,7 +2,7 @@
 
 ## Product identity
 
-Agentic Systems Lab is a public evidence surface for inspecting how bounded agentic work is directed, evaluated, and transferred. It is part of the Erik Florida platform, but it is independently deployable from the professional website.
+Agentic Systems Lab is an experiment-led evidence surface for inspecting how bounded agentic product and engineering work is directed, evaluated, and returned to a person. It is part of the Erik Florida platform, but it is independently deployable from the professional website. The visual metaphor is a working ledger: each experiment names a real user question, exposes its inputs and result, and distinguishes model judgment from checks and human authority.
 
 Mission Control is the generally tool- and team-agnostic methodology that informs the Lab. Flight Deck is an optional, opinionated implementation of a Mission Control engineering team. The Lab is neither: it demonstrates selected interaction and evidence patterns without becoming a general project-management, Mission Control, or Flight Deck runtime.
 
@@ -10,13 +10,15 @@ Mission Control is the generally tool- and team-agnostic methodology that inform
 
 The first audience is an engineering leader or technically curious hiring stakeholder evaluating whether agentic-development claims are concrete and trustworthy.
 
-Their primary task is to inspect a run and answer:
+Their primary task is to explore a working specimen and answer:
 
 1. What outcome was requested?
 2. What did the agent do?
 3. What evidence supports the result?
 4. What was evaluated mechanically or through judgment?
 5. What still requires human authority?
+
+The professional site establishes Erik's experience and perspective; the Lab shows selected implementation choices in action. It is a small collection rather than a claim to offer a general agent platform or a competitive code-review service. A visitor should reach one usable sample quickly, then find deeper architecture and evidence when interested.
 
 ## First product slice
 
@@ -43,6 +45,12 @@ Automated tests verify request validation, safe unconfigured behavior, error map
 LAB-M003 adds `/workspace`: a bounded diff starts a separate-worker Mastra workflow with parallel risk and test reports followed by an advisory brief. The visitor can reopen a 24-hour run URL, inspect each validated report as it arrives, and open a drawer of actual app-level transitions. This is a new local opt-in implementation checkpoint, not a public launch or evidence of review reliability. A credentialed run and three-case quality assessment remain pending. See [LAB-M003](../missions/LAB-M003/mission.md) and [ADR-009](../architecture/decisions/ADR-009-lab-mastra-worker-and-run-store.md).
 
 Erik selected the [Experiment Ledger visual direction](../design/lab-experiment-ledger.md) for the Lab on 2026-10-05. Its light notebook canvas, navy and blue structure, orange markers, boxed artifacts, and restrained handwritten accent deliberately distinguish the Lab from the professional website. The generated concept image is visual inspiration only; its extra controls and sample findings do not describe implemented behavior or evidence.
+
+## Fourth product slice — experiment entrance and product comparison
+
+LAB-M004 makes `/` the visitor entrance, retains the offloaded `/workspace` as an engineering-systems specimen, and moves the earlier one-shot route to `/quick-review`. A second specimen at `/comparison` asks whether a fictional supplier chair meets a buyer's explicit replacement requirements. One Mastra extraction agent reads only fixed catalog notes and returns typed facts with source-note IDs. Deterministic code applies the buyer's seat-height, load, lumbar, and armrest rules; a person makes any purchasing decision. The route accepts only three authored cases, stores no comparison run, is disabled by default, and is unavailable on Vercel. It is a local implementation checkpoint, not a validated public product. See [LAB-M004](../missions/LAB-M004/mission.md) and [ADR-010](../architecture/decisions/ADR-010-bounded-lab-comparison.md).
+
+The two specimens show complementary patterns: offloaded parallel engineering review and request-bound customer-product extraction with hard rules outside the model. A future field note can connect a real repository delivery decision to its evidence without inventing a Flight Deck runtime. It should use attributable public-safe artifacts before appearing in the visitor interface.
 
 ## Mission Control concepts demonstrated and absent
 

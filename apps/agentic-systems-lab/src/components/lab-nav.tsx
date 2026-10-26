@@ -4,8 +4,9 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 const modes = [
-  { href: "/workspace", label: "Workspace" },
-  { href: "/", label: "Live review" },
+  { href: "/", label: "Experiments" },
+  { href: "/comparison", label: "Product comparison" },
+  { href: "/workspace", label: "Change review" },
   { href: "/reference", label: "Reference scenario" },
 ] as const;
 
