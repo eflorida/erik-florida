@@ -15,7 +15,7 @@ Use `motion` 14.9.0 only inside this app for coordinated entrances and spring-ba
 
 [Motion's React guide](https://motion.dev/docs/react), [reduced-motion API](https://motion.dev/docs/react-use-reduced-motion), and [React Bits introduction](https://reactbits.dev/get-started/introduction) were reviewed on 2026-10-31. React Bits offers reusable component source, but no React Bits code or additional effect engine is copied into this implementation. This page needs one lightweight motion dependency and tailored reusable components; no premium template/package purchase is necessary.
 
-No database, auth, API, worker, AI provider runtime, CMS, or analytics is added. AI-first is company positioning, not an assertion that this marketing page executes AI. Vercel and domain setup remain deferred by the user.
+No database, auth, API, worker, AI provider runtime, CMS, or analytics is added. AI-first is company positioning, not an assertion that this marketing page executes AI. Erik subsequently connected the independent Vercel project and authorized repair of its first failed deployment on 2026-10-31. App-local Vercel configuration selects Flo Forge without changing the personal-site deployment settings. Domain/DNS and indexing changes remain separate.
 
 ## Revisit when
 

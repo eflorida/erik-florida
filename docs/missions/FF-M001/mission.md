@@ -36,3 +36,9 @@ Human visual/copy acceptance is recorded by Erik’s follow-up, subject to the i
 ## Final source review — 2026-10-31
 
 The final wording is “AI is the engine, People are the driver.” Both company contact links use `mailto:erik@floforge.tech`, explicitly confirmed by Erik after correcting the initial email typo. No visitor-facing code-profile links remain. Repository checks and all five Flo Forge production browser journeys pass for these corrections. The browser checks use an ignored temporary configuration on port 3211 because port 3201 belongs to another local application; the no-JavaScript journey now respects the configured base URL. The delivery branch is `codex/flo-forge`, based on the current checkout’s existing Lab commits. Unrelated template-planning changes are excluded from the company-site commit. Vercel setup remains Erik’s next step; no hosting, DNS, or indexing changes are included.
+
+## Hosted deployment repair — 2026-10-31
+
+Erik connected the independent `flo-forge` Vercel project and reported deployment `dpl_4kAdavUhz7m8kho7dy6ymgo5ybJE`. Its Git source is `main` at `6afa992`; Root Directory is correctly `apps/flo-forge`. The retained build logs show the repository-root config ran `pnpm --filter @erik-florida/site build`, then expected `apps/site/.next` beneath the Flo Forge root. The personal site built successfully, but packaging failed with `NEXT_OUTPUT_DIR_MISSING` at `/vercel/path0/apps/flo-forge/apps/site/.next`.
+
+The repair adds `apps/flo-forge/vercel.json` to explicitly select Flo Forge and the app-relative `.next` output. The repository-root personal-site configuration is unchanged. Hosted verification is pending; no DNS or indexing changes are included.

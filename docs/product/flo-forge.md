@@ -14,7 +14,7 @@ The core promise is useful SaaS shaped around real work: AI as part of how produ
 
 - No named portfolio, product release status, customers, revenue, testimonials, or performance claims have been supplied. Do not fabricate them.
 - Contact is `erik@floforge.tech`, supplied by Erik on 2026-10-31. Use email links and do not direct visitors to his public code profile.
-- `floforge.tech` is Erik's intended, already-purchased domain. No DNS, Vercel, hosting, or publication work is authorized in this preview phase.
+- `floforge.tech` is Erik's intended, already-purchased domain. Erik connected an independent Vercel project and authorized troubleshooting its initial failed deployment on 2026-10-31. DNS and indexing changes remain separate from that repair.
 - Motion is app-local under ADR-011. There is no AI provider integration or other server application infrastructure.
 - The initial route is marked `noindex, nofollow` pending publication work. This is an indexing directive, not privacy protection.
 

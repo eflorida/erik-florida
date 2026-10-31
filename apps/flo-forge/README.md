@@ -22,4 +22,10 @@ The Server Component page owns static copy and layout. Small client components o
 - Edit static copy in `src/app/page.tsx`. There is no structured external/authored-data ingestion boundary to validate; introduce an app-local schema if a portfolio data source is later added.
 - Both founder/contact CTAs use `mailto:erik@floforge.tech`, the email address Erik supplied. The visitor-facing site has no GitHub links.
 
-This is a local review checkpoint. Metadata intentionally uses `noindex, nofollow`. Erik accepted the visual direction with the slogan “AI is the engine, People are the driver.” and email-only contact. Vercel setup, `floforge.tech`, and publication remain separate. No production deployment configuration has been created.
+Erik accepted the visual direction with the slogan “AI is the engine, People are the driver.” and email-only contact. Metadata retains `noindex, nofollow` pending indexing approval. Domain configuration and verified hosted operation remain separate from source acceptance.
+
+## Vercel
+
+The independent `flo-forge` Vercel project uses `apps/flo-forge` as its Root Directory, `main` as its production branch, and includes source files outside the Root Directory for shared configuration. This app's `vercel.json` selects the Flo Forge package and `.next` output relative to this directory. It overrides the repository-root `vercel.json`, which belongs to the personal website. Do not use the personal website's build command or `apps/site/.next` output for this app.
+
+The initial deployment built the personal site and failed with `NEXT_OUTPUT_DIR_MISSING` because the inherited output path resolved to `apps/flo-forge/apps/site/.next`. The app-local configuration repairs that selection without changing the existing personal-site project.

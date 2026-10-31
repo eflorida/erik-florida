@@ -4,7 +4,7 @@
 
 [FF-M001](../missions/FF-M001/mission.md) implements the local company-site preview in `apps/flo-forge`. Read the [product summary](../product/flo-forge.md) and [ADR-011](../architecture/decisions/ADR-011-flo-forge-brand-and-motion.md).
 
-Erik accepted the initial direction on 2026-10-31 with two final edits: “AI is the engine, People are the driver.” and email-only contact at `erik@floforge.tech`. Those edits are implemented. Five Flo Forge production browser journeys cover the preview. Erik authorized a commit/push to origin and will connect Vercel himself.
+Erik accepted the initial direction on 2026-10-31 with two final edits: “AI is the engine, People are the driver.” and email-only contact at `erik@floforge.tech`. Those edits are implemented. Five Flo Forge production browser journeys cover the preview. Erik authorized a commit/push to origin, created the independent Vercel project, and requested repair of its first deployment.
 
 ## Sequence
 
@@ -16,4 +16,8 @@ Erik accepted the initial direction on 2026-10-31 with two final edits: “AI is
 
 ## Deferred
 
-Real portfolio entries, Vercel connection, DNS and `floforge.tech`, publication/indexing, and production operational checks. Erik confirmed `erik@floforge.tech` after correcting the initial email typo.
+Real portfolio entries, DNS and `floforge.tech`, publication/indexing, and production operational checks. Erik confirmed `erik@floforge.tech` after correcting the initial email typo.
+
+## Hosted deployment repair — 2026-10-31
+
+Erik created the independent Vercel project and reported its first failed deployment. The logs show the repository-root configuration selected the personal-site build and output despite the correct `apps/flo-forge` Root Directory. The repair adds an app-local `vercel.json` with the Flo Forge package build and `.next` output. Verify the resulting hosted deployment before claiming success. DNS and indexing remain separate.
