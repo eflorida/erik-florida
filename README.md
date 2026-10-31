@@ -27,12 +27,13 @@ corepack pnpm check
 corepack pnpm test:e2e
 ```
 
-The site runs at `http://localhost:3000` and the Lab at `http://localhost:3100` during development.
+The site runs at `http://localhost:3000`, the Lab at `http://localhost:3100`, and Flo Forge at `http://127.0.0.1:3200` during development. Run only Flo Forge with `corepack pnpm --filter @erik-florida/flo-forge dev`.
 
 ## Repository map
 
 - `apps/site` — static-first Next.js professional website.
 - `apps/agentic-systems-lab` — independently deployable Next.js evidence application with an explicitly disclosed reference scenario and bounded live review.
+- `apps/flo-forge` — independent Flo Forge company website; [FF-M001](docs/missions/FF-M001/mission.md) is the local brand/animation preview, with Vercel and `floforge.tech` setup deferred.
 - `packages/typescript-config` — shared strict TypeScript configuration.
 - `packages/eslint-config` — shared Next.js lint policy.
 - `docs/product` — product framing and current state.

@@ -1,6 +1,6 @@
 # Erik Florida — Current Project State
 
-**Last intentionally established:** 2026-10-26, M003 and G004-001 landed; LAB-M003 validation remains open; LAB-M004 experiment-led implementation checkpoint
+**Last intentionally established:** 2026-10-31, Flo Forge local-preview implementation; M003 and G004-001 landed; LAB-M003 validation remains open; LAB-M004 experiment-led implementation checkpoint
 
 This document is current working truth, not an activity log. Historical mission files preserve what was true at their checkpoints; a commit or merge does not by itself establish Landing, editorial acceptance, publication, deployment, or completion of an unchecked validation item.
 
@@ -9,9 +9,10 @@ This document is current working truth, not an activity log. Historical mission 
 - Erik Florida is a multi-application personal platform whose immediate purpose is to support Erik's search for an engineering-leadership role through concrete professional and technical evidence.
 - `apps/site` is the static-first professional website.
 - `apps/agentic-systems-lab` is the independently deployable evidence application. It is present in this checkout and contains an original reference-scenario explorer plus a bounded, opt-in live review workflow.
+- `apps/flo-forge` is the independently deployable Flo Forge company website, authorized on 2026-10-31 for local preview under [FF-M001](../missions/FF-M001/mission.md). Its company identity and motion are separate from the professional site and Lab. Erik accepted the visual direction with slogan/email edits and authorized a source push; Vercel and the intended `floforge.tech` domain remain pending.
 - Mission Control is the generally tool- and team-agnostic engineering methodology informing work here. Its current terminology is mapped in the [concept guide](../guides/mission-control-concepts.md).
 - Flight Deck is a possible future, opinionated implementation of a Mission Control engineering team, including observability, coordination, and governance. Existing tools could collectively fulfill all of its responsibilities. Its product-specific plans do not govern this repository or replace specialized coding harnesses.
-- The site, Lab, Mission Control, and Flight Deck retain distinct purposes. Neither application in this repository is Flight Deck.
+- The professional site, Lab, Flo Forge, Mission Control, and Flight Deck retain distinct purposes. No application in this repository is Flight Deck.
 
 ## Reconciliation state
 
@@ -64,9 +65,12 @@ The original reference scenario explicitly discloses that its source execution a
 
 ## Application and ownership boundaries
 
-- Both applications now live in the same `main` checkout. Earlier separate-worktree instructions are historical coordination records, not current ownership constraints.
+Flo Forge's [FF-M001](../missions/FF-M001/mission.md) received Erik’s visual/copy review on 2026-10-31, with the final slogan “AI is the engine, People are the driver.” and email-only contact. Its single page uses the supplied SVG identity, graphite concrete styling, a steel-and-ember hero, app-local Motion transitions, and bounded decorative sparks. The app's production build and five browser journeys pass; content remains usable without JavaScript and motion honors device preferences and a pause control. The local preview is on port 3200. Contact uses Erik’s supplied `erik@floforge.tech` address. Erik authorized a source push and will connect Vercel himself. Hosted deployment, DNS, and publication remain open.
+
+- The professional site and Lab now live in the same `main` checkout. Earlier separate-worktree instructions are historical coordination records, not current ownership constraints. Flo Forge is added independently in this checkout.
 - `apps/site/**` remains the site's independently deployable boundary and local development uses port 3000.
 - `apps/agentic-systems-lab/**` remains the Lab's independently deployable boundary and local development uses port 3100.
+- `apps/flo-forge/**` is the Flo Forge company-site boundary and uses port 3200. Its [product summary](flo-forge.md), [plan](../plans/flo-forge.md), and [ADR-011](../architecture/decisions/ADR-011-flo-forge-brand-and-motion.md) govern the initial local preview. Its explicit motion authorization does not broaden either existing application's defaults.
 - Shared root configuration, the lockfile, and `packages/**` are cross-application integration surfaces. Shared code still requires a proven second consumer.
 - The professional site does not import the Lab implementation. Public site-to-Lab integration remains a separate product, content, deployment, and evidence decision.
 

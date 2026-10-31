@@ -27,6 +27,7 @@ No Mission Control runtime, state/event store, adapter topology, Flight Deck pro
 - `apps/site` is a static-first Next.js App Router application deployed to Vercel.
 - `apps/agentic-systems-lab` is an implemented, independently deployable Next.js application. It contains a Git-backed original reference scenario with an explicit execution-provenance boundary and an opt-in, request-bound OpenAI review route governed by ADR-008. Its recorded mission state remains ready for human review/credentialed validation; integration into this checkout is not evidence of public deployment or mission Landing.
 - Shared configuration begins under `packages/`. Content contracts and shared UI are introduced when their first real implementation requires them.
+- `apps/flo-forge` is the independently deployable, static-first Flo Forge company app. Its app-local Motion capability follows Erik's explicit animated-site brief under [ADR-011](architecture/decisions/ADR-011-flo-forge-brand-and-motion.md). This does not change the personal site's motion default. Local preview uses port 3200; hosting and domain setup are deferred.
 
 ## Site profile
 
