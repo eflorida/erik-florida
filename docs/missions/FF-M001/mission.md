@@ -1,6 +1,6 @@
 # FF-M001 — Flo Forge company website
 
-- **Status:** Visual/copy direction accepted with requested edits; source push authorized, hosting pending
+- **Status:** Visual/copy direction accepted; Vercel production deployment verified Ready; custom domain pending
 - **Authorized by:** Erik's 2026-10-31 request
 - **Application:** `apps/flo-forge`
 
@@ -41,4 +41,12 @@ The final wording is “AI is the engine, People are the driver.” Both company
 
 Erik connected the independent `flo-forge` Vercel project and reported deployment `dpl_4kAdavUhz7m8kho7dy6ymgo5ybJE`. Its Git source is `main` at `6afa992`; Root Directory is correctly `apps/flo-forge`. The retained build logs show the repository-root config ran `pnpm --filter @erik-florida/site build`, then expected `apps/site/.next` beneath the Flo Forge root. The personal site built successfully, but packaging failed with `NEXT_OUTPUT_DIR_MISSING` at `/vercel/path0/apps/flo-forge/apps/site/.next`.
 
-The repair adds `apps/flo-forge/vercel.json` to explicitly select Flo Forge and the app-relative `.next` output. The repository-root personal-site configuration is unchanged. Hosted verification is pending; no DNS or indexing changes are included.
+The repair adds `apps/flo-forge/vercel.json` to explicitly select Flo Forge and the app-relative `.next` output. The repository-root personal-site configuration is unchanged. Hosted verification passed for repair commit `b86669e`; no DNS or indexing changes are included.
+
+### Hosted verification
+
+- The local Flo Forge production build and formatting/diff checks pass.
+- Git-triggered production deployment `dpl_9qY33my4hzDvw1T6HegXCDcBWnfA` built commit `b86669e` with `pnpm --filter @erik-florida/flo-forge build`, generated the correct root/icon routes, and reached **Ready**. The inherited personal-site output path is no longer used.
+- Hosted site: `https://flo-forge-red.vercel.app`. An authenticated HTTP request returned 200; its document contains the Flo Forge title, final slogan, `mailto:erik@floforge.tech`, and brand asset reference.
+- Generated deployment URLs retain the existing Vercel login protection (`all_except_custom_domains`). The temporary test credential automatically created by `vercel curl` was revoked after the smoke check; no continuing automation credential or protection relaxation is retained.
+- The project’s domain list contains only `flo-forge-red.vercel.app`. `floforge.tech` and DNS remain the next setup step. Indexing remains disabled as previously documented.

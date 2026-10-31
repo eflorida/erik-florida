@@ -29,3 +29,5 @@ Erik accepted the visual direction with the slogan “AI is the engine, People a
 The independent `flo-forge` Vercel project uses `apps/flo-forge` as its Root Directory, `main` as its production branch, and includes source files outside the Root Directory for shared configuration. This app's `vercel.json` selects the Flo Forge package and `.next` output relative to this directory. It overrides the repository-root `vercel.json`, which belongs to the personal website. Do not use the personal website's build command or `apps/site/.next` output for this app.
 
 The initial deployment built the personal site and failed with `NEXT_OUTPUT_DIR_MISSING` because the inherited output path resolved to `apps/flo-forge/apps/site/.next`. The app-local configuration repairs that selection without changing the existing personal-site project.
+
+The repaired production deployment was verified Ready on 2026-10-31, with a successful authenticated content check at `https://flo-forge-red.vercel.app`. Generated Vercel URLs retain the existing login protection. The custom domain `floforge.tech` has not yet been added to the project; DNS and indexing remain separate.
